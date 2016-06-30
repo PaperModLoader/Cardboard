@@ -1199,9 +1199,17 @@ CLASS none/axz net/minecraft/block/material/PortalBlock
 CLASS none/bcx net/minecraft/client/MinecraftClient
 	FIELD J LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD K MOJANG_IMAGE Lnone/kn;
+	FIELD Q resourceHandler Lnone/bwf;
 	FIELD R INSTANCE Lnone/bcx;
+	FIELD aJ soundManager Lnone/bzw;
 	FIELD a RUNNING_OSX Z
 	FIELD ae session Lnone/bde;
+	FIELD m openScreen Lnone/bft;
+	METHOD K getSession ()Lnone/bde;
+	METHOD N getResourceHandler ()Lnone/bwf;
+	METHOD U getSoundManager ()Lnone/bzw;
+	METHOD a openGUI (Lnone/bft;)V
+		ARG 0 screen
 	METHOD an initialize ()V
 	METHOD z getInstance ()Lnone/bcx;
 CLASS none/bde net/minecraft/client/util/Session
@@ -1268,7 +1276,7 @@ CLASS none/bej
 CLASS none/bep
 	METHOD a mouseReleased (II)V
 	METHOD b getWidth ()I
-CLASS none/bft net/minecraft/client/gui/GUI
+CLASS none/bft net/minecraft/client/gui/ScreenGUI
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD j client Lnone/bcx;
 	FIELD n buttons Ljava/util/List;
@@ -1364,6 +1372,7 @@ CLASS none/but
 CLASS none/bvu net/minecraft/client/util/DynamicResource
 	METHOD <init> (Ljava/awt/image/BufferedImage;)V
 		ARG 0 image
+CLASS none/bwf net/minecraft/client/resource/ResourceHandler
 CLASS none/bzw net/minecraft/client/sound/SoundManager
 	METHOD a play (Lnone/bzg;)V
 CLASS net/minecraft/client/main/Main net/minecraft/client/main/Main
