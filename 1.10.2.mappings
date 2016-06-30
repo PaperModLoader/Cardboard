@@ -40,7 +40,7 @@ CLASS none/a net/minecraft/client/util/TextFormat
 	METHOD b getColor ()I
 	METHOD d isColor ()Z
 	METHOD e getFormattedName ()Ljava/lang/String;
-CLASS none/h
+CLASS none/h net/minecraft/client/util/ClientUtil
 	CLASS none/h$a OperatingSystem
 		FIELD a LINUX Lnone/h$a;
 		FIELD b SOLARIS Lnone/h$a;
@@ -48,6 +48,11 @@ CLASS none/h
 		FIELD d OSX Lnone/h$a;
 		FIELD e UNIX Lnone/h$a;
 	METHOD a getOperatingSystem ()Lnone/h$a;
+	METHOD a last (Ljava/util/List;)Ljava/lang/Object;
+		ARG 0 list
+	METHOD a runTask (Ljava/util/concurrent/FutureTask;Lorg/apache/logging/log4j/Logger;)Ljava/lang/Object;
+		ARG 0 task
+		ARG 1 logger
 CLASS none/j net/minecraft/command/Command
 CLASS none/l
 	METHOD c getName ()Ljava/lang/String;
@@ -173,8 +178,10 @@ CLASS none/bz net/minecraft/command/WhitelistCommand
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/ca
 	METHOD c getName ()Ljava/lang/String;
+CLASS none/kn net/minecraft/util/Identifier
 CLASS none/ls
 	METHOD a spawnEntity (Lnone/rw;)Z
+CLASS none/nj net/minecraft/client/sound/Sounds
 CLASS none/ru net/minecraft/entity/AreaEffectCloudEntity
 CLASS none/rw net/minecraft/entity/Entity
 	FIELD g entityID I
@@ -1190,12 +1197,175 @@ CLASS none/axy net/minecraft/block/material/MapColor
 		ARG 1 color
 CLASS none/axz net/minecraft/block/material/PortalBlock
 CLASS none/bcx net/minecraft/client/MinecraftClient
+	FIELD J LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD K MOJANG_IMAGE Lnone/kn;
 	FIELD R INSTANCE Lnone/bcx;
+	FIELD a RUNNING_OSX Z
+	FIELD ae session Lnone/bde;
+	METHOD an initialize ()V
 	METHOD z getInstance ()Lnone/bcx;
+CLASS none/bde net/minecraft/client/util/Session
+	CLASS none/bde$a SessionType
+		FIELD a LEGACY Lnone/bde$a;
+		FIELD b MOJANG Lnone/bde$a;
+		FIELD c SESSION_TYPES Ljava/util/Map;
+		FIELD d type Ljava/lang/String;
+		METHOD a get (Ljava/lang/String;)Lnone/bde$a;
+			ARG 0 name
+	METHOD e getProfile ()Lcom/mojang/authlib/GameProfile;
+CLASS none/bdn net/minecraft/client/gui/BaseGUI
+CLASS none/bdr net/minecraft/client/gui/ButtonGUI
+	FIELD a BUTTON_TEXTURE Lnone/kn;
+	FIELD f width I
+	FIELD g height I
+	FIELD h x I
+	FIELD i y I
+	FIELD j text Ljava/lang/String;
+	FIELD k id I
+	FIELD m visible Z
+	FIELD n selected Z
+	METHOD <init> (IIIIILjava/lang/String;)V
+		ARG 0 id
+		ARG 1 x
+		ARG 2 y
+		ARG 3 width
+		ARG 4 height
+		ARG 5 text
+	METHOD <init> (IIILjava/lang/String;)V
+		ARG 0 id
+		ARG 1 x
+		ARG 2 y
+		ARG 3 text
+	METHOD a isSelected ()Z
+	METHOD a setWidth (I)V
+		ARG 0 width
+	METHOD a mouseReleased (II)V
+		ARG 0 mouseX
+		ARG 1 mouseY
+	METHOD a render (Lnone/bcx;II)V
+		ARG 0 client
+		ARG 1 mouseX
+		ARG 2 mouseY
+	METHOD a playClickSound (Lnone/bzw;)V
+		ARG 0 soundManager
+	METHOD b getWidth ()I
+	METHOD b (Lnone/bcx;II)V
+		ARG 0 client
+		ARG 1 mouseX
+		ARG 2 mouseY
+	METHOD c (Lnone/bcx;II)Z
+		ARG 0 client
+		ARG 1 mouseX
+		ARG 2 mouseY
+CLASS none/bdw
+	METHOD a mouseReleased (II)V
+CLASS none/bdy
+	METHOD a render (Lnone/bcx;II)V
+CLASS none/bec
+	METHOD a render (Lnone/bcx;II)V
+CLASS none/bej
+	METHOD a mouseReleased (II)V
+CLASS none/bep
+	METHOD a mouseReleased (II)V
+	METHOD b getWidth ()I
+CLASS none/bft net/minecraft/client/gui/GUI
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD j client Lnone/bcx;
+	FIELD n buttons Ljava/util/List;
+	FIELD o labels Ljava/util/List;
+CLASS none/bfx
+	CLASS none/bfx$a
+		METHOD a mouseReleased (II)V
+		METHOD a playClickSound (Lnone/bzw;)V
+CLASS none/bga net/minecraft/client/gui/MainMenuGUI
+CLASS none/bgn
+	CLASS none/bgn$d
+		METHOD a render (Lnone/bcx;II)V
+CLASS none/bgo
+	CLASS none/bgo$a
+		METHOD a render (Lnone/bcx;II)V
+CLASS none/bhd
+	CLASS none/bhd$a
+		METHOD a render (Lnone/bcx;II)V
 CLASS none/bln
 	METHOD a spawnEntity (Lnone/rw;)Z
+CLASS none/bob net/minecraft/client/render/OpenGL
+	CLASS none/bob$b
+	CLASS none/bob$c BooleanState
+		FIELD a capability I
+		FIELD b state Z
+		METHOD <init> (I)V
+			ARG 0 capability
+		METHOD a disable ()V
+		METHOD a set (Z)V
+			ARG 0 state
+		METHOD b enable ()V
+	CLASS none/bob$e ColorState
+		FIELD a red F
+		FIELD b green F
+		FIELD c blue F
+		FIELD d alpha F
+		METHOD <init> (FFFF)V
+			ARG 0 red
+			ARG 1 green
+			ARG 2 blue
+			ARG 3 alpha
+	FIELD v COLOR_STATE Lnone/bob$e;
+	METHOD F loadIdentity ()V
+	METHOD G pushMatrix ()V
+	METHOD H popMatrix ()V
+	METHOD a scale (DDD)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD a ortho (DDDDDD)V
+	METHOD a normalPointer (IILjava/nio/ByteBuffer;)V
+		ARG 0 a1
+	METHOD b translate (DDD)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD b tex (FF)V
+		ARG 0 x
+		ARG 1 y
+	METHOD b scale (FFF)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD b rotate (FFFF)V
+		ARG 0 amount
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD c translate (FFF)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD c color (FFFF)V
+		ARG 0 red
+		ARG 1 green
+		ARG 2 blue
+		ARG 3 alpha
+	METHOD c getFloat (ILjava/nio/FloatBuffer;)V
+	METHOD d color (FFF)V
+		ARG 0 red
+		ARG 1 green
+		ARG 2 blue
+	METHOD e vertex (FFF)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD m clear (I)V
+		ARG 0 mask
+	METHOD n matrixMode (I)V
+		ARG 0 mode
 CLASS none/but
 	FIELD a PIG_SADDLE_TEXTURE Lnone/kn;
+CLASS none/bvu net/minecraft/client/util/DynamicResource
+	METHOD <init> (Ljava/awt/image/BufferedImage;)V
+		ARG 0 image
+CLASS none/bzw net/minecraft/client/sound/SoundManager
+	METHOD a play (Lnone/bzg;)V
 CLASS net/minecraft/client/main/Main net/minecraft/client/main/Main
 	METHOD main main ([Ljava/lang/String;)V
 		ARG 0 args
