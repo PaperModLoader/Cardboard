@@ -569,6 +569,7 @@ CLASS none/aip net/minecraft/world/biome/ColdBeachBiome
 CLASS none/aiq net/minecraft/world/biome/Biome
 	FIELD r topBlock Lnone/ars;
 	FIELD s fillerBlock Lnone/ars;
+	FIELD t populator Lnone/ait;
 	METHOD a registerBiome (ILjava/lang/String;Lnone/aiq;)V
 		ARG 0 id
 		ARG 1 name
@@ -578,6 +579,7 @@ CLASS none/aiq net/minecraft/world/biome/Biome
 	METHOD a (Lnone/aid;Ljava/util/Random;Lnone/cm;)V
 		ARG 0 world
 		ARG 1 random
+CLASS none/ait net/minecraft/world/biome/BiomePopulator
 CLASS none/aix net/minecraft/world/biome/DesertBiome
 	METHOD a (Lnone/aid;Ljava/util/Random;Lnone/cm;)V
 		ARG 0 world
