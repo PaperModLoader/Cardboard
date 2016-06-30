@@ -1,4 +1,4 @@
-CLASS none/a net/minecraft/client/TextFormat
+CLASS none/a net/minecraft/client/util/TextFormat
 	FIELD B formatPrefix Ljava/lang/String;
 	FIELD C color I
 	FIELD a BLACK Lnone/a;
@@ -48,28 +48,28 @@ CLASS none/h
 		FIELD d OSX Lnone/h$a;
 		FIELD e UNIX Lnone/h$a;
 	METHOD a getOperatingSystem ()Lnone/h$a;
-CLASS none/j net/minecraft/server/command/Command
+CLASS none/j net/minecraft/command/Command
 CLASS none/l
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/q net/minecraft/server/command/AchievementCommand
+CLASS none/q net/minecraft/command/AchievementCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/r net/minecraft/server/command/BanIPCommand
+CLASS none/r net/minecraft/command/BanIPCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/s net/minecraft/server/command/BanCommand
+CLASS none/s net/minecraft/command/BanCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/t net/minecraft/server/command/BlockDataCommand
+CLASS none/t net/minecraft/command/BlockDataCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/u net/minecraft/server/command/ClearCommand
+CLASS none/u net/minecraft/command/ClearCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/v net/minecraft/server/command/CloneCommand
+CLASS none/v net/minecraft/command/CloneCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/w net/minecraft/server/command/TestForBlocksCommand
+CLASS none/w net/minecraft/command/TestForBlocksCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/x net/minecraft/server/command/DeopCommand
+CLASS none/x net/minecraft/command/DeopCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/y net/minecraft/server/command/DebugCommand
+CLASS none/y net/minecraft/command/DebugCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/z net/minecraft/server/command/DefaultGamemodeCommand
+CLASS none/z net/minecraft/command/DefaultGamemodeCommand
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/aa
 	METHOD c getName ()Ljava/lang/String;
@@ -141,42 +141,42 @@ CLASS none/bi
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bj
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bk net/minecraft/server/command/StatisticsCommand
+CLASS none/bk net/minecraft/command/StatisticsCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bl net/minecraft/server/command/StopServerCommand
+CLASS none/bl net/minecraft/command/StopServerCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bm net/minecraft/server/command/StopSoundCommand
+CLASS none/bm net/minecraft/command/StopSoundCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bn net/minecraft/server/command/SummonCommand
+CLASS none/bn net/minecraft/command/SummonCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bo net/minecraft/server/command/TeleportCommand
+CLASS none/bo net/minecraft/command/TeleportCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bp net/minecraft/server/command/TellRawCommand
+CLASS none/bp net/minecraft/command/TellRawCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/br net/minecraft/server/command/TestForBlockCommand
+CLASS none/br net/minecraft/command/TestForBlockCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bs net/minecraft/server/command/TestforCommand
+CLASS none/bs net/minecraft/command/TestforCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bt net/minecraft/server/command/TimeCommand
+CLASS none/bt net/minecraft/command/TimeCommand
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bu
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bv
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bw net/minecraft/server/command/TPCommand
+CLASS none/bw net/minecraft/command/TPCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bx net/minecraft/server/command/TriggerCommand
+CLASS none/bx net/minecraft/command/TriggerCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/by net/minecraft/server/command/WeatherCommand
+CLASS none/by net/minecraft/command/WeatherCommand
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bz net/minecraft/server/command/WhitelistCommand
+CLASS none/bz net/minecraft/command/WhitelistCommand
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/ca
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/ls
 	METHOD a spawnEntity (Lnone/rw;)Z
-CLASS none/ru net/minecraft/server/entity/AreaEffectCloudEntity
-CLASS none/rw net/minecraft/server/entity/Entity
+CLASS none/ru net/minecraft/entity/AreaEffectCloudEntity
+CLASS none/rw net/minecraft/entity/Entity
 	FIELD g entityID I
 	FIELD l world Lnone/aid;
 	METHOD <init> (Lnone/aid;)V
@@ -184,65 +184,65 @@ CLASS none/rw net/minecraft/server/entity/Entity
 	METHOD O getEntityID ()I
 	METHOD h setEntityID (I)V
 		ARG 0 entityID
-CLASS none/sc net/minecraft/server/entity/XPOrbEntity
-CLASS none/wa net/minecraft/server/entity/BatEntity
-CLASS none/wd net/minecraft/server/entity/ChickenEntity
-CLASS none/we net/minecraft/server/entity/CowEntity
-CLASS none/wg net/minecraft/server/entity/MooshroomEntity
-CLASS none/wh net/minecraft/server/entity/OcelotEntity
-CLASS none/wi net/minecraft/server/entity/PigEntity
-CLASS none/wj net/minecraft/server/entity/PolarBearEntity
-CLASS none/wk net/minecraft/server/entity/RabbitEntity
-CLASS none/wl net/minecraft/server/entity/SheepEntity
-CLASS none/wm net/minecraft/server/entity/SnowmanEntity
-CLASS none/wn net/minecraft/server/entity/SquidEntity
-CLASS none/wo net/minecraft/server/entity/IronGolemEntity
-CLASS none/wq net/minecraft/server/entity/WolfEntity
-CLASS none/wr net/minecraft/server/entity/HorseEntity
-CLASS none/xa net/minecraft/server/entity/EnderCrystalEntity
-CLASS none/xb net/minecraft/server/entity/EnderDragonEntity
-CLASS none/xv net/minecraft/server/entity/WitherEntity
-CLASS none/xx net/minecraft/server/entity/ArmorStandEntity
-CLASS none/xz net/minecraft/server/entity/ItemFrameEntity
-CLASS none/ya net/minecraft/server/entity/LeashKnotEntity
-CLASS none/yb net/minecraft/server/entity/PaintingEntity
-CLASS none/yj net/minecraft/server/entity/FallingBlockEntity
-CLASS none/yk net/minecraft/server/entity/ItemEntity
-CLASS none/yl net/minecraft/server/entity/PrimedTNTEntity
-CLASS none/yn net/minecraft/server/entity/BlazeEntity
-CLASS none/yo net/minecraft/server/entity/CaveSpiderEntity
-CLASS none/yp net/minecraft/server/entity/CreeperEntity
-CLASS none/yq net/minecraft/server/entity/EndermanEntity
-CLASS none/yr net/minecraft/server/entity/EndermiteEntity
-CLASS none/yt net/minecraft/server/entity/GhastEntity
-CLASS none/yu net/minecraft/server/entity/GiantEntity
-CLASS none/yv net/minecraft/server/entity/GuardianEntity
-CLASS none/yw net/minecraft/server/entity/MagmaCubeEntity
-CLASS none/yy net/minecraft/server/entity/PigZombieEntity
-CLASS none/zb net/minecraft/server/entity/ShulkerEntity
-CLASS none/zc net/minecraft/server/entity/SilverfishEntity
-CLASS none/zd net/minecraft/server/entity/SkeletonEntity
-CLASS none/zf net/minecraft/server/entity/SlimeEntity
-CLASS none/zg net/minecraft/server/entity/SpiderEntity
-CLASS none/zh net/minecraft/server/entity/WitchEntity
-CLASS none/zi net/minecraft/server/entity/ZombieEntity
-CLASS none/zn net/minecraft/server/entity/VillagerEntity
-CLASS none/zw net/minecraft/server/entity/DragonFireballEntity
-CLASS none/zx net/minecraft/server/entity/EyeOfEnderEntity
-CLASS none/zz net/minecraft/server/entity/FireworkEntity
-CLASS none/aaa net/minecraft/server/entity/FireballEntity
-CLASS none/aad net/minecraft/server/entity/ShulkerBulletEntity
-CLASS none/aae net/minecraft/server/entity/SmallFireballEntity
-CLASS none/aaf net/minecraft/server/entity/SnowballEntity
-CLASS none/aag net/minecraft/server/entity/SpectralArrowEntity
-CLASS none/aai net/minecraft/server/entity/EggEntity
-CLASS none/aaj net/minecraft/server/entity/EnderPearlEntity
-CLASS none/aak net/minecraft/server/entity/ExperienceBottleEntity
-CLASS none/aal net/minecraft/server/entity/ThrownPotionEntity
-CLASS none/aam net/minecraft/server/entity/ArrowEntity
-CLASS none/aan net/minecraft/server/entity/WitherSkullEntity
-CLASS none/aap net/minecraft/server/entity/BoatEntity
-CLASS none/aaq net/minecraft/server/entity/minecart/MinecartEntity
+CLASS none/sc net/minecraft/entity/XPOrbEntity
+CLASS none/wa net/minecraft/entity/BatEntity
+CLASS none/wd net/minecraft/entity/ChickenEntity
+CLASS none/we net/minecraft/entity/CowEntity
+CLASS none/wg net/minecraft/entity/MooshroomEntity
+CLASS none/wh net/minecraft/entity/OcelotEntity
+CLASS none/wi net/minecraft/entity/PigEntity
+CLASS none/wj net/minecraft/entity/PolarBearEntity
+CLASS none/wk net/minecraft/entity/RabbitEntity
+CLASS none/wl net/minecraft/entity/SheepEntity
+CLASS none/wm net/minecraft/entity/SnowmanEntity
+CLASS none/wn net/minecraft/entity/SquidEntity
+CLASS none/wo net/minecraft/entity/IronGolemEntity
+CLASS none/wq net/minecraft/entity/WolfEntity
+CLASS none/wr net/minecraft/entity/HorseEntity
+CLASS none/xa net/minecraft/entity/EnderCrystalEntity
+CLASS none/xb net/minecraft/entity/EnderDragonEntity
+CLASS none/xv net/minecraft/entity/WitherEntity
+CLASS none/xx net/minecraft/entity/ArmorStandEntity
+CLASS none/xz net/minecraft/entity/ItemFrameEntity
+CLASS none/ya net/minecraft/entity/LeashKnotEntity
+CLASS none/yb net/minecraft/entity/PaintingEntity
+CLASS none/yj net/minecraft/entity/FallingBlockEntity
+CLASS none/yk net/minecraft/entity/ItemEntity
+CLASS none/yl net/minecraft/entity/PrimedTNTEntity
+CLASS none/yn net/minecraft/entity/BlazeEntity
+CLASS none/yo net/minecraft/entity/CaveSpiderEntity
+CLASS none/yp net/minecraft/entity/CreeperEntity
+CLASS none/yq net/minecraft/entity/EndermanEntity
+CLASS none/yr net/minecraft/entity/EndermiteEntity
+CLASS none/yt net/minecraft/entity/GhastEntity
+CLASS none/yu net/minecraft/entity/GiantEntity
+CLASS none/yv net/minecraft/entity/GuardianEntity
+CLASS none/yw net/minecraft/entity/MagmaCubeEntity
+CLASS none/yy net/minecraft/entity/PigZombieEntity
+CLASS none/zb net/minecraft/entity/ShulkerEntity
+CLASS none/zc net/minecraft/entity/SilverfishEntity
+CLASS none/zd net/minecraft/entity/SkeletonEntity
+CLASS none/zf net/minecraft/entity/SlimeEntity
+CLASS none/zg net/minecraft/entity/SpiderEntity
+CLASS none/zh net/minecraft/entity/WitchEntity
+CLASS none/zi net/minecraft/entity/ZombieEntity
+CLASS none/zn net/minecraft/entity/VillagerEntity
+CLASS none/zw net/minecraft/entity/DragonFireballEntity
+CLASS none/zx net/minecraft/entity/EyeOfEnderEntity
+CLASS none/zz net/minecraft/entity/FireworkEntity
+CLASS none/aaa net/minecraft/entity/FireballEntity
+CLASS none/aad net/minecraft/entity/ShulkerBulletEntity
+CLASS none/aae net/minecraft/entity/SmallFireballEntity
+CLASS none/aaf net/minecraft/entity/SnowballEntity
+CLASS none/aag net/minecraft/entity/SpectralArrowEntity
+CLASS none/aai net/minecraft/entity/EggEntity
+CLASS none/aaj net/minecraft/entity/EnderPearlEntity
+CLASS none/aak net/minecraft/entity/ExperienceBottleEntity
+CLASS none/aal net/minecraft/entity/PotionEntity
+CLASS none/aam net/minecraft/entity/ArrowEntity
+CLASS none/aan net/minecraft/entity/WitherSkullEntity
+CLASS none/aap net/minecraft/entity/BoatEntity
+CLASS none/aaq net/minecraft/entity/minecart/MinecartEntity
 	CLASS none/aaq$a MinecartType
 		FIELD a EMPTY Lnone/aaq$a;
 		FIELD b CHEST Lnone/aaq$a;
@@ -252,29 +252,29 @@ CLASS none/aaq net/minecraft/server/entity/minecart/MinecartEntity
 		FIELD f HOPPER Lnone/aaq$a;
 		FIELD g COMMAND_BLOCK Lnone/aaq$a;
 	METHOD v getType ()Lnone/aaq$a;
-CLASS none/aar net/minecraft/server/entity/minecart/ChestMinecartEntity
+CLASS none/aar net/minecraft/entity/minecart/ChestMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
-CLASS none/aas net/minecraft/server/entity/minecart/CommandBlockMinecartEntity
+CLASS none/aas net/minecraft/entity/minecart/CommandBlockMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
-CLASS none/aau net/minecraft/server/entity/minecart/FurnaceMinecartEntity
+CLASS none/aau net/minecraft/entity/minecart/FurnaceMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
-CLASS none/aav net/minecraft/server/entity/minecart/HopperMinecartEntity
+CLASS none/aav net/minecraft/entity/minecart/HopperMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
-CLASS none/aaw net/minecraft/server/entity/minecart/EmptyMinecartEntity
+CLASS none/aaw net/minecraft/entity/minecart/EmptyMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
-CLASS none/aax net/minecraft/server/entity/minecart/SpawnerMinecartEntity
+CLASS none/aax net/minecraft/entity/minecart/SpawnerMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
-CLASS none/aay net/minecraft/server/entity/minecart/TNTMinecartEntity
+CLASS none/aay net/minecraft/entity/minecart/TNTMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
-CLASS none/acf net/minecraft/server/item/ArmorItem
-CLASS none/acg net/minecraft/server/item/ArmorStandItem
-CLASS none/ach net/minecraft/server/item/ArrowItem
-CLASS none/aci net/minecraft/server/item/AxeItem
-CLASS none/acn net/minecraft/server/item/BoatItem
-CLASS none/acq net/minecraft/server/item/BowItem
-CLASS none/acr net/minecraft/server/item/StewItem
-CLASS none/acs net/minecraft/server/item/BucketItem
-CLASS none/acw net/minecraft/server/item/CoalItem
+CLASS none/acf net/minecraft/item/ArmorItem
+CLASS none/acg net/minecraft/item/ArmorStandItem
+CLASS none/ach net/minecraft/item/ArrowItem
+CLASS none/aci net/minecraft/item/AxeItem
+CLASS none/acn net/minecraft/item/BoatItem
+CLASS none/acq net/minecraft/item/BowItem
+CLASS none/acr net/minecraft/item/StewItem
+CLASS none/acs net/minecraft/item/BucketItem
+CLASS none/acw net/minecraft/item/CoalItem
 CLASS none/acz net/minecraft/client/tab/CreativeTab
 	CLASS none/acz$1
 		METHOD e getTabIcon ()Lnone/adx;
@@ -322,20 +322,20 @@ CLASS none/acz net/minecraft/client/tab/CreativeTab
 	METHOD b getName ()Ljava/lang/String;
 	METHOD c getTranslation ()Ljava/lang/String;
 	METHOD e getTabIcon ()Lnone/adx;
-CLASS none/adb net/minecraft/server/item/DoorItem
-CLASS none/adg net/minecraft/server/item/ElytraItem
-CLASS none/adh net/minecraft/server/item/MapItem
-CLASS none/adi net/minecraft/server/item/EnchantedBookItem
-CLASS none/adr net/minecraft/server/item/FishingRodItem
-CLASS none/ads net/minecraft/server/item/FlintAndSteelItem
-CLASS none/adt net/minecraft/server/item/FoodItem
-CLASS none/adw net/minecraft/server/item/HoeItem
-CLASS none/adx net/minecraft/server/item/Item
+CLASS none/adb net/minecraft/item/DoorItem
+CLASS none/adg net/minecraft/item/ElytraItem
+CLASS none/adh net/minecraft/item/MapItem
+CLASS none/adi net/minecraft/item/EnchantedBookItem
+CLASS none/adr net/minecraft/item/FishingRodItem
+CLASS none/ads net/minecraft/item/FlintAndSteelItem
+CLASS none/adt net/minecraft/item/FoodItem
+CLASS none/adw net/minecraft/item/HoeItem
+CLASS none/adx net/minecraft/item/Item
 	FIELD n tab Lnone/acz;
 	METHOD a registerItem (ILjava/lang/String;Lnone/adx;)V
 	METHOD a setTab (Lnone/acz;)Lnone/adx;
 		ARG 0 tab
-CLASS none/aeb net/minecraft/server/item/ItemHandler
+CLASS none/aeb net/minecraft/item/ItemHandler
 	FIELD A STICK Lnone/adx;
 	FIELD B BOWL Lnone/adx;
 	FIELD C MUSHROOM_STEW Lnone/adx;
@@ -543,17 +543,17 @@ CLASS none/aeb net/minecraft/server/item/ItemHandler
 	FIELD z DIAMOND_AXE Lnone/adx;
 	METHOD a get (Ljava/lang/String;)Lnone/adx;
 		ARG 0 name
-CLASS none/aef net/minecraft/server/item/FilledMapItem
-CLASS none/aeh net/minecraft/server/item/MinecartItem
-CLASS none/aek net/minecraft/server/item/PickaxeItem
-CLASS none/aem net/minecraft/server/item/PotionItem
-CLASS none/aeo net/minecraft/server/item/RecordItem
-CLASS none/aeq net/minecraft/server/item/SaddleItem
-CLASS none/aes net/minecraft/server/item/SeedItem
-CLASS none/aeu net/minecraft/server/item/ShearsItem
-CLASS none/aev net/minecraft/server/item/ShieldItem
-CLASS none/aew net/minecraft/server/item/ShovelItem
-CLASS none/afd net/minecraft/server/item/SpawnEggItem
+CLASS none/aef net/minecraft/item/FilledMapItem
+CLASS none/aeh net/minecraft/item/MinecartItem
+CLASS none/aek net/minecraft/item/PickaxeItem
+CLASS none/aem net/minecraft/item/PotionItem
+CLASS none/aeo net/minecraft/item/RecordItem
+CLASS none/aeq net/minecraft/item/SaddleItem
+CLASS none/aes net/minecraft/item/SeedItem
+CLASS none/aeu net/minecraft/item/ShearsItem
+CLASS none/aev net/minecraft/item/ShieldItem
+CLASS none/aew net/minecraft/item/ShovelItem
+CLASS none/afd net/minecraft/item/SpawnEggItem
 	METHOD a (Lnone/adz;Lnone/zs;Lnone/aid;Lnone/cm;Lnone/qr;Lnone/ct;FFF)Lnone/qt;
 		ARG 2 world
 	METHOD a (Lnone/aid;Ljava/lang/String;DDD)Lnone/rw;
@@ -561,12 +561,12 @@ CLASS none/afd net/minecraft/server/item/SpawnEggItem
 	METHOD a (Lnone/aid;Lnone/zs;Lnone/adz;Lnone/rw;)V
 		ARG 0 world
 		ARG 3 entity
-CLASS none/afg net/minecraft/server/item/SwordItem
-CLASS none/aid net/minecraft/server/world/World
+CLASS none/afg net/minecraft/item/SwordItem
+CLASS none/aid net/minecraft/world/World
 	FIELD r random Ljava/util/Random;
 	METHOD a spawnEntity (Lnone/rw;)Z
-CLASS none/aip net/minecraft/server/world/biome/ColdBeachBiome
-CLASS none/aiq net/minecraft/server/world/biome/Biome
+CLASS none/aip net/minecraft/world/biome/ColdBeachBiome
+CLASS none/aiq net/minecraft/world/biome/Biome
 	FIELD r topBlock Lnone/ars;
 	FIELD s fillerBlock Lnone/ars;
 	METHOD a registerBiome (ILjava/lang/String;Lnone/aiq;)V
@@ -578,31 +578,39 @@ CLASS none/aiq net/minecraft/server/world/biome/Biome
 	METHOD a (Lnone/aid;Ljava/util/Random;Lnone/cm;)V
 		ARG 0 world
 		ARG 1 random
-CLASS none/aix net/minecraft/server/world/biome/DesertBiome
+CLASS none/aix net/minecraft/world/biome/DesertBiome
 	METHOD a (Lnone/aid;Ljava/util/Random;Lnone/cm;)V
 		ARG 0 world
 		ARG 1 random
-CLASS none/aiy net/minecraft/server/world/biome/ExtremeHillsBiome
-CLASS none/aja net/minecraft/server/world/biome/ForestBiome
-CLASS none/ajb net/minecraft/server/world/biome/NetherBiome
-CLASS none/ajd net/minecraft/server/world/biome/IceBiome
-CLASS none/aje net/minecraft/server/world/biome/JungleBiome
-CLASS none/ajf net/minecraft/server/world/biome/MesaBiome
-CLASS none/ajg net/minecraft/server/world/biome/MushroomBiome
-CLASS none/ajj net/minecraft/server/world/biome/OceanBiome
-CLASS none/ajk net/minecraft/server/world/biome/PlainsBiome
-CLASS none/ajl net/minecraft/server/world/biome/RiverBiome
-CLASS none/ajm net/minecraft/server/world/biome/SavannaBiome
-CLASS none/ajn net/minecraft/server/world/biome/StoneBeachBiome
-CLASS none/ajo net/minecraft/server/world/biome/SwampBiome
-CLASS none/ajp net/minecraft/server/world/biome/TaigaBiome
-CLASS none/ajq net/minecraft/server/world/biome/EndBiome
-CLASS none/ajs net/minecraft/server/world/biome/VoidBiome
-CLASS none/akb net/minecraft/server/block/RailBlock
-CLASS none/akd net/minecraft/server/block/BedBlock
-CLASS none/akf net/minecraft/server/block/Block
+CLASS none/aiy net/minecraft/world/biome/ExtremeHillsBiome
+CLASS none/aja net/minecraft/world/biome/ForestBiome
+CLASS none/ajb net/minecraft/world/biome/NetherBiome
+CLASS none/ajd net/minecraft/world/biome/IceBiome
+CLASS none/aje net/minecraft/world/biome/JungleBiome
+CLASS none/ajf net/minecraft/world/biome/MesaBiome
+CLASS none/ajg net/minecraft/world/biome/MushroomBiome
+CLASS none/ajj net/minecraft/world/biome/OceanBiome
+CLASS none/ajk net/minecraft/world/biome/PlainsBiome
+CLASS none/ajl net/minecraft/world/biome/RiverBiome
+CLASS none/ajm net/minecraft/world/biome/SavannaBiome
+CLASS none/ajn net/minecraft/world/biome/StoneBeachBiome
+CLASS none/ajo net/minecraft/world/biome/SwampBiome
+CLASS none/ajp net/minecraft/world/biome/TaigaBiome
+CLASS none/ajq net/minecraft/world/biome/EndBiome
+CLASS none/ajs net/minecraft/world/biome/VoidBiome
+CLASS none/ajv net/minecraft/block/AirBlock
+CLASS none/ajw rnet/minecraft/block/AnvilBlock
+CLASS none/akb net/minecraft/block/RailBlock
+CLASS none/akc net/minecraft/block/BeaconBlock
+CLASS none/akd net/minecraft/block/BedBlock
+CLASS none/akf net/minecraft/block/Block
+	FIELD a AIR Lnone/kn;
+	FIELD b creativeTab Lnone/acz;
+	FIELD x material Lnone/axx;
+	FIELD y mapColor Lnone/axy;
 	METHOD a setTab (Lnone/acz;)Lnone/akf;
-CLASS none/akg net/minecraft/server/block/BlockHandler
+	METHOD c setName (Ljava/lang/String;)Lnone/akf;
+CLASS none/akg net/minecraft/block/BlockHandler
 	FIELD A SANDSTONE Lnone/akf;
 	FIELD B NOTEBLOCK Lnone/akf;
 	FIELD C BED Lnone/akf;
@@ -800,6 +808,7 @@ CLASS none/akg net/minecraft/server/block/BlockHandler
 	FIELD di BONE_BLOCK Lnone/akf;
 	FIELD dj STRUCTURE_VOID Lnone/akf;
 	FIELD dk STRUCTURE_BLOCK Lnone/akf;
+	FIELD dl BLOCKS Ljava/util/Set;
 	FIELD e COBBLESTONE Lnone/akf;
 	FIELD f PLANKS Lnone/akf;
 	FIELD g SAPLING Lnone/akf;
@@ -824,34 +833,83 @@ CLASS none/akg net/minecraft/server/block/BlockHandler
 	FIELD z DISPENSER Lnone/akf;
 	METHOD a get (Ljava/lang/String;)Lnone/akf;
 		ARG 0 name
-CLASS none/akw net/minecraft/server/block/WoolBlock
-CLASS none/alg net/minecraft/server/block/DirtBlock
-CLASS none/alh net/minecraft/server/block/DispenserBlock
-CLASS none/ali net/minecraft/server/block/DoorBlock
-CLASS none/aly net/minecraft/server/block/FireBlock
-CLASS none/amg net/minecraft/server/block/GlassBlock
-CLASS none/ami net/minecraft/server/block/GrassBlock
-CLASS none/amk net/minecraft/server/block/GravelBlock
-CLASS none/amy net/minecraft/server/block/LeavesBlock
-CLASS none/anq net/minecraft/server/block/BedrockBlock
-CLASS none/anr net/minecraft/server/block/NoteblockBlock
-CLASS none/ant
-CLASS none/anu net/minecraft/server/block/LogBlock
-CLASS none/anv net/minecraft/server/block/OreBlock
-CLASS none/anx net/minecraft/server/block/PlanksBlock
-CLASS none/aob net/minecraft/server/block/PoweredRailBlock
-CLASS none/aot net/minecraft/server/block/SandBlock
-CLASS none/aov net/minecraft/server/block/SaplingBlock
-CLASS none/ape net/minecraft/server/block/SpongeBlock
-CLASS none/apl net/minecraft/server/block/StoneBlock
-CLASS none/aqc net/minecraft/server/block/WebBlock
-CLASS none/axu net/minecraft/server/block/material/UnsolidMaterial
+CLASS none/akj net/minecraft/block/BookshelfBlock
+CLASS none/akn net/minecraft/block/CactusBlock
+CLASS none/ako net/minecraft/block/CakeBlock
+CLASS none/akq net/minecraft/block/CauldonBlcok
+CLASS none/akr net/minecraft/block/ChestBlock
+CLASS none/aku net/minecraft/block/ClayBlock
+CLASS none/akw net/minecraft/block/WoolBlock
+CLASS none/akx net/minecraft/block/CommandBlock
+CLASS none/aky net/minecraft/block/ComparatorBlock
+CLASS none/alb net/minecraft/block/DaylightDetectorBlock
+CLASS none/alg net/minecraft/block/DirtBlock
+CLASS none/alh net/minecraft/block/DispenserBlock
+CLASS none/ali net/minecraft/block/DoorBlock
+CLASS none/alm net/minecraft/block/WaterBlock
+CLASS none/alv net/minecraft/block/FarmlandBlock
+CLASS none/alw net/minecraft/block/FenceBlock
+CLASS none/aly net/minecraft/block/FireBlock
+CLASS none/amd
+CLASS none/amf net/minecraft/block/FurnaceBlock
+CLASS none/amg net/minecraft/block/GlassBlock
+CLASS none/ami net/minecraft/block/GrassBlock
+CLASS none/amk net/minecraft/block/GravelBlock
+CLASS none/amm net/minecraft/block/SlabBlock
+CLASS none/amn
+CLASS none/ams net/minecraft/block/HopperBlock
+CLASS none/amu net/minecraft/block/BigMushroomBlock
+CLASS none/amw net/minecraft/block/JukeboxBlock
+CLASS none/amx net/minecraft/block/LadderBlock
+CLASS none/amy net/minecraft/block/LeavesBlock
+CLASS none/ana net/minecraft/block/LeverBlock
+CLASS none/ang net/minecraft/block/SpawnerBlock
+CLASS none/ani net/minecraft/block/MushroomBlock
+CLASS none/anm net/minecraft/block/NetherrackBlock
+CLASS none/anq net/minecraft/block/BedrockBlock
+CLASS none/anr net/minecraft/block/NoteblockBlock
+CLASS none/ans net/minecraft/block/ObsidianBlock
+CLASS none/ant net/minecraft/block/NewLeavesBlock
+CLASS none/anu net/minecraft/block/LogBlock
+CLASS none/anv net/minecraft/block/OreBlock
+CLASS none/anx net/minecraft/block/PlanksBlock
+CLASS none/any net/minecraft/block/NetherPortalBlock
+CLASS none/aob net/minecraft/block/PoweredRailBlock
+CLASS none/aoc net/minecraft/block/PressurePlateBlock
+CLASS none/aoe net/minecraft/block/PumpkinBlock
+CLASS none/aok net/minecraft/block/RedstoneOreBlock
+CLASS none/aol net/minecraft/block/RedstoneWireBlock
+CLASS none/aon net/minecraft/block/RedstoneTorchBlock
+CLASS none/aoo net/minecraft/block/SugarCaneBlock
+CLASS none/aoq net/minecraft/block/RepeaterBlock
+CLASS none/aot net/minecraft/block/SandBlock
+CLASS none/aou net/minecraft/block/SandstoneBlock
+CLASS none/aov net/minecraft/block/SaplingBlock
+CLASS none/aoy net/minecraft/block/SkullBlock
+CLASS none/apc net/minecraft/block/SoulSandBlock
+CLASS none/ape net/minecraft/block/SpongeBlock
+CLASS none/apj net/minecraft/block/LavaBlock
+CLASS none/apk net/minecraft/block/StemBlock
+CLASS none/apl net/minecraft/block/StoneBlock
+CLASS none/apn net/minecraft/block/ButtonBlock
+CLASS none/aps net/minecraft/block/PaneBlock
+CLASS none/apt net/minecraft/block/TNTBlock
+CLASS none/apu net/minecraft/block/TorchBlock
+CLASS none/apv net/minecraft/block/TrapdoorBlock
+CLASS none/apx net/minecraft/block/TripwireHookBlock
+CLASS none/apy net/minecraft/block/VineBlock
+CLASS none/aqb net/minecraft/block/WaterLillyBlock
+CLASS none/aqc net/minecraft/block/WebBlock
+CLASS none/arj net/minecraft/block/PistonBlock
+CLASS none/ark net/minecraft/block/PistonHeadBlock
+CLASS none/arl net/minecraft/block/PistonExtensionBlock
+CLASS none/axu net/minecraft/block/material/UnsolidMaterial
 	METHOD <init> (Lnone/axy;)V
 		ARG 0 color
-CLASS none/axv net/minecraft/server/block/material/TransparentMaterial
-CLASS none/axw net/minecraft/server/block/material/LiquidMaterial
+CLASS none/axv net/minecraft/block/material/TransparentMaterial
+CLASS none/axw net/minecraft/block/material/LiquidMaterial
 	METHOD d isLiquid ()Z
-CLASS none/axx net/minecraft/server/block/material/Material
+CLASS none/axx net/minecraft/block/material/Material
 	FIELD A CACTUS Lnone/axx;
 	FIELD B CLAY Lnone/axx;
 	FIELD C STALK Lnone/axx;
@@ -892,7 +950,7 @@ CLASS none/axx net/minecraft/server/block/material/Material
 		ARG 0 color
 	METHOD d isLiquid ()Z
 	METHOD r getColor ()Lnone/axy;
-CLASS none/axy net/minecraft/server/block/material/MapColor
+CLASS none/axy net/minecraft/block/material/MapColor
 	FIELD A BLUE Lnone/axy;
 	FIELD B BROWN Lnone/axy;
 	FIELD C GREEN Lnone/axy;
@@ -935,7 +993,10 @@ CLASS none/axy net/minecraft/server/block/material/MapColor
 	METHOD <init> (II)V
 		ARG 0 ID
 		ARG 1 color
-CLASS none/axz net/minecraft/server/block/material/PortalBlock
+CLASS none/axz net/minecraft/block/material/PortalBlock
+CLASS none/bcx net/minecraft/client/MinecraftClient
+	FIELD R INSTANCE Lnone/bcx;
+	METHOD z getInstance ()Lnone/bcx;
 CLASS none/bln
 	METHOD a spawnEntity (Lnone/rw;)Z
 CLASS none/but
@@ -943,6 +1004,5 @@ CLASS none/but
 CLASS net/minecraft/client/main/Main net/minecraft/client/main/Main
 	METHOD main main ([Ljava/lang/String;)V
 		ARG 0 args
-CLASS net/minecraft/server/MinecraftServer net/minecraft/server/MinecraftServer
 CLASS net/minecraft/client/ClientBrandRetriever net/minecraft/client/ClientBrandRetriever
 	METHOD getClientModName getClientModName ()Ljava/lang/String;
