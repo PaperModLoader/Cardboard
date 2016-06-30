@@ -49,16 +49,130 @@ CLASS none/h
 		FIELD e UNIX Lnone/h$a;
 	METHOD a getOperatingSystem ()Lnone/h$a;
 CLASS none/j net/minecraft/server/command/Command
+CLASS none/l
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/q net/minecraft/server/command/AchievementCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/r net/minecraft/server/command/BanIPCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/s net/minecraft/server/command/BanCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/t net/minecraft/server/command/BlockDataCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/u net/minecraft/server/command/ClearCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/v net/minecraft/server/command/CloneCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/w net/minecraft/server/command/TestForBlocksCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/x net/minecraft/server/command/DeopCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/y net/minecraft/server/command/DebugCommand
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/z net/minecraft/server/command/DefaultGamemodeCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/aa
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ab
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ac
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ad
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ae
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/af
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ag
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ah
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ai
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/aj
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ak
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/al
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/am
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/an
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ao
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ap
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/aq
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ar
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/as
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/at
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/au
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/av
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/aw
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ax
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ay
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/az
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ba
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bb
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bc
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/be
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bf
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bg
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bh
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bi
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bj
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bk net/minecraft/server/command/StatisticsCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bl net/minecraft/server/command/StopServerCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bm net/minecraft/server/command/StopSoundCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bn net/minecraft/server/command/SummonCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bo net/minecraft/server/command/TeleportCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bp net/minecraft/server/command/TellRawCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/br net/minecraft/server/command/TestForBlockCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bs net/minecraft/server/command/TestforCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bt net/minecraft/server/command/TimeCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bu
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bv
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bw net/minecraft/server/command/TPCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bx net/minecraft/server/command/TriggerCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/by net/minecraft/server/command/WeatherCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/bz net/minecraft/server/command/WhitelistCommand
+	METHOD c getName ()Ljava/lang/String;
+CLASS none/ca
+	METHOD c getName ()Ljava/lang/String;
 CLASS none/ls
 	METHOD a spawnEntity (Lnone/rw;)Z
 CLASS none/ru net/minecraft/server/entity/AreaEffectCloudEntity
