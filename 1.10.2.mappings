@@ -242,6 +242,13 @@ CLASS none/aal net/minecraft/entity/PotionEntity
 CLASS none/aam net/minecraft/entity/ArrowEntity
 CLASS none/aan net/minecraft/entity/WitherSkullEntity
 CLASS none/aap net/minecraft/entity/BoatEntity
+	CLASS none/aap$b BoatType
+		FIELD a OAK Lnone/aap$b;
+		FIELD b SPRUCE Lnone/aap$b;
+		FIELD c BIRCH Lnone/aap$b;
+		FIELD d JUNGLE Lnone/aap$b;
+		FIELD e ACACIA Lnone/aap$b;
+		FIELD f DARK_OAK Lnone/aap$b;
 CLASS none/aaq net/minecraft/entity/minecart/MinecartEntity
 	CLASS none/aaq$a MinecartType
 		FIELD a EMPTY Lnone/aaq$a;
@@ -270,11 +277,20 @@ CLASS none/acf net/minecraft/item/ArmorItem
 CLASS none/acg net/minecraft/item/ArmorStandItem
 CLASS none/ach net/minecraft/item/ArrowItem
 CLASS none/aci net/minecraft/item/AxeItem
+CLASS none/acj net/minecraft/item/BannerItem
+CLASS none/ack net/minecraft/item/BedItem
+CLASS none/acm net/minecraft/item/PlaceableItem
 CLASS none/acn net/minecraft/item/BoatItem
+CLASS none/aco net/minecraft/item/BookItem
+CLASS none/acp net/minecraft/item/BottleItem
 CLASS none/acq net/minecraft/item/BowItem
 CLASS none/acr net/minecraft/item/StewItem
 CLASS none/acs net/minecraft/item/BucketItem
+CLASS none/act net/minecraft/item/CarrotOnAStickItem
+CLASS none/acu net/minecraft/item/ChorusFruitItem
+CLASS none/acv net/minecraft/item/ClockItem
 CLASS none/acw net/minecraft/item/CoalItem
+CLASS none/acx net/minecraft/item/CompassItem
 CLASS none/acz net/minecraft/client/tab/CreativeTab
 	CLASS none/acz$1
 		METHOD e getTabIcon ()Lnone/adx;
@@ -323,12 +339,24 @@ CLASS none/acz net/minecraft/client/tab/CreativeTab
 	METHOD c getTranslation ()Ljava/lang/String;
 	METHOD e getTabIcon ()Lnone/adx;
 CLASS none/adb net/minecraft/item/DoorItem
+CLASS none/add net/minecraft/item/DyeItem
+CLASS none/adf net/minecraft/item/EggItem
 CLASS none/adg net/minecraft/item/ElytraItem
 CLASS none/adh net/minecraft/item/MapItem
 CLASS none/adi net/minecraft/item/EnchantedBookItem
+CLASS none/adj net/minecraft/item/EndCrystalItem
+CLASS none/adk net/minecraft/item/EyeOfEnderItem
+CLASS none/adl net/minecraft/item/EnderPearlItem
+CLASS none/adm net/minecraft/item/ExperienceBottleItem
+CLASS none/adn net/minecraft/item/FireChargeItem
+CLASS none/ado net/minecraft/item/FireworkChargeItem
+CLASS none/adp net/minecraft/item/FireworksItem
+CLASS none/adq net/minecraft/item/FishItem
 CLASS none/adr net/minecraft/item/FishingRodItem
 CLASS none/ads net/minecraft/item/FlintAndSteelItem
 CLASS none/adt net/minecraft/item/FoodItem
+CLASS none/adu net/minecraft/item/GoldenAppleItem
+CLASS none/adv net/minecraft/item/PaintingItem
 CLASS none/adw net/minecraft/item/HoeItem
 CLASS none/adx net/minecraft/item/Item
 	FIELD n tab Lnone/acz;
@@ -543,16 +571,26 @@ CLASS none/aeb net/minecraft/item/ItemHandler
 	FIELD z DIAMOND_AXE Lnone/adx;
 	METHOD a get (Ljava/lang/String;)Lnone/adx;
 		ARG 0 name
+CLASS none/aec net/minecraft/item/LeashItem
+CLASS none/aee net/minecraft/item/LingeringPotionItem
 CLASS none/aef net/minecraft/item/FilledMapItem
+CLASS none/aeg net/minecraft/item/MilkBucketItem
 CLASS none/aeh net/minecraft/item/MinecartItem
+CLASS none/aej net/minecraft/item/NameTagItem
 CLASS none/aek net/minecraft/item/PickaxeItem
 CLASS none/aem net/minecraft/item/PotionItem
 CLASS none/aeo net/minecraft/item/RecordItem
+CLASS none/aep net/minecraft/item/RedstoneItem
 CLASS none/aeq net/minecraft/item/SaddleItem
+CLASS none/aer net/minecraft/item/PlantableFoodItem
 CLASS none/aes net/minecraft/item/SeedItem
 CLASS none/aeu net/minecraft/item/ShearsItem
 CLASS none/aev net/minecraft/item/ShieldItem
 CLASS none/aew net/minecraft/item/ShovelItem
+CLASS none/aex net/minecraft/item/SignItem
+CLASS none/aey net/minecraft/item/NetherStarItem
+CLASS none/aez net/minecraft/item/SkullItem
+CLASS none/afc net/minecraft/item/SnowballItem
 CLASS none/afd net/minecraft/item/SpawnEggItem
 	METHOD a (Lnone/adz;Lnone/zs;Lnone/aid;Lnone/cm;Lnone/qr;Lnone/ct;FFF)Lnone/qt;
 		ARG 2 world
@@ -561,7 +599,12 @@ CLASS none/afd net/minecraft/item/SpawnEggItem
 	METHOD a (Lnone/aid;Lnone/zs;Lnone/adz;Lnone/rw;)V
 		ARG 0 world
 		ARG 3 entity
+CLASS none/afe net/minecraft/item/SpectralArrowItem
+CLASS none/aff net/minecraft/item/SplashPotionItem
 CLASS none/afg net/minecraft/item/SwordItem
+CLASS none/afi net/minecraft/item/TippedArrowItem
+CLASS none/afl net/minecraft/item/WritableBookItem
+CLASS none/afm net/minecraft/item/WrittenBookItem
 CLASS none/aid net/minecraft/world/World
 	FIELD r random Ljava/util/Random;
 	METHOD a spawnEntity (Lnone/rw;)Z
@@ -580,6 +623,71 @@ CLASS none/aiq net/minecraft/world/biome/Biome
 		ARG 0 world
 		ARG 1 random
 CLASS none/ait net/minecraft/world/biome/BiomePopulator
+CLASS none/aiv net/minecraft/world/biome/BiomeHandler
+	FIELD A STONE_BEACH Lnone/aiq;
+	FIELD B COLD_BEACH Lnone/aiq;
+	FIELD C BIRCH_FOREST Lnone/aiq;
+	FIELD D BIRCH_FOREST_HILLS Lnone/aiq;
+	FIELD E ROOFED_FOREST Lnone/aiq;
+	FIELD F COLD_TAIGA Lnone/aiq;
+	FIELD G COLD_TAIGA_HILLS Lnone/aiq;
+	FIELD H REDWOOD_TAIGA Lnone/aiq;
+	FIELD I REDWOOD_TAIGA_HILLS Lnone/aiq;
+	FIELD J EXTREME_HILLS_FOREST Lnone/aiq;
+	FIELD K SAVANNA Lnone/aiq;
+	FIELD L SAVANNA_ROCK Lnone/aiq;
+	FIELD M MESA Lnone/aiq;
+	FIELD N MESA_ROCK Lnone/aiq;
+	FIELD O MESA_CLEAR_ROCK Lnone/aiq;
+	FIELD P VOID Lnone/aiq;
+	FIELD Q MUTATED_PLAINS Lnone/aiq;
+	FIELD R MUTATED_DESERT Lnone/aiq;
+	FIELD S MUTATED_EXTREME_HILLS Lnone/aiq;
+	FIELD T MUTATED_FOREST Lnone/aiq;
+	FIELD U MUTATED_TAIGA Lnone/aiq;
+	FIELD V MUTATED_SWAMPLAND Lnone/aiq;
+	FIELD W MUTATED_ICE_PLAINS Lnone/aiq;
+	FIELD X MUTATED_JUNGLE Lnone/aiq;
+	FIELD Y MUTATED_JUNGLE_EDGE Lnone/aiq;
+	FIELD Z MUTATED_BIRCH_FOREST Lnone/aiq;
+	FIELD a OCEAN Lnone/aiq;
+	FIELD aa MUTATED_BIRCH_FOREST_HILLS Lnone/aiq;
+	FIELD ab MUTATED_ROOFED_FOREST Lnone/aiq;
+	FIELD ac MUTATED_COLD_TAIGA Lnone/aiq;
+	FIELD ad MUTATED_REDWOOD_TAIGA Lnone/aiq;
+	FIELD ae MUTATED_REDWOOD_TAIGA_HILLS Lnone/aiq;
+	FIELD af MUTATED_EXTREME_HILLS_FOREST Lnone/aiq;
+	FIELD ag MUTATED_SAVANNA Lnone/aiq;
+	FIELD ah MUTATED_SAVANNA_ROCK Lnone/aiq;
+	FIELD ai MUTATED_MESA Lnone/aiq;
+	FIELD aj MUTATED_MESA_ROCK Lnone/aiq;
+	FIELD ak MUTATED_MESA_CLEAR_ROCK Lnone/aiq;
+	FIELD b DEFAULT_BIOME Lnone/aiq;
+	FIELD c PLAINS Lnone/aiq;
+	FIELD d DESERT Lnone/aiq;
+	FIELD e EXTREME_HILLS Lnone/aiq;
+	FIELD f FOREST Lnone/aiq;
+	FIELD g TAIGA Lnone/aiq;
+	FIELD h SWAMPLAND Lnone/aiq;
+	FIELD i RIVER Lnone/aiq;
+	FIELD j HELL Lnone/aiq;
+	FIELD k SKY Lnone/aiq;
+	FIELD l FROZEN_OCEAN Lnone/aiq;
+	FIELD m FROZEN_RIVER Lnone/aiq;
+	FIELD n ICE_PLAINS Lnone/aiq;
+	FIELD o ICE_MOUNTAINS Lnone/aiq;
+	FIELD p MUSHROOM_ISLAND Lnone/aiq;
+	FIELD q MUSHROOM_ISLAND_SHORE Lnone/aiq;
+	FIELD r BEACH Lnone/aiq;
+	FIELD s DESERT_HILLS Lnone/aiq;
+	FIELD t FOREST_HILLS Lnone/aiq;
+	FIELD u TAIGA_HILLS Lnone/aiq;
+	FIELD v HILLS Lnone/aiq;
+	FIELD w JUNGLE Lnone/aiq;
+	FIELD x JUNGLE_HILLS Lnone/aiq;
+	FIELD y JUNGLE_EDGE Lnone/aiq;
+	FIELD z DEEP_OCEAN Lnone/aiq;
+	METHOD a get (Ljava/lang/String;)Lnone/aiq;
 CLASS none/aix net/minecraft/world/biome/DesertBiome
 	METHOD a (Lnone/aid;Ljava/util/Random;Lnone/cm;)V
 		ARG 0 world
@@ -591,6 +699,8 @@ CLASS none/ajd net/minecraft/world/biome/IceBiome
 CLASS none/aje net/minecraft/world/biome/JungleBiome
 CLASS none/ajf net/minecraft/world/biome/MesaBiome
 CLASS none/ajg net/minecraft/world/biome/MushroomBiome
+CLASS none/ajh net/minecraft/world/biome/MutatedBirchForest
+CLASS none/aji net/minecraft/world/biome/MutatedSavanna
 CLASS none/ajj net/minecraft/world/biome/OceanBiome
 CLASS none/ajk net/minecraft/world/biome/PlainsBiome
 CLASS none/ajl net/minecraft/world/biome/RiverBiome
