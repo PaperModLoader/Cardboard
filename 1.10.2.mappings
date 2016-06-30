@@ -335,7 +335,7 @@ CLASS none/adx net/minecraft/server/item/Item
 	METHOD a registerItem (ILjava/lang/String;Lnone/adx;)V
 	METHOD a setTab (Lnone/acz;)Lnone/adx;
 		ARG 0 tab
-CLASS none/aeb net/minecraft/server/item/Items
+CLASS none/aeb net/minecraft/server/item/ItemHandler
 	FIELD A STICK Lnone/adx;
 	FIELD B BOWL Lnone/adx;
 	FIELD C MUSHROOM_STEW Lnone/adx;
@@ -602,7 +602,7 @@ CLASS none/akb net/minecraft/server/block/RailBlock
 CLASS none/akd net/minecraft/server/block/BedBlock
 CLASS none/akf net/minecraft/server/block/Block
 	METHOD a setTab (Lnone/acz;)Lnone/akf;
-CLASS none/akg net/minecraft/server/block/Blocks
+CLASS none/akg net/minecraft/server/block/BlockHandler
 	FIELD A SANDSTONE Lnone/akf;
 	FIELD B NOTEBLOCK Lnone/akf;
 	FIELD C BED Lnone/akf;
