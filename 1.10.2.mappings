@@ -178,13 +178,286 @@ CLASS none/bz net/minecraft/command/WhitelistCommand
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/ca
 	METHOD c getName ()Ljava/lang/String;
+CLASS none/cm net/minecraft/util/Position
+	CLASS none/cm$a
+		METHOD p getX ()I
+		METHOD q getY ()I
+		METHOD r getZ ()I
 CLASS none/ct
 	CLASS none/ct$a
 		METHOD m getName ()Ljava/lang/String;
 	METHOD m getName ()Ljava/lang/String;
+CLASS none/di
+	METHOD p getX ()I
+	METHOD q getY ()I
+	METHOD r getZ ()I
+CLASS none/dp net/minecraft/util/nbt/ByteArrayTag
+	FIELD b values [B
+	METHOD <init> ([B)V
+		ARG 0 values
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 input
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD c values ()[B
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+CLASS none/dq net/minecraft/util/nbt/ByteTag
+	FIELD b value B
+	METHOD <init> (B)V
+		ARG 0 value
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 input
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD c copy ()Lnone/dq;
+	METHOD d toLong ()J
+	METHOD e toInteger ()I
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+	METHOD f toShort ()S
+	METHOD g toByte ()B
+	METHOD h toDouble ()D
+	METHOD i toFloat ()F
+CLASS none/dr net/minecraft/util/nbt/CompoundTag
+	FIELD b tags Ljava/util/Map;
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 input
+	METHOD a readByte (Ljava/io/DataInput;Lnone/dz;)B
+		ARG 0 input
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD a getUUID (Ljava/lang/String;)Ljava/util/UUID;
+		ARG 0 key
+	METHOD a setByte (Ljava/lang/String;B)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setDouble (Ljava/lang/String;D)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setFloat (Ljava/lang/String;F)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setInteger (Ljava/lang/String;I)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setLong (Ljava/lang/String;J)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setString (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setUUID (Ljava/lang/String;Ljava/util/UUID;)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a set (Ljava/lang/String;Lnone/ef;)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setShort (Ljava/lang/String;S)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setBoolean (Ljava/lang/String;Z)V
+		ARG 0 key
+		ARG 1 value
+	METHOD a setByteArray (Ljava/lang/String;[B)V
+		ARG 0 key
+		ARG 1 values
+	METHOD a setIntegerArray (Ljava/lang/String;[I)V
+		ARG 0 key
+		ARG 1 values
+	METHOD a (Lnone/dr;)V
+		ARG 0 tag
+	METHOD b copy ()Lnone/ef;
+	METHOD b readUTF (Ljava/io/DataInput;Lnone/dz;)Ljava/lang/String;
+		ARG 0 input
+	METHOD b (Ljava/lang/String;)Z
+		ARG 0 key
+	METHOD b (Ljava/lang/String;I)Z
+	METHOD b_ isEmpty ()Z
+	METHOD c getKeys ()Ljava/util/Set;
+	METHOD c get (Ljava/lang/String;)Lnone/ef;
+		ARG 0 key
+	METHOD d size ()I
+	METHOD d getByte (Ljava/lang/String;)B
+		ARG 0 key
+	METHOD e hasTag (Ljava/lang/String;)Z
+		ARG 0 key
+	METHOD g getShort (Ljava/lang/String;)S
+		ARG 0 key
+	METHOD h getInteger (Ljava/lang/String;)I
+		ARG 0 key
+	METHOD i getLong (Ljava/lang/String;)J
+		ARG 0 key
+	METHOD j getFloat (Ljava/lang/String;)F
+		ARG 0 key
+	METHOD k getDouble (Ljava/lang/String;)D
+		ARG 0 key
+	METHOD l getString (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 key
+	METHOD m getByteArray (Ljava/lang/String;)[B
+		ARG 0 key
+	METHOD n getIntegerArray (Ljava/lang/String;)[I
+		ARG 0 key
+	METHOD o getCompoundTag (Ljava/lang/String;)Lnone/dr;
+		ARG 0 key
+	METHOD q removeTag (Ljava/lang/String;)V
+		ARG 0 key
+CLASS none/ds net/minecraft/util/nbt/DoubleTag
+	FIELD b value D
+	METHOD <init> (D)V
+		ARG 0 value
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 input
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD c copy ()Lnone/ds;
+	METHOD d toLong ()J
+	METHOD e toInteger ()I
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+	METHOD f toShort ()S
+	METHOD g toByte ()B
+	METHOD h toDouble ()D
+	METHOD i toFloat ()F
+CLASS none/dt
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+	METHOD a serialize (Ljava/io/DataOutput;)V
+	METHOD b copy ()Lnone/ef;
+CLASS none/du net/minecraft/util/nbt/FloatTag
+	FIELD b value F
+	METHOD <init> (F)V
+		ARG 0 value
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 input
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD c copy ()Lnone/du;
+	METHOD d toLong ()J
+	METHOD e toInteger ()I
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+	METHOD f toShort ()S
+	METHOD g toByte ()B
+	METHOD h toDouble ()D
+	METHOD i toFloat ()F
+CLASS none/dv net/minecraft/util/nbt/IntegerArrayTag
+	FIELD b values [I
+	METHOD <init> ([I)V
+		ARG 0 values
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 input
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD c copy ()Lnone/dv;
+	METHOD d values ()[I
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+CLASS none/dw net/minecraft/util/nbt/IntegerTag
+	FIELD b value I
+	METHOD <init> (I)V
+		ARG 0 value
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 output
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD c copy ()Lnone/dw;
+	METHOD d toLong ()J
+	METHOD e toInteger ()I
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+	METHOD f toShort ()S
+	METHOD g toByte ()B
+	METHOD h toDouble ()D
+	METHOD i toFloat ()F
+CLASS none/dx
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+	METHOD a serialize (Ljava/io/DataOutput;)V
+	METHOD b copy ()Lnone/ef;
+	METHOD b_ isEmpty ()Z
+CLASS none/dy net/minecraft/util/nbt/LongTag
+	FIELD b value J
+	METHOD <init> (J)V
+		ARG 0 value
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 output
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD c copy ()Lnone/dy;
+	METHOD d toLong ()J
+	METHOD e toInteger ()I
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+	METHOD f toShort ()S
+	METHOD g toByte ()B
+	METHOD h toDouble ()D
+	METHOD i toFloat ()F
+CLASS none/ec net/minecraft/util/nbt/NumericalTag
+	METHOD d toLong ()J
+	METHOD e toInteger ()I
+	METHOD f toShort ()S
+	METHOD g toByte ()B
+	METHOD h toDouble ()D
+	METHOD i toFloat ()F
+CLASS none/ed net/minecraft/util/nbt/ShortTag
+	FIELD b value S
+	METHOD <init> (S)V
+		ARG 0 value
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 input
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD c copy ()Lnone/ed;
+	METHOD d toLong ()J
+	METHOD e toInteger ()I
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+	METHOD f toShort ()S
+	METHOD g toByte ()B
+	METHOD h toDouble ()D
+	METHOD i toFloat ()F
+CLASS none/ee net/minecraft/util/nbt/StringTag
+	FIELD b value Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;)V
+		ARG 0 value
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+		ARG 0 input
+	METHOD a serialize (Ljava/io/DataOutput;)V
+		ARG 0 output
+	METHOD b copy ()Lnone/ef;
+	METHOD b_ isEmpty ()Z
+	METHOD c copy ()Lnone/ee;
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 0 object
+CLASS none/ef net/minecraft/util/nbt/Tag
+	METHOD a id ()B
+	METHOD a deserialize (Ljava/io/DataInput;ILnone/dz;)V
+	METHOD a serialize (Ljava/io/DataOutput;)V
+	METHOD b copy ()Lnone/ef;
+	METHOD b_ isEmpty ()Z
 CLASS none/kn net/minecraft/util/Identifier
 CLASS none/ls
 	METHOD a spawnEntity (Lnone/rw;)Z
+	METHOD k handleUpdate ()V
 CLASS none/lu
 	METHOD m handleUpdate ()V
 CLASS none/nj net/minecraft/client/sound/Sounds
@@ -279,6 +552,7 @@ CLASS none/ot
 CLASS none/ru net/minecraft/entity/AreaEffectCloudEntity
 	METHOD m handleUpdate ()V
 CLASS none/rw net/minecraft/entity/Entity
+	FIELD T age I
 	FIELD g entityID I
 	FIELD l world Lnone/aid;
 	METHOD <init> (Lnone/aid;)V
@@ -478,6 +752,7 @@ CLASS none/aau net/minecraft/entity/minecart/FurnaceMinecartEntity
 	METHOD m handleUpdate ()V
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aav net/minecraft/entity/minecart/HopperMinecartEntity
+	METHOD D getWorld ()Lnone/aid;
 	METHOD m handleUpdate ()V
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aaw net/minecraft/entity/minecart/EmptyMinecartEntity
@@ -842,6 +1117,7 @@ CLASS none/aid net/minecraft/world/World
 	FIELD E isClient Z
 	FIELD r random Ljava/util/Random;
 	METHOD a spawnEntity (Lnone/rw;)Z
+	METHOD k handleUpdate ()V
 CLASS none/aip net/minecraft/world/biome/ColdBeachBiome
 CLASS none/aiq net/minecraft/world/biome/Biome
 	FIELD r topBlock Lnone/ars;
@@ -957,12 +1233,14 @@ CLASS none/ajw net/minecraft/block/AnvilBlock
 CLASS none/ajx net/minecraft/block/BannerBlock
 	CLASS none/ajx$a Standing
 	CLASS none/ajx$b Hanging
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/ajy net/minecraft/block/BarrierBlock
 CLASS none/ajz net/minecraft/block/EntityBlock
 CLASS none/akb net/minecraft/block/BaseRailBlock
 	CLASS none/akb$b
 		METHOD m getName ()Ljava/lang/String;
 CLASS none/akc net/minecraft/block/BeaconBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/akd net/minecraft/block/BedBlock
 	CLASS none/akd$a
 		METHOD m getName ()Ljava/lang/String;
@@ -1201,24 +1479,29 @@ CLASS none/akg net/minecraft/block/BlockHandler
 CLASS none/akh net/minecraft/block/BoneBlock
 CLASS none/akj net/minecraft/block/BookshelfBlock
 CLASS none/akk net/minecraft/block/BrewingStandBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/akm net/minecraft/block/ButtonBlock
 CLASS none/akn net/minecraft/block/CactusBlock
 CLASS none/ako net/minecraft/block/CakeBlock
 CLASS none/akp net/minecraft/block/CarrotsBlock
 CLASS none/akq net/minecraft/block/CauldonBlcok
 CLASS none/akr net/minecraft/block/ChestBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/aks net/minecraft/block/ChorusFlowerBlock
 CLASS none/akt net/minecraft/block/ChorusPlantBlock
 CLASS none/aku net/minecraft/block/ClayBlock
 CLASS none/akv net/minecraft/block/CocoaBlock
 CLASS none/akw net/minecraft/block/WoolBlock
 CLASS none/akx net/minecraft/block/CommandBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/aky net/minecraft/block/ComparatorBlock
 	CLASS none/aky$a
 		METHOD m getName ()Ljava/lang/String;
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/akz net/minecraft/block/CraftingTableBlock
 CLASS none/ala net/minecraft/block/CropBlock
 CLASS none/alb net/minecraft/block/DaylightDetectorBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/alc net/minecraft/block/DeadbushBlock
 CLASS none/ald net/minecraft/block/DetectorRailBlock
 CLASS none/alf net/minecraft/block/RotatedBlock
@@ -1226,6 +1509,7 @@ CLASS none/alg net/minecraft/block/DirtBlock
 	CLASS none/alg$a
 		METHOD m getName ()Ljava/lang/String;
 CLASS none/alh net/minecraft/block/DispenserBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/ali net/minecraft/block/DoorBlock
 	CLASS none/ali$a
 		METHOD m getName ()Ljava/lang/String;
@@ -1238,14 +1522,22 @@ CLASS none/alj net/minecraft/block/DoublePlantBlock
 		METHOD m getName ()Ljava/lang/String;
 CLASS none/alk net/minecraft/block/DragonEgg
 CLASS none/all net/minecraft/block/DropperBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/alm net/minecraft/block/WaterBlock
 CLASS none/aln net/minecraft/block/EnchantingTableBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/alo net/minecraft/block/EndGatewayBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/alp net/minecraft/block/EndPortalBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/alq net/minecraft/block/EndPortalFrameBlock
 CLASS none/alr net/minecraft/block/EndRodBlock
 CLASS none/als net/minecraft/block/EnderChestBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/alt net/minecraft/block/BlockEntityProvider
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
+		ARG 0 world
+		ARG 1 metadata
 CLASS none/alu net/minecraft/block/FallingBlock
 CLASS none/alv net/minecraft/block/FarmlandBlock
 CLASS none/alw net/minecraft/block/FenceBlock
@@ -1257,11 +1549,13 @@ CLASS none/alz
 CLASS none/ama net/minecraft/block/FlowerPotBlock
 	CLASS none/ama$a
 		METHOD m getName ()Ljava/lang/String;
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/amb net/minecraft/block/FrostedIceBlock
 CLASS none/amc net/minecraft/block/DoubleStoneSlab2Block
 CLASS none/amd net/minecraft/block/DoubleStoneSlabBlock
 CLASS none/ame net/minecraft/block/DoubleWoodenSlabBlock
 CLASS none/amf net/minecraft/block/FurnaceBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/amg net/minecraft/block/GlassBlock
 CLASS none/amh net/minecraft/block/GlowstoneBlock
 CLASS none/ami net/minecraft/block/GrassBlock
@@ -1279,12 +1573,17 @@ CLASS none/amp net/minecraft/block/WoodenSlabBlock
 CLASS none/amq net/minecraft/block/HardenedClayBlock
 CLASS none/amr net/minecraft/block/HayBaleBlock
 CLASS none/ams net/minecraft/block/HopperBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/amt net/minecraft/block/RotatedHorizontalBlock
 CLASS none/amu net/minecraft/block/BigMushroomBlock
 	CLASS none/amu$a
 		METHOD m getName ()Ljava/lang/String;
 CLASS none/amv net/minecraft/block/IceBlock
 CLASS none/amw net/minecraft/block/JukeboxBlock
+	CLASS none/amw$a
+		METHOD a deserialize (Lnone/dr;)V
+		METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/amx net/minecraft/block/LadderBlock
 CLASS none/amy net/minecraft/block/LeavesBlock
 CLASS none/ana net/minecraft/block/LeverBlock
@@ -1296,6 +1595,7 @@ CLASS none/anc
 CLASS none/and net/minecraft/block/MagmaBlock
 CLASS none/ane net/minecraft/block/MelonBlock
 CLASS none/ang net/minecraft/block/SpawnerBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/anh net/minecraft/block/MonsterEggBlock
 	CLASS none/anh$a
 		METHOD m getName ()Ljava/lang/String;
@@ -1311,6 +1611,7 @@ CLASS none/anp
 		METHOD m getName ()Ljava/lang/String;
 CLASS none/anq net/minecraft/block/BedrockBlock
 CLASS none/anr net/minecraft/block/NoteblockBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/ans net/minecraft/block/ObsidianBlock
 CLASS none/ant net/minecraft/block/NewLeavesBlock
 CLASS none/anu net/minecraft/block/LogBlock
@@ -1358,7 +1659,10 @@ CLASS none/aou net/minecraft/block/SandstoneBlock
 		METHOD m getName ()Ljava/lang/String;
 CLASS none/aov net/minecraft/block/SaplingBlock
 CLASS none/aow net/minecraft/block/SeaLanternBlock
+CLASS none/aox net/minecraft/block/SignBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/aoy net/minecraft/block/SkullBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/aoz net/minecraft/block/SlimeBlock
 CLASS none/apa net/minecraft/block/SnowBlock
 CLASS none/apb net/minecraft/block/SnowLayerBlock
@@ -1385,6 +1689,7 @@ CLASS none/apo
 	CLASS none/apo$a
 		METHOD m getName ()Ljava/lang/String;
 CLASS none/app net/minecraft/block/StructureBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/apq net/minecraft/block/StructureVoidBlock
 CLASS none/apr net/minecraft/block/TallgrassBlock
 	CLASS none/apr$a
@@ -1408,14 +1713,119 @@ CLASS none/aqd net/minecraft/block/WeightedPressurePlateBlock
 CLASS none/aqe net/minecraft/block/WoodenButtonBlock
 CLASS none/aqg net/minecraft/block/CarpetBlock
 CLASS none/aqh net/minecraft/block/DandelionBlock
-CLASS none/are
+CLASS none/aqi net/minecraft/block/entity/BannerBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD c handleSerialize ()Lnone/dr;
+CLASS none/aqj net/minecraft/block/entity/BeaconBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD c handleSerialize ()Lnone/dr;
+CLASS none/aqk net/minecraft/block/entity/BlockEntity
+	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD b world Lnone/aid;
+	FIELD c position Lnone/cm;
+	FIELD e block Lnone/akf;
+	FIELD f IDENTIFIER_TO_ENTITY Ljava/util/Map;
+	FIELD g ENTITY_TO_IDENTIFIER Ljava/util/Map;
+	METHOD D getWorld ()Lnone/aid;
+	METHOD a getDistanceSquared (DDD)D
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD a register (Ljava/lang/Class;Ljava/lang/String;)V
+		ARG 0 entity
+		ARG 1 identifier
+	METHOD a setWorld (Lnone/aid;)V
+		ARG 0 world
+	METHOD a create (Lnone/aid;Lnone/dr;)Lnone/aqk;
+		ARG 0 world
+		ARG 1 tag
+	METHOD a setPosition (Lnone/cm;)V
+		ARG 0 position
+	METHOD a deserialize (Lnone/dr;)V
+		ARG 0 tag
+	METHOD b (Lnone/aid;)V
+		ARG 0 world
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+		ARG 0 tag
+	METHOD c handleSerialize ()Lnone/dr;
+	METHOD c serialize (Lnone/dr;)Lnone/dr;
+		ARG 0 tag
+	METHOD t hasWorld ()Z
+	METHOD v getPosition ()Lnone/cm;
+	METHOD w getBlock ()Lnone/akf;
+CLASS none/aql net/minecraft/block/entity/CauldronBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqm net/minecraft/block/entity/ChestBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqn
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqo net/minecraft/block/entity/ComparatorBlockEntity
+	FIELD a outputSignal I
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqp net/minecraft/block/entity/DaylightDetectorBlockEntity
+CLASS none/aqq net/minecraft/block/entity/TrapBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqr net/minecraft/block/entity/DropperBlockEntity
+CLASS none/aqs net/minecraft/block/entity/EnchantingTableBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqt net/minecraft/block/entity/EnderChestBlockEntity
+CLASS none/aqu net/minecraft/block/entity/PotBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD c handleSerialize ()Lnone/dr;
+CLASS none/aqv net/minecraft/block/entity/FurnaceBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqw
+	METHOD D getWorld ()Lnone/aid;
+CLASS none/aqx net/minecraft/block/entity/HopperBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqy
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/aqz net/minecraft/block/entity/SpawnerBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD c handleSerialize ()Lnone/dr;
+CLASS none/ara
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+CLASS none/arc net/minecraft/block/entity/SignBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD c handleSerialize ()Lnone/dr;
+CLASS none/ard net/minecraft/block/entity/SkullBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD c handleSerialize ()Lnone/dr;
+CLASS none/are net/minecraft/block/entity/StructureBlockEntity
 	CLASS none/are$a
 		METHOD m getName ()Ljava/lang/String;
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD c handleSerialize ()Lnone/dr;
+CLASS none/arf net/minecraft/block/entity/EndGatewayBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
+	METHOD c handleSerialize ()Lnone/dr;
 CLASS none/arj net/minecraft/block/PistonBlock
 CLASS none/ark net/minecraft/block/PistonHeadBlock
 	CLASS none/ark$a
 		METHOD m getName ()Ljava/lang/String;
 CLASS none/arl net/minecraft/block/PistonExtensionBlock
+	METHOD a create (Lnone/aid;I)Lnone/aqk;
+CLASS none/arm net/minecraft/block/entity/PistonBlockEntity
+	METHOD a deserialize (Lnone/dr;)V
+	METHOD b handleSerialize (Lnone/dr;)Lnone/dr;
 CLASS none/axu net/minecraft/block/material/UnsolidMaterial
 	METHOD <init> (Lnone/axy;)V
 		ARG 0 color
@@ -1507,6 +1917,84 @@ CLASS none/axy net/minecraft/block/material/MapColor
 		ARG 0 id
 		ARG 1 color
 CLASS none/axz net/minecraft/block/material/PortalBlock
+CLASS none/bak net/minecraft/util/loot/LootTables
+	FIELD A SNOWMAN Lnone/kn;
+	FIELD B RABBIT Lnone/kn;
+	FIELD C CHICKEN Lnone/kn;
+	FIELD D PIG Lnone/kn;
+	FIELD E POLAR_BEAR Lnone/kn;
+	FIELD F HORSE Lnone/kn;
+	FIELD G ZOMBIE_HORSE Lnone/kn;
+	FIELD H SKELETON_HORSE Lnone/kn;
+	FIELD I COW Lnone/kn;
+	FIELD J MOOSHROOM Lnone/kn;
+	FIELD K WOLF Lnone/kn;
+	FIELD L OCELOT Lnone/kn;
+	FIELD M SHEEP Lnone/kn;
+	FIELD N WHITE_SHEEP Lnone/kn;
+	FIELD O ORANGE_SHEEP Lnone/kn;
+	FIELD P MAGENTA_SHEEP Lnone/kn;
+	FIELD Q LIGHT_BLUE_SHEEP Lnone/kn;
+	FIELD R YELLOW_SHEEP Lnone/kn;
+	FIELD S LIME_SHEEP Lnone/kn;
+	FIELD T PINK_SHEEP Lnone/kn;
+	FIELD U GRAY_SHEEP Lnone/kn;
+	FIELD V SILVER_SHEEP Lnone/kn;
+	FIELD W CYAN_SHEEP Lnone/kn;
+	FIELD X PURPLE_SHEEP Lnone/kn;
+	FIELD Y BLUE_SHEEP Lnone/kn;
+	FIELD Z BROWN_SHEEP Lnone/kn;
+	FIELD a EMPTY Lnone/kn;
+	FIELD aa GREEN_SHEEP Lnone/kn;
+	FIELD ab RED_SHEEP Lnone/kn;
+	FIELD ac BLACK_SHEEP Lnone/kn;
+	FIELD ad BAT Lnone/kn;
+	FIELD ae SLIME Lnone/kn;
+	FIELD af MAGMA_CUBE Lnone/kn;
+	FIELD ag GHAST Lnone/kn;
+	FIELD ah SQUID Lnone/kn;
+	FIELD ai ENDERMITE Lnone/kn;
+	FIELD aj ZOMBIE Lnone/kn;
+	FIELD ak ZOMBIE_PIGMAN Lnone/kn;
+	FIELD al SKELETON Lnone/kn;
+	FIELD am WITHER_SKELETON Lnone/kn;
+	FIELD an STRAY Lnone/kn;
+	FIELD ao FISHING Lnone/kn;
+	FIELD ap FISHING_JUNK Lnone/kn;
+	FIELD aq FISHING_TREASURE Lnone/kn;
+	FIELD ar FISHING_FISH Lnone/kn;
+	FIELD as LOOT_TABLES Ljava/util/Set;
+	FIELD at IMMUTABLE_LOOT_TABLES Ljava/util/Set;
+	FIELD b BONUS_CHEST Lnone/kn;
+	FIELD c END_CITY_TREASURE Lnone/kn;
+	FIELD d SIMPLE_DUNGEON Lnone/kn;
+	FIELD e VILLAGE_BLACKSMITH Lnone/kn;
+	FIELD f ABANDONED_MINESHAFT Lnone/kn;
+	FIELD g NETHER_BRIDGE Lnone/kn;
+	FIELD h STRONGHOLD_LIBRARY Lnone/kn;
+	FIELD i STRONGHOLD_CROSSING Lnone/kn;
+	FIELD j STRONGHOLD_CORRIDOR Lnone/kn;
+	FIELD k DESERT_PYRAMID Lnone/kn;
+	FIELD l JUNGLE_TEMPLE Lnone/kn;
+	FIELD m JUNGLE_TEMPLE_DISPENSER Lnone/kn;
+	FIELD n IGLOO_CHEST Lnone/kn;
+	FIELD o WITCH Lnone/kn;
+	FIELD p BLAZE Lnone/kn;
+	FIELD q CREEPER Lnone/kn;
+	FIELD r SPIDER Lnone/kn;
+	FIELD s CAVE_SPIDER Lnone/kn;
+	FIELD t GIANT Lnone/kn;
+	FIELD u SILVERFISH Lnone/kn;
+	FIELD v ENDERMAN Lnone/kn;
+	FIELD w GUARDIAN Lnone/kn;
+	FIELD x ELDER_GUARDIAN Lnone/kn;
+	FIELD y SHULKER Lnone/kn;
+	FIELD z IRON_GOLEM Lnone/kn;
+	METHOD a getLootTables ()Ljava/util/Set;
+	METHOD a get (Ljava/lang/String;)Lnone/kn;
+		ARG 0 identifier
+	METHOD a get (Lnone/kn;)Lnone/kn;
+		ARG 0 identifier
 CLASS none/bcx net/minecraft/client/MinecraftClient
 	FIELD J LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD K MOJANG_IMAGE Lnone/kn;
@@ -1587,6 +2075,10 @@ CLASS none/bej
 CLASS none/bep
 	METHOD a mouseReleased (II)V
 	METHOD b getWidth ()I
+CLASS none/bfl net/minecraft/client/gui/SelectLanguageGUI
+	FIELD a returnGUI Lnone/bft;
+	METHOD <init> (Lnone/bft;Lnone/bcz;Lnone/bxn;)V
+		ARG 0 returnGUI
 CLASS none/bft net/minecraft/client/gui/ScreenGUI
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD j client Lnone/bcx;
@@ -1682,8 +2174,148 @@ CLASS none/bob net/minecraft/client/render/OpenGL
 		ARG 0 mask
 	METHOD n matrixMode (I)V
 		ARG 0 mode
+CLASS none/brr
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/brs
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bru
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/brv
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/brw
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/brx
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bry
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/brz
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsa
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsb
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsc
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsd
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bse
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsf
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsg
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsi net/minecraft/client/render/entity/Renderer
+	FIELD a SHADOW_TEXTURE Lnone/kn;
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+		ARG 0 entity
+	METHOD a (Lnone/rw;DDD)V
+		ARG 0 entity
+	METHOD a (Lnone/rw;DDDF)V
+		ARG 0 entity
+	METHOD a (Lnone/rw;DDDFF)V
+		ARG 0 entity
+	METHOD a (Lnone/rw;DDDLjava/lang/String;D)V
+		ARG 0 entity
+	METHOD a (Lnone/rw;Ljava/lang/String;DDDI)V
+		ARG 0 entity
+	METHOD a (Lnone/rw;Lnone/brf;DDD)Z
+		ARG 0 entity
+	METHOD b (Lnone/rw;)Z
+		ARG 0 entity
+	METHOD b (Lnone/rw;DDDFF)V
+		ARG 0 entity
+	METHOD c (Lnone/rw;)I
+		ARG 0 entity
+	METHOD c (Lnone/rw;DDDFF)V
+		ARG 0 entity
+CLASS none/bsj
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsk
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsl
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsm
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsn
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bso
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsp
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsq
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsr
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bss
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bst
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsv
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsw
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsx
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bsz
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btc
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btd
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bte
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btf
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btg
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bth
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bti
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btj
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btk
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btl
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btm
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btn
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bto
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btp
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btq
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btr
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bts
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btt
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btv
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btx
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bty
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/btz
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bua
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bub
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/buc
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bud
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
+CLASS none/bue
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
 CLASS none/but
 	FIELD a PIG_SADDLE_TEXTURE Lnone/kn;
+CLASS none/bvh
+	METHOD a getTexture (Lnone/rw;)Lnone/kn;
 CLASS none/bvu net/minecraft/client/util/DynamicResource
 	METHOD <init> (Ljava/awt/image/BufferedImage;)V
 		ARG 0 image
