@@ -178,10 +178,16 @@ CLASS none/bz net/minecraft/command/WhitelistCommand
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/ca
 	METHOD c getName ()Ljava/lang/String;
+CLASS none/ct
+	CLASS none/ct$a
+		METHOD m getName ()Ljava/lang/String;
+	METHOD m getName ()Ljava/lang/String;
 CLASS none/kn net/minecraft/util/Identifier
 CLASS none/ls
 	METHOD a spawnEntity (Lnone/rw;)Z
 CLASS none/nj net/minecraft/client/sound/Sounds
+CLASS none/ot
+	METHOD m getName ()Ljava/lang/String;
 CLASS none/ru net/minecraft/entity/AreaEffectCloudEntity
 CLASS none/rw net/minecraft/entity/Entity
 	FIELD g entityID I
@@ -192,23 +198,32 @@ CLASS none/rw net/minecraft/entity/Entity
 	METHOD h setEntityID (I)V
 		ARG 0 entityID
 CLASS none/sc net/minecraft/entity/XPOrbEntity
-CLASS none/wa net/minecraft/entity/BatEntity
-CLASS none/wd net/minecraft/entity/ChickenEntity
-CLASS none/we net/minecraft/entity/CowEntity
-CLASS none/wg net/minecraft/entity/MooshroomEntity
-CLASS none/wh net/minecraft/entity/OcelotEntity
-CLASS none/wi net/minecraft/entity/PigEntity
-CLASS none/wj net/minecraft/entity/PolarBearEntity
-CLASS none/wk net/minecraft/entity/RabbitEntity
-CLASS none/wl net/minecraft/entity/SheepEntity
-CLASS none/wm net/minecraft/entity/SnowmanEntity
-CLASS none/wn net/minecraft/entity/SquidEntity
-CLASS none/wo net/minecraft/entity/IronGolemEntity
-CLASS none/wq net/minecraft/entity/WolfEntity
-CLASS none/wr net/minecraft/entity/HorseEntity
+CLASS none/wa net/minecraft/entity/living/BatEntity
+CLASS none/wd net/minecraft/entity/living/ChickenEntity
+CLASS none/we net/minecraft/entity/living/CowEntity
+CLASS none/wg net/minecraft/entity/living/MooshroomEntity
+CLASS none/wh net/minecraft/entity/living/OcelotEntity
+CLASS none/wi net/minecraft/entity/living/PigEntity
+CLASS none/wj net/minecraft/entity/living/PolarBearEntity
+CLASS none/wk net/minecraft/entity/living/RabbitEntity
+CLASS none/wl net/minecraft/entity/living/SheepEntity
+	METHOD df isSheared ()Z
+CLASS none/wm net/minecraft/entity/living/SnowmanEntity
+CLASS none/wn net/minecraft/entity/living/SquidEntity
+CLASS none/wo net/minecraft/entity/living/IronGolemEntity
+CLASS none/wq net/minecraft/entity/living/WolfEntity
+CLASS none/wr net/minecraft/entity/living/HorseEntity
+CLASS none/ws net/minecraft/entity/living/HorseArmor
+	FIELD a NONE Lnone/ws;
+	FIELD b IRON Lnone/ws;
+	FIELD c GOLD Lnone/ws;
+	FIELD d DIAMOND Lnone/ws;
+	METHOD <init> (Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
+	METHOD a get (I)Lnone/ws;
+		ARG 0 id
 CLASS none/xa net/minecraft/entity/EnderCrystalEntity
-CLASS none/xb net/minecraft/entity/EnderDragonEntity
-CLASS none/xv net/minecraft/entity/WitherEntity
+CLASS none/xb net/minecraft/entity/boss/EnderDragonEntity
+CLASS none/xv net/minecraft/entity/boss/WitherEntity
 CLASS none/xx net/minecraft/entity/ArmorStandEntity
 CLASS none/xz net/minecraft/entity/ItemFrameEntity
 CLASS none/ya net/minecraft/entity/LeashKnotEntity
@@ -216,24 +231,24 @@ CLASS none/yb net/minecraft/entity/PaintingEntity
 CLASS none/yj net/minecraft/entity/FallingBlockEntity
 CLASS none/yk net/minecraft/entity/ItemEntity
 CLASS none/yl net/minecraft/entity/PrimedTNTEntity
-CLASS none/yn net/minecraft/entity/BlazeEntity
-CLASS none/yo net/minecraft/entity/CaveSpiderEntity
-CLASS none/yp net/minecraft/entity/CreeperEntity
-CLASS none/yq net/minecraft/entity/EndermanEntity
-CLASS none/yr net/minecraft/entity/EndermiteEntity
-CLASS none/yt net/minecraft/entity/GhastEntity
-CLASS none/yu net/minecraft/entity/GiantEntity
-CLASS none/yv net/minecraft/entity/GuardianEntity
-CLASS none/yw net/minecraft/entity/MagmaCubeEntity
-CLASS none/yy net/minecraft/entity/PigZombieEntity
-CLASS none/zb net/minecraft/entity/ShulkerEntity
-CLASS none/zc net/minecraft/entity/SilverfishEntity
-CLASS none/zd net/minecraft/entity/SkeletonEntity
-CLASS none/zf net/minecraft/entity/SlimeEntity
-CLASS none/zg net/minecraft/entity/SpiderEntity
-CLASS none/zh net/minecraft/entity/WitchEntity
-CLASS none/zi net/minecraft/entity/ZombieEntity
-CLASS none/zn net/minecraft/entity/VillagerEntity
+CLASS none/yn net/minecraft/entity/living/BlazeEntity
+CLASS none/yo net/minecraft/entity/living/CaveSpiderEntity
+CLASS none/yp net/minecraft/entity/living/CreeperEntity
+CLASS none/yq net/minecraft/entity/living/EndermanEntity
+CLASS none/yr net/minecraft/entity/living/EndermiteEntity
+CLASS none/yt net/minecraft/entity/living/GhastEntity
+CLASS none/yu net/minecraft/entity/living/GiantEntity
+CLASS none/yv net/minecraft/entity/living/GuardianEntity
+CLASS none/yw net/minecraft/entity/living/MagmaCubeEntity
+CLASS none/yy net/minecraft/entity/living/PigZombieEntity
+CLASS none/zb net/minecraft/entity/living/ShulkerEntity
+CLASS none/zc net/minecraft/entity/living/SilverfishEntity
+CLASS none/zd net/minecraft/entity/living/SkeletonEntity
+CLASS none/zf net/minecraft/entity/living/SlimeEntity
+CLASS none/zg net/minecraft/entity/living/SpiderEntity
+CLASS none/zh net/minecraft/entity/living/WitchEntity
+CLASS none/zi net/minecraft/entity/living/ZombieEntity
+CLASS none/zn net/minecraft/entity/living/VillagerEntity
 CLASS none/zw net/minecraft/entity/DragonFireballEntity
 CLASS none/zx net/minecraft/entity/EyeOfEnderEntity
 CLASS none/zz net/minecraft/entity/FireworkEntity
@@ -242,6 +257,7 @@ CLASS none/aad net/minecraft/entity/ShulkerBulletEntity
 CLASS none/aae net/minecraft/entity/SmallFireballEntity
 CLASS none/aaf net/minecraft/entity/SnowballEntity
 CLASS none/aag net/minecraft/entity/SpectralArrowEntity
+CLASS none/aah
 CLASS none/aai net/minecraft/entity/EggEntity
 CLASS none/aaj net/minecraft/entity/EnderPearlEntity
 CLASS none/aak net/minecraft/entity/ExperienceBottleEntity
@@ -346,6 +362,24 @@ CLASS none/acz net/minecraft/client/tab/CreativeTab
 	METHOD c getTranslation ()Ljava/lang/String;
 	METHOD e getTabIcon ()Lnone/adx;
 CLASS none/adb net/minecraft/item/DoorItem
+CLASS none/adc net/minecraft/util/Color
+	FIELD a WHITE Lnone/adc;
+	FIELD b ORANGE Lnone/adc;
+	FIELD c MAGENTA Lnone/adc;
+	FIELD d LIGHT_BLUE Lnone/adc;
+	FIELD e YELLOW Lnone/adc;
+	FIELD f LIME Lnone/adc;
+	FIELD g PINK Lnone/adc;
+	FIELD h GRAY Lnone/adc;
+	FIELD i SILVER Lnone/adc;
+	FIELD j CYAN Lnone/adc;
+	FIELD k PURPLE Lnone/adc;
+	FIELD l BLUE Lnone/adc;
+	FIELD m BROWN Lnone/adc;
+	FIELD n GREEN Lnone/adc;
+	FIELD o RED Lnone/adc;
+	FIELD p BLACK Lnone/adc;
+	METHOD m getName ()Ljava/lang/String;
 CLASS none/add net/minecraft/item/DyeItem
 CLASS none/adf net/minecraft/item/EggItem
 CLASS none/adg net/minecraft/item/ElytraItem
@@ -700,6 +734,14 @@ CLASS none/aix net/minecraft/world/biome/DesertBiome
 		ARG 0 world
 		ARG 1 random
 CLASS none/aiy net/minecraft/world/biome/ExtremeHillsBiome
+	METHOD a (Ljava/util/Random;)Lnone/auf;
+		ARG 0 random
+	METHOD a (Lnone/aid;Ljava/util/Random;Lnone/atv;IID)V
+		ARG 0 world
+		ARG 1 random
+	METHOD a (Lnone/aid;Ljava/util/Random;Lnone/cm;)V
+		ARG 0 world
+		ARG 1 random
 CLASS none/aja net/minecraft/world/biome/ForestBiome
 CLASS none/ajb net/minecraft/world/biome/NetherBiome
 CLASS none/ajd net/minecraft/world/biome/IceBiome
@@ -725,8 +767,12 @@ CLASS none/ajx net/minecraft/block/BannerBlock
 CLASS none/ajy net/minecraft/block/BarrierBlock
 CLASS none/ajz net/minecraft/block/EntityBlock
 CLASS none/akb net/minecraft/block/BaseRailBlock
+	CLASS none/akb$b
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/akc net/minecraft/block/BeaconBlock
 CLASS none/akd net/minecraft/block/BedBlock
+	CLASS none/akd$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/ake net/minecraft/block/BeetrootBlock
 CLASS none/akf net/minecraft/block/Block
 	FIELD a AIR Lnone/kn;
@@ -975,6 +1021,8 @@ CLASS none/akv net/minecraft/block/CocoaBlock
 CLASS none/akw net/minecraft/block/WoolBlock
 CLASS none/akx net/minecraft/block/CommandBlock
 CLASS none/aky net/minecraft/block/ComparatorBlock
+	CLASS none/aky$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/akz net/minecraft/block/CraftingTableBlock
 CLASS none/ala net/minecraft/block/CropBlock
 CLASS none/alb net/minecraft/block/DaylightDetectorBlock
@@ -982,9 +1030,19 @@ CLASS none/alc net/minecraft/block/DeadbushBlock
 CLASS none/ald net/minecraft/block/DetectorRailBlock
 CLASS none/alf net/minecraft/block/RotatedBlock
 CLASS none/alg net/minecraft/block/DirtBlock
+	CLASS none/alg$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/alh net/minecraft/block/DispenserBlock
 CLASS none/ali net/minecraft/block/DoorBlock
+	CLASS none/ali$a
+		METHOD m getName ()Ljava/lang/String;
+	CLASS none/ali$b
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/alj net/minecraft/block/DoublePlantBlock
+	CLASS none/alj$a
+		METHOD m getName ()Ljava/lang/String;
+	CLASS none/alj$b
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/alk net/minecraft/block/DragonEgg
 CLASS none/all net/minecraft/block/DropperBlock
 CLASS none/alm net/minecraft/block/WaterBlock
@@ -1000,7 +1058,12 @@ CLASS none/alv net/minecraft/block/FarmlandBlock
 CLASS none/alw net/minecraft/block/FenceBlock
 CLASS none/alx net/minecraft/block/FenceGateBlock
 CLASS none/aly net/minecraft/block/FireBlock
+CLASS none/alz
+	CLASS none/alz$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/ama net/minecraft/block/FlowerPotBlock
+	CLASS none/ama$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/amb net/minecraft/block/FrostedIceBlock
 CLASS none/amc net/minecraft/block/DoubleStoneSlab2Block
 CLASS none/amd net/minecraft/block/DoubleStoneSlabBlock
@@ -1013,6 +1076,11 @@ CLASS none/amj net/minecraft/block/PathBlock
 CLASS none/amk net/minecraft/block/GravelBlock
 CLASS none/aml net/minecraft/block/StoneSlab2Block
 CLASS none/amm net/minecraft/block/SlabBlock
+	CLASS none/amm$a Half
+		FIELD a TOP Lnone/amm$a;
+		FIELD b BOTTOM Lnone/amm$a;
+		FIELD c name Ljava/lang/String;
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/amn net/minecraft/block/StoneSlabBlock
 CLASS none/amp net/minecraft/block/WoodenSlabBlock
 CLASS none/amq net/minecraft/block/HardenedClayBlock
@@ -1020,15 +1088,24 @@ CLASS none/amr net/minecraft/block/HayBaleBlock
 CLASS none/ams net/minecraft/block/HopperBlock
 CLASS none/amt net/minecraft/block/RotatedHorizontalBlock
 CLASS none/amu net/minecraft/block/BigMushroomBlock
+	CLASS none/amu$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/amv net/minecraft/block/IceBlock
 CLASS none/amw net/minecraft/block/JukeboxBlock
 CLASS none/amx net/minecraft/block/LadderBlock
 CLASS none/amy net/minecraft/block/LeavesBlock
 CLASS none/ana net/minecraft/block/LeverBlock
+	CLASS none/ana$a
+		METHOD m getName ()Ljava/lang/String;
+CLASS none/anc
+	CLASS none/anc$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/and net/minecraft/block/MagmaBlock
 CLASS none/ane net/minecraft/block/MelonBlock
 CLASS none/ang net/minecraft/block/SpawnerBlock
 CLASS none/anh net/minecraft/block/MonsterEggBlock
+	CLASS none/anh$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/ani net/minecraft/block/MushroomBlock
 CLASS none/anj net/minecraft/block/MyceliumBlock
 CLASS none/ank net/minecraft/block/NetherBrickBlock
@@ -1036,6 +1113,9 @@ CLASS none/anl net/minecraft/block/NetherWartBlock
 CLASS none/anm net/minecraft/block/NetherrackBlock
 CLASS none/ann net/minecraft/block/Leaves2Block
 CLASS none/ano net/minecraft/block/Log2Block
+CLASS none/anp
+	CLASS none/anp$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/anq net/minecraft/block/BedrockBlock
 CLASS none/anr net/minecraft/block/NoteblockBlock
 CLASS none/ans net/minecraft/block/ObsidianBlock
@@ -1044,29 +1124,45 @@ CLASS none/anu net/minecraft/block/LogBlock
 CLASS none/anv net/minecraft/block/OreBlock
 CLASS none/anw net/minecraft/block/PackedIceBlock
 CLASS none/anx net/minecraft/block/PlanksBlock
+	CLASS none/anx$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/any net/minecraft/block/NetherPortalBlock
 CLASS none/anz net/minecraft/block/PotatoesBlock
 CLASS none/aoa net/minecraft/block/RedstoneBlock
 CLASS none/aob net/minecraft/block/PoweredRailBlock
 CLASS none/aoc net/minecraft/block/PressurePlateBlock
 CLASS none/aod net/minecraft/block/PrismarineBlock
+	CLASS none/aod$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aoe net/minecraft/block/PumpkinBlock
 CLASS none/aof net/minecraft/block/PurpurSlab
 	CLASS none/aof$a Double
 	CLASS none/aof$b Single
+	CLASS none/aof$c
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aog net/minecraft/block/QuartzBlock
+	CLASS none/aog$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aoh net/minecraft/block/RailBlock
 CLASS none/aoi net/minecraft/block/PoppyBlock
 CLASS none/aoj net/minecraft/block/RedSandstoneBlock
+	CLASS none/aoj$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aok net/minecraft/block/RedstoneOreBlock
 CLASS none/aol net/minecraft/block/RedstoneWireBlock
+	CLASS none/aol$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aom net/minecraft/block/RedstoneLampBlock
 CLASS none/aon net/minecraft/block/RedstoneTorchBlock
 CLASS none/aoo net/minecraft/block/SugarCaneBlock
 CLASS none/aoq net/minecraft/block/RepeaterBlock
 CLASS none/aor net/minecraft/block/PillarBlock
 CLASS none/aot net/minecraft/block/SandBlock
+	CLASS none/aot$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aou net/minecraft/block/SandstoneBlock
+	CLASS none/aou$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aov net/minecraft/block/SaplingBlock
 CLASS none/aow net/minecraft/block/SeaLanternBlock
 CLASS none/aoy net/minecraft/block/SkullBlock
@@ -1078,23 +1174,40 @@ CLASS none/ape net/minecraft/block/SpongeBlock
 CLASS none/apf net/minecraft/block/StainedGlassBlock
 CLASS none/apg net/minecraft/block/StainedGlassPaneBlock
 CLASS none/aph net/minecraft/block/StairsBlock
+	CLASS none/aph$a
+		METHOD m getName ()Ljava/lang/String;
+	CLASS none/aph$b
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/api net/minecraft/block/StandingSignBlock
 CLASS none/apj net/minecraft/block/LavaBlock
 CLASS none/apk net/minecraft/block/StemBlock
 CLASS none/apl net/minecraft/block/StoneBlock
+	CLASS none/apl$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/apm net/minecraft/block/StoneBrickBlock
+	CLASS none/apm$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/apn net/minecraft/block/StoneButtonBlock
+CLASS none/apo
+	CLASS none/apo$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/app net/minecraft/block/StructureBlock
 CLASS none/apq net/minecraft/block/StructureVoidBlock
 CLASS none/apr net/minecraft/block/TallgrassBlock
+	CLASS none/apr$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aps net/minecraft/block/PaneBlock
 CLASS none/apt net/minecraft/block/TNTBlock
 CLASS none/apu net/minecraft/block/TorchBlock
 CLASS none/apv net/minecraft/block/TrapdoorBlock
+	CLASS none/apv$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/apw net/minecraft/block/TripwireBlock
 CLASS none/apx net/minecraft/block/TripwireHookBlock
 CLASS none/apy net/minecraft/block/VineBlock
 CLASS none/apz net/minecraft/block/CobblestoneWallBlock
+	CLASS none/apz$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/aqa net/minecraft/block/WallSignBlock
 CLASS none/aqb net/minecraft/block/WaterLilyBlock
 CLASS none/aqc net/minecraft/block/WebBlock
@@ -1102,8 +1215,13 @@ CLASS none/aqd net/minecraft/block/WeightedPressurePlateBlock
 CLASS none/aqe net/minecraft/block/WoodenButtonBlock
 CLASS none/aqg net/minecraft/block/CarpetBlock
 CLASS none/aqh net/minecraft/block/DandelionBlock
+CLASS none/are
+	CLASS none/are$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/arj net/minecraft/block/PistonBlock
 CLASS none/ark net/minecraft/block/PistonHeadBlock
+	CLASS none/ark$a
+		METHOD m getName ()Ljava/lang/String;
 CLASS none/arl net/minecraft/block/PistonExtensionBlock
 CLASS none/axu net/minecraft/block/material/UnsolidMaterial
 	METHOD <init> (Lnone/axy;)V
@@ -1165,7 +1283,7 @@ CLASS none/axy net/minecraft/block/material/MapColor
 	FIELD J OBSIDIAN Lnone/axy;
 	FIELD K NETHERRACK Lnone/axy;
 	FIELD L color I
-	FIELD M ID I
+	FIELD M id I
 	FIELD a COLORS [Lnone/axy;
 	FIELD b AIR Lnone/axy;
 	FIELD c GRASS Lnone/axy;
@@ -1174,15 +1292,15 @@ CLASS none/axy net/minecraft/block/material/MapColor
 	FIELD f TNT Lnone/axy;
 	FIELD g ICE Lnone/axy;
 	FIELD h IRON Lnone/axy;
-	FIELD i FOLIAGE Lnone/axy;
-	FIELD j SNOW Lnone/axy;
+	FIELD i PLANT Lnone/axy;
+	FIELD j WHITE Lnone/axy;
 	FIELD k CLAY Lnone/axy;
 	FIELD l DIRT Lnone/axy;
 	FIELD m STONE Lnone/axy;
 	FIELD n WATER Lnone/axy;
 	FIELD o WOOD Lnone/axy;
 	FIELD p QUARTZ Lnone/axy;
-	FIELD q ADOBE Lnone/axy;
+	FIELD q ORANGE Lnone/axy;
 	FIELD r MAGENTA Lnone/axy;
 	FIELD s LIGHT_BLUE Lnone/axy;
 	FIELD t YELLOW Lnone/axy;
@@ -1193,7 +1311,7 @@ CLASS none/axy net/minecraft/block/material/MapColor
 	FIELD y CYAN Lnone/axy;
 	FIELD z PURPLE Lnone/axy;
 	METHOD <init> (II)V
-		ARG 0 ID
+		ARG 0 id
 		ARG 1 color
 CLASS none/axz net/minecraft/block/material/PortalBlock
 CLASS none/bcx net/minecraft/client/MinecraftClient
@@ -1201,13 +1319,13 @@ CLASS none/bcx net/minecraft/client/MinecraftClient
 	FIELD K MOJANG_IMAGE Lnone/kn;
 	FIELD Q resourceHandler Lnone/bwf;
 	FIELD R INSTANCE Lnone/bcx;
-	FIELD aJ soundManager Lnone/bzw;
+	FIELD aJ soundHandler Lnone/bzw;
 	FIELD a RUNNING_OSX Z
 	FIELD ae session Lnone/bde;
 	FIELD m openScreen Lnone/bft;
 	METHOD K getSession ()Lnone/bde;
 	METHOD N getResourceHandler ()Lnone/bwf;
-	METHOD U getSoundManager ()Lnone/bzw;
+	METHOD U getSoundHandler ()Lnone/bzw;
 	METHOD a openGUI (Lnone/bft;)V
 		ARG 0 screen
 	METHOD an initialize ()V
@@ -1373,7 +1491,7 @@ CLASS none/bvu net/minecraft/client/util/DynamicResource
 	METHOD <init> (Ljava/awt/image/BufferedImage;)V
 		ARG 0 image
 CLASS none/bwf net/minecraft/client/resource/ResourceHandler
-CLASS none/bzw net/minecraft/client/sound/SoundManager
+CLASS none/bzw net/minecraft/client/sound/SoundHandler
 	METHOD a play (Lnone/bzg;)V
 CLASS net/minecraft/client/main/Main net/minecraft/client/main/Main
 	METHOD main main ([Ljava/lang/String;)V
