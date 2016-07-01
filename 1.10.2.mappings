@@ -186,6 +186,88 @@ CLASS none/kn net/minecraft/util/Identifier
 CLASS none/ls
 	METHOD a spawnEntity (Lnone/rw;)Z
 CLASS none/nj net/minecraft/client/sound/Sounds
+CLASS none/op net/minecraft/util/MathUtil
+	FIELD a SQRT_2 F
+	FIELD b SIN [F
+	FIELD c RANDOM Ljava/util/Random;
+	METHOD a sqrt (D)F
+		ARG 0 value
+	METHOD a largestAbsolute (DD)D
+		ARG 0 first
+		ARG 1 second
+	METHOD a clamp (DDD)D
+		ARG 0 value
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a sin (F)F
+		ARG 0 value
+	METHOD a epsilon (FF)Z
+		ARG 0 first
+		ARG 1 second
+	METHOD a clamp (FFF)F
+		ARG 0 value
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a abs (I)I
+		ARG 0 value
+	METHOD a clamp (III)I
+		ARG 0 value
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a parseDefault (Ljava/lang/String;D)D
+		ARG 0 parse
+		ARG 1 def
+	METHOD a parseDefaultMax (Ljava/lang/String;DD)D
+		ARG 0 parse
+		ARG 1 def
+		ARG 2 max
+	METHOD a parseDefault (Ljava/lang/String;I)I
+		ARG 0 parse
+		ARG 1 def
+	METHOD a parseDefaultMax (Ljava/lang/String;II)I
+		ARG 0 parse
+		ARG 1 def
+		ARG 2 max
+	METHOD a random (Ljava/util/Random;DD)D
+		ARG 0 random
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a random (Ljava/util/Random;FF)F
+		ARG 0 random
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a random (Ljava/util/Random;II)I
+		ARG 0 random
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a average ([J)D
+		ARG 0 values
+	METHOD b clampScaled (DDD)D
+		ARG 0 minimum
+		ARG 1 maximum
+		ARG 2 value
+	METHOD b wrapAngle (I)I
+		ARG 0 angle
+	METHOD c floor (D)I
+		ARG 0 value
+	METHOD c sqrt (F)F
+		ARG 0 value
+	METHOD d floorLong (D)J
+		ARG 0 value
+	METHOD d floor (F)I
+		ARG 0 value
+	METHOD e floorAbsolute (D)I
+		ARG 0 value
+	METHOD e abs (F)F
+		ARG 0 value
+	METHOD f ceil (D)I
+		ARG 0 value
+	METHOD f ceil (F)I
+		ARG 0 value
+	METHOD g wrapAngle (D)D
+		ARG 0 angle
+	METHOD g wrapAngle (F)F
+		ARG 0 angle
 CLASS none/ot
 	METHOD m getName ()Ljava/lang/String;
 CLASS none/ru net/minecraft/entity/AreaEffectCloudEntity
@@ -198,6 +280,38 @@ CLASS none/rw net/minecraft/entity/Entity
 	METHOD h setEntityID (I)V
 		ARG 0 entityID
 CLASS none/sc net/minecraft/entity/XPOrbEntity
+CLASS none/sr net/minecraft/entity/attribute/Attribute
+	METHOD a getName ()Ljava/lang/String;
+	METHOD b getDefaultValue ()D
+	METHOD d getParent ()Lnone/sr;
+CLASS none/ss
+	METHOD a set (D)V
+CLASS none/su net/minecraft/entity/attribute/BaseAttribute
+	FIELD a parent Lnone/sr;
+	FIELD b name Ljava/lang/String;
+	FIELD c defaultValue D
+	METHOD <init> (Lnone/sr;Ljava/lang/String;D)V
+		ARG 0 parent
+		ARG 1 name
+		ARG 2 defaultValue
+	METHOD a getName ()Ljava/lang/String;
+	METHOD b getDefaultValue ()D
+	METHOD d getParent ()Lnone/sr;
+CLASS none/sv
+	METHOD b register (Lnone/sr;)Lnone/ss;
+CLASS none/sw
+	METHOD a set (D)V
+CLASS none/sx
+	METHOD b register (Lnone/sr;)Lnone/ss;
+CLASS none/sy net/minecraft/entity/attribute/ClampedAttribute
+	FIELD a minimum D
+	FIELD b maximum D
+	METHOD <init> (Lnone/sr;Ljava/lang/String;DDD)V
+		ARG 0 parent
+		ARG 1 name
+		ARG 2 defaultValue
+		ARG 3 minimum
+		ARG 4 maximum
 CLASS none/wa net/minecraft/entity/living/BatEntity
 CLASS none/wd net/minecraft/entity/living/ChickenEntity
 CLASS none/we net/minecraft/entity/living/CowEntity
@@ -241,6 +355,17 @@ CLASS none/yu net/minecraft/entity/living/GiantEntity
 CLASS none/yv net/minecraft/entity/living/GuardianEntity
 CLASS none/yw net/minecraft/entity/living/MagmaCubeEntity
 CLASS none/yy net/minecraft/entity/living/PigZombieEntity
+CLASS none/za net/minecraft/entity/attribute/EntityAttributes
+	FIELD a MAX_HEALTH Lnone/sr;
+	FIELD b FOLLOW_RANGE Lnone/sr;
+	FIELD c KNOCKBACK_RESISTANCE Lnone/sr;
+	FIELD d MOVEMENT_SPEED Lnone/sr;
+	FIELD e ATTACK_DAMAGE Lnone/sr;
+	FIELD f ATTACK_SPEED Lnone/sr;
+	FIELD g ARMOR Lnone/sr;
+	FIELD h ARMOR_TOUGHNESS Lnone/sr;
+	FIELD i LUCK Lnone/sr;
+	FIELD j LOGGER Lorg/apache/logging/log4j/Logger;
 CLASS none/zb net/minecraft/entity/living/ShulkerEntity
 CLASS none/zc net/minecraft/entity/living/SilverfishEntity
 CLASS none/zd net/minecraft/entity/living/SkeletonEntity
@@ -249,6 +374,11 @@ CLASS none/zg net/minecraft/entity/living/SpiderEntity
 CLASS none/zh net/minecraft/entity/living/WitchEntity
 CLASS none/zi net/minecraft/entity/living/ZombieEntity
 CLASS none/zn net/minecraft/entity/living/VillagerEntity
+CLASS none/zs net/minecraft/entity/player/PlayerEntity
+	FIELD bT profile Lcom/mojang/authlib/GameProfile;
+	METHOD <init> (Lnone/aid;Lcom/mojang/authlib/GameProfile;)V
+		ARG 0 world
+		ARG 1 profile
 CLASS none/zw net/minecraft/entity/DragonFireballEntity
 CLASS none/zx net/minecraft/entity/EyeOfEnderEntity
 CLASS none/zz net/minecraft/entity/FireworkEntity
