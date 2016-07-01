@@ -185,6 +185,8 @@ CLASS none/ct
 CLASS none/kn net/minecraft/util/Identifier
 CLASS none/ls
 	METHOD a spawnEntity (Lnone/rw;)Z
+CLASS none/lu
+	METHOD m handleUpdate ()V
 CLASS none/nj net/minecraft/client/sound/Sounds
 CLASS none/op net/minecraft/util/MathUtil
 	FIELD a SQRT_2 F
@@ -252,6 +254,10 @@ CLASS none/op net/minecraft/util/MathUtil
 		ARG 0 value
 	METHOD c sqrt (F)F
 		ARG 0 value
+	METHOD c toRGB (FFF)I
+		ARG 0 h
+		ARG 1 s
+		ARG 2 v
 	METHOD d floorLong (D)J
 		ARG 0 value
 	METHOD d floor (F)I
@@ -271,15 +277,25 @@ CLASS none/op net/minecraft/util/MathUtil
 CLASS none/ot
 	METHOD m getName ()Ljava/lang/String;
 CLASS none/ru net/minecraft/entity/AreaEffectCloudEntity
+	METHOD m handleUpdate ()V
 CLASS none/rw net/minecraft/entity/Entity
 	FIELD g entityID I
 	FIELD l world Lnone/aid;
 	METHOD <init> (Lnone/aid;)V
 		ARG 0 world
 	METHOD O getEntityID ()I
+	METHOD U onUpdate ()V
 	METHOD h setEntityID (I)V
 		ARG 0 entityID
+	METHOD m handleUpdate ()V
 CLASS none/sc net/minecraft/entity/XPOrbEntity
+	METHOD m handleUpdate ()V
+CLASS none/sf
+	METHOD U onUpdate ()V
+	METHOD m handleUpdate ()V
+CLASS none/sg
+	METHOD U onUpdate ()V
+	METHOD m handleUpdate ()V
 CLASS none/sr net/minecraft/entity/attribute/Attribute
 	METHOD a getName ()Ljava/lang/String;
 	METHOD b getDefaultValue ()D
@@ -313,20 +329,26 @@ CLASS none/sy net/minecraft/entity/attribute/ClampedAttribute
 		ARG 3 minimum
 		ARG 4 maximum
 CLASS none/wa net/minecraft/entity/living/BatEntity
+	METHOD m handleUpdate ()V
 CLASS none/wd net/minecraft/entity/living/ChickenEntity
 CLASS none/we net/minecraft/entity/living/CowEntity
 CLASS none/wg net/minecraft/entity/living/MooshroomEntity
 CLASS none/wh net/minecraft/entity/living/OcelotEntity
 CLASS none/wi net/minecraft/entity/living/PigEntity
 CLASS none/wj net/minecraft/entity/living/PolarBearEntity
+	METHOD m handleUpdate ()V
 CLASS none/wk net/minecraft/entity/living/RabbitEntity
 CLASS none/wl net/minecraft/entity/living/SheepEntity
 	METHOD df isSheared ()Z
 CLASS none/wm net/minecraft/entity/living/SnowmanEntity
 CLASS none/wn net/minecraft/entity/living/SquidEntity
 CLASS none/wo net/minecraft/entity/living/IronGolemEntity
+CLASS none/wp
+	METHOD U onUpdate ()V
 CLASS none/wq net/minecraft/entity/living/WolfEntity
+	METHOD m handleUpdate ()V
 CLASS none/wr net/minecraft/entity/living/HorseEntity
+	METHOD m handleUpdate ()V
 CLASS none/ws net/minecraft/entity/living/HorseArmor
 	FIELD a NONE Lnone/ws;
 	FIELD b IRON Lnone/ws;
@@ -336,25 +358,42 @@ CLASS none/ws net/minecraft/entity/living/HorseArmor
 	METHOD a get (I)Lnone/ws;
 		ARG 0 id
 CLASS none/xa net/minecraft/entity/EnderCrystalEntity
+	METHOD m handleUpdate ()V
 CLASS none/xb net/minecraft/entity/boss/EnderDragonEntity
 CLASS none/xv net/minecraft/entity/boss/WitherEntity
 CLASS none/xx net/minecraft/entity/ArmorStandEntity
+	METHOD m handleUpdate ()V
+CLASS none/xy
+	METHOD m handleUpdate ()V
 CLASS none/xz net/minecraft/entity/ItemFrameEntity
 CLASS none/ya net/minecraft/entity/LeashKnotEntity
 CLASS none/yb net/minecraft/entity/PaintingEntity
+CLASS none/yd
+	METHOD m handleUpdate ()V
+CLASS none/yh
+	METHOD m handleUpdate ()V
 CLASS none/yj net/minecraft/entity/FallingBlockEntity
+	METHOD m handleUpdate ()V
 CLASS none/yk net/minecraft/entity/ItemEntity
+	METHOD m handleUpdate ()V
 CLASS none/yl net/minecraft/entity/PrimedTNTEntity
+	METHOD m handleUpdate ()V
 CLASS none/yn net/minecraft/entity/living/BlazeEntity
 CLASS none/yo net/minecraft/entity/living/CaveSpiderEntity
 CLASS none/yp net/minecraft/entity/living/CreeperEntity
+	METHOD m handleUpdate ()V
 CLASS none/yq net/minecraft/entity/living/EndermanEntity
 CLASS none/yr net/minecraft/entity/living/EndermiteEntity
+	METHOD m handleUpdate ()V
 CLASS none/yt net/minecraft/entity/living/GhastEntity
+	METHOD m handleUpdate ()V
 CLASS none/yu net/minecraft/entity/living/GiantEntity
 CLASS none/yv net/minecraft/entity/living/GuardianEntity
 CLASS none/yw net/minecraft/entity/living/MagmaCubeEntity
+CLASS none/yx
+	METHOD m handleUpdate ()V
 CLASS none/yy net/minecraft/entity/living/PigZombieEntity
+	METHOD m handleUpdate ()V
 CLASS none/za net/minecraft/entity/attribute/EntityAttributes
 	FIELD a MAX_HEALTH Lnone/sr;
 	FIELD b FOLLOW_RANGE Lnone/sr;
@@ -367,32 +406,49 @@ CLASS none/za net/minecraft/entity/attribute/EntityAttributes
 	FIELD i LUCK Lnone/sr;
 	FIELD j LOGGER Lorg/apache/logging/log4j/Logger;
 CLASS none/zb net/minecraft/entity/living/ShulkerEntity
+	METHOD m handleUpdate ()V
 CLASS none/zc net/minecraft/entity/living/SilverfishEntity
+	METHOD m handleUpdate ()V
 CLASS none/zd net/minecraft/entity/living/SkeletonEntity
 CLASS none/zf net/minecraft/entity/living/SlimeEntity
+	METHOD m handleUpdate ()V
 CLASS none/zg net/minecraft/entity/living/SpiderEntity
+	METHOD m handleUpdate ()V
 CLASS none/zh net/minecraft/entity/living/WitchEntity
 CLASS none/zi net/minecraft/entity/living/ZombieEntity
+	METHOD m handleUpdate ()V
 CLASS none/zn net/minecraft/entity/living/VillagerEntity
 CLASS none/zs net/minecraft/entity/player/PlayerEntity
 	FIELD bT profile Lcom/mojang/authlib/GameProfile;
 	METHOD <init> (Lnone/aid;Lcom/mojang/authlib/GameProfile;)V
 		ARG 0 world
 		ARG 1 profile
+	METHOD m handleUpdate ()V
+CLASS none/zv
+	METHOD m handleUpdate ()V
 CLASS none/zw net/minecraft/entity/DragonFireballEntity
 CLASS none/zx net/minecraft/entity/EyeOfEnderEntity
+	METHOD m handleUpdate ()V
+CLASS none/zy
+	METHOD m handleUpdate ()V
 CLASS none/zz net/minecraft/entity/FireworkEntity
+	METHOD m handleUpdate ()V
 CLASS none/aaa net/minecraft/entity/FireballEntity
 CLASS none/aad net/minecraft/entity/ShulkerBulletEntity
+	METHOD m handleUpdate ()V
 CLASS none/aae net/minecraft/entity/SmallFireballEntity
 CLASS none/aaf net/minecraft/entity/SnowballEntity
 CLASS none/aag net/minecraft/entity/SpectralArrowEntity
+	METHOD m handleUpdate ()V
 CLASS none/aah
+	METHOD m handleUpdate ()V
 CLASS none/aai net/minecraft/entity/EggEntity
 CLASS none/aaj net/minecraft/entity/EnderPearlEntity
+	METHOD m handleUpdate ()V
 CLASS none/aak net/minecraft/entity/ExperienceBottleEntity
 CLASS none/aal net/minecraft/entity/PotionEntity
 CLASS none/aam net/minecraft/entity/ArrowEntity
+	METHOD m handleUpdate ()V
 CLASS none/aan net/minecraft/entity/WitherSkullEntity
 CLASS none/aap net/minecraft/entity/BoatEntity
 	CLASS none/aap$b BoatType
@@ -402,6 +458,7 @@ CLASS none/aap net/minecraft/entity/BoatEntity
 		FIELD d JUNGLE Lnone/aap$b;
 		FIELD e ACACIA Lnone/aap$b;
 		FIELD f DARK_OAK Lnone/aap$b;
+	METHOD m handleUpdate ()V
 CLASS none/aaq net/minecraft/entity/minecart/MinecartEntity
 	CLASS none/aaq$a MinecartType
 		FIELD a EMPTY Lnone/aaq$a;
@@ -411,20 +468,25 @@ CLASS none/aaq net/minecraft/entity/minecart/MinecartEntity
 		FIELD e SPAWNER Lnone/aaq$a;
 		FIELD f HOPPER Lnone/aaq$a;
 		FIELD g COMMAND_BLOCK Lnone/aaq$a;
+	METHOD m handleUpdate ()V
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aar net/minecraft/entity/minecart/ChestMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aas net/minecraft/entity/minecart/CommandBlockMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aau net/minecraft/entity/minecart/FurnaceMinecartEntity
+	METHOD m handleUpdate ()V
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aav net/minecraft/entity/minecart/HopperMinecartEntity
+	METHOD m handleUpdate ()V
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aaw net/minecraft/entity/minecart/EmptyMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aax net/minecraft/entity/minecart/SpawnerMinecartEntity
+	METHOD m handleUpdate ()V
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aay net/minecraft/entity/minecart/TNTMinecartEntity
+	METHOD m handleUpdate ()V
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/acf net/minecraft/item/ArmorItem
 CLASS none/acg net/minecraft/item/ArmorStandItem
@@ -777,6 +839,7 @@ CLASS none/afi net/minecraft/item/TippedArrowItem
 CLASS none/afl net/minecraft/item/WritableBookItem
 CLASS none/afm net/minecraft/item/WrittenBookItem
 CLASS none/aid net/minecraft/world/World
+	FIELD E isClient Z
 	FIELD r random Ljava/util/Random;
 	METHOD a spawnEntity (Lnone/rw;)Z
 CLASS none/aip net/minecraft/world/biome/ColdBeachBiome
@@ -1545,6 +1608,10 @@ CLASS none/bhd
 		METHOD a render (Lnone/bcx;II)V
 CLASS none/bln
 	METHOD a spawnEntity (Lnone/rw;)Z
+CLASS none/bnn
+	METHOD m handleUpdate ()V
+CLASS none/bno
+	METHOD m handleUpdate ()V
 CLASS none/bob net/minecraft/client/render/OpenGL
 	CLASS none/bob$b
 	CLASS none/bob$c BooleanState
