@@ -54,192 +54,426 @@ CLASS none/h net/minecraft/client/util/ClientUtil
 		ARG 0 task
 		ARG 1 logger
 CLASS none/j net/minecraft/command/Command
-CLASS none/l
+	METHOD a getMinimumPermissions ()I
+	METHOD a createSyntaxException (Lcom/google/gson/JsonParseException;)Lnone/cf;
+		ARG 0 parseException
+	METHOD a parseInteger (Ljava/lang/String;)I
+		ARG 0 string
+	METHOD a parseDouble (Ljava/lang/String;D)D
+		ARG 0 string
+		ARG 1 minimum
+	METHOD a parseDouble (Ljava/lang/String;DD)D
+		ARG 0 string
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a parseInteger (Ljava/lang/String;I)I
+		ARG 0 string
+		ARG 1 minimum
+	METHOD a parseInteger (Ljava/lang/String;II)I
+		ARG 0 string
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a parseLong (Ljava/lang/String;JJ)J
+		ARG 0 string
+		ARG 1 minimum
+		ARG 2 maximum
+	METHOD a canExecute (Lnet/minecraft/server/MinecraftServer;Lnone/n;)Z
+		ARG 0 server
+		ARG 1 commandable
+	METHOD a (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;Lnone/cm;)Ljava/util/List;
+		ARG 0 server
+		ARG 1 commandable
+		ARG 2 arguments
+		ARG 3 position
+	METHOD a getItem (Lnone/n;Ljava/lang/String;)Lnone/adx;
+		ARG 0 commandable
+		ARG 1 identifier
+	METHOD b parseLong (Ljava/lang/String;)J
+		ARG 0 string
+	METHOD b (Lnet/minecraft/server/MinecraftServer;Lnone/n;Ljava/lang/String;)Lnone/rw;
+		ARG 0 server
+	METHOD b getBlock (Lnone/n;Ljava/lang/String;)Lnone/akf;
+		ARG 0 commandable
+		ARG 1 identifier
+	METHOD c parseDouble (Ljava/lang/String;)D
+		ARG 0 string
+	METHOD d parseBoolean (Ljava/lang/String;)Z
+		ARG 0 string
+CLASS none/k
+	METHOD a getServer ()Lnet/minecraft/server/MinecraftServer;
+	METHOD a (Lnone/l;)Lnone/l;
+CLASS none/l net/minecraft/command/Executable
+	METHOD a canExecute (Lnet/minecraft/server/MinecraftServer;Lnone/n;)Z
+		ARG 0 server
+		ARG 1 commandable
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
+		ARG 0 server
+		ARG 1 commandable
+		ARG 2 arguments
+	METHOD a (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;Lnone/cm;)Ljava/util/List;
+		ARG 0 server
+		ARG 1 commandable
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
+		ARG 0 commandable
 	METHOD c getName ()Ljava/lang/String;
+CLASS none/n net/minecraft/command/Commandable
+	METHOD a hasPermissions (ILjava/lang/String;)Z
+	METHOD c getPosition ()Lnone/cm;
+	METHOD e getWorld ()Lnone/aid;
+	METHOD f getEntity ()Lnone/rw;
+	METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
+CLASS none/o
+	CLASS none/o$1
+		METHOD a hasPermissions (ILjava/lang/String;)Z
+		METHOD c getPosition ()Lnone/cm;
+		METHOD e getWorld ()Lnone/aid;
+		METHOD f getEntity ()Lnone/rw;
+		METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
 CLASS none/q net/minecraft/command/AchievementCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
+		ARG 0 server
+		ARG 1 commandable
+		ARG 2 arguments
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/r net/minecraft/command/BanIPCommand
+CLASS none/r net/minecraft/command/server/BanIPCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a canExecute (Lnet/minecraft/server/MinecraftServer;Lnone/n;)Z
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/s net/minecraft/command/BanCommand
+CLASS none/s net/minecraft/command/server/BanCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a canExecute (Lnet/minecraft/server/MinecraftServer;Lnone/n;)Z
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/t net/minecraft/command/BlockDataCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/u net/minecraft/command/ClearCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/v net/minecraft/command/CloneCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/w net/minecraft/command/TestForBlocksCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/x net/minecraft/command/DeopCommand
+CLASS none/x net/minecraft/command/server/DeopCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/y net/minecraft/command/DebugCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/z net/minecraft/command/DefaultGamemodeCommand
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/aa
+CLASS none/aa net/minecraft/command/EffectCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ab
+CLASS none/ab net/minecraft/command/MeCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ac
+CLASS none/ac net/minecraft/command/EnchantCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ad
+CLASS none/ad net/minecraft/command/EntityDataCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/ae net/minecraft/command/ExecuteCommand
+	CLASS none/ae$1
+		METHOD a hasPermissions (ILjava/lang/String;)Z
+		METHOD c getPosition ()Lnone/cm;
+		METHOD e getWorld ()Lnone/aid;
+		METHOD f getEntity ()Lnone/rw;
+		METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/af
+CLASS none/af net/minecraft/command/XPCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/ag net/minecraft/command/FillCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ah
+CLASS none/ah net/minecraft/command/DifficultyCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ai
+CLASS none/ai net/minecraft/command/GamemodeCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/aj
+CLASS none/aj net/minecraft/command/GameRuleCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ak
+CLASS none/ak net/minecraft/command/GiveCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/al
+CLASS none/al net/minecraft/command/HelpCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/am
+CLASS none/am net/minecraft/command/server/KickCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/an
+CLASS none/an net/minecraft/command/KillCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ao
+CLASS none/ao net/minecraft/command/server/BanListCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a canExecute (Lnet/minecraft/server/MinecraftServer;Lnone/n;)Z
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ap
+CLASS none/ap net/minecraft/command/server/ListPlayersCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/aq
+CLASS none/aq net/minecraft/command/TellCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ar
+CLASS none/ar net/minecraft/command/server/OpCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/as
+CLASS none/as net/minecraft/command/server/PardonIPCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a canExecute (Lnet/minecraft/server/MinecraftServer;Lnone/n;)Z
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/at
+CLASS none/at net/minecraft/command/server/PardonCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a canExecute (Lnet/minecraft/server/MinecraftServer;Lnone/n;)Z
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/au
+CLASS none/au net/minecraft/command/ParticleCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/av
+CLASS none/av net/minecraft/command/PlaySoundCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/aw
+CLASS none/aw net/minecraft/command/client/PublishCommand
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ax
+CLASS none/ax net/minecraft/command/ReplaceItemCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ay
+CLASS none/ay net/minecraft/command/server/SaveAllCommand
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/az
+CLASS none/az net/minecraft/command/server/SaveOffCommand
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ba
+CLASS none/ba net/minecraft/command/server/SaveOnCommand
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bb
+CLASS none/bb net/minecraft/command/SayCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bc
+CLASS none/bc net/minecraft/command/ScoreboardCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/be
+CLASS none/bd
+	FIELD a server Lnet/minecraft/server/MinecraftServer;
+	METHOD <init> (Lnet/minecraft/server/MinecraftServer;)V
+		ARG 0 server
+	METHOD a getServer ()Lnet/minecraft/server/MinecraftServer;
+CLASS none/be net/minecraft/command/SetBlockCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bf
+CLASS none/bf net/minecraft/command/SetWorldSpawnCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bg
+CLASS none/bg net/minecraft/command/server/SetIdleTimeoutCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bh
+CLASS none/bh net/minecraft/command/SpawnPointCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bi
+CLASS none/bi net/minecraft/command/SeedCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a canExecute (Lnet/minecraft/server/MinecraftServer;Lnone/n;)Z
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bj
+CLASS none/bj net/minecraft/command/SpreadPlayersCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bk net/minecraft/command/StatisticsCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bl net/minecraft/command/StopServerCommand
+CLASS none/bl net/minecraft/command/server/StopServerCommand
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bm net/minecraft/command/StopSoundCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bn net/minecraft/command/SummonCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bo net/minecraft/command/TeleportCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bp net/minecraft/command/TellRawCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/br net/minecraft/command/TestForBlockCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bs net/minecraft/command/TestforCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bt net/minecraft/command/TimeCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/bu
+CLASS none/bu net/minecraft/command/TitleCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bv net/minecraft/command/ToggleDownfallCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bw net/minecraft/command/TPCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bx net/minecraft/command/TriggerCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/by net/minecraft/command/WeatherCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
 CLASS none/bz net/minecraft/command/WhitelistCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/ca
+CLASS none/ca net/minecraft/command/WorldBorderCommand
+	METHOD a getMinimumPermissions ()I
+	METHOD a execute (Lnet/minecraft/server/MinecraftServer;Lnone/n;[Ljava/lang/String;)V
 	METHOD b getUsage (Lnone/n;)Ljava/lang/String;
 	METHOD c getName ()Ljava/lang/String;
+CLASS none/cc net/minecraft/command/exception/CommandException
+	FIELD a parameters [Ljava/lang/Object;
+	METHOD <init> (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 0 localization
+		ARG 1 parameters
+	METHOD a getParameters ()[Ljava/lang/Object;
+CLASS none/cd net/minecraft/command/exception/EntityNotFoundCommandException
+	METHOD <init> (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 0 localization
+		ARG 1 parameters
+CLASS none/ce net/minecraft/command/exception/NumericalCommandException
+	METHOD <init> (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 0 localization
+		ARG 1 parameters
+CLASS none/cf net/minecraft/command/exception/SyntaxCommandException
+	METHOD <init> (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 0 localization
+		ARG 1 parameters
+CLASS none/cg net/minecraft/command/exception/PlayerNotFoundCommandException
+	METHOD <init> (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 0 localization
+		ARG 1 parameters
+CLASS none/ch net/minecraft/command/exception/NotFoundCommandException
+	METHOD <init> (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 0 localization
+		ARG 1 parameters
 CLASS none/cm net/minecraft/util/Position
 	CLASS none/cm$a
 		FIELD b x I
@@ -725,15 +959,490 @@ CLASS none/kk net/minecraft/entity/data/DataHandler
 CLASS none/kn net/minecraft/util/Identifier
 CLASS none/ld
 	METHOD Z isSnooperEnabled ()Z
-CLASS none/ls
+CLASS none/ls net/minecraft/world/RemoteWorld
+	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnone/bab;Lnone/baa;ILnone/oq;)V
+		ARG 0 server
 	METHOD a spawnEntity (Lnone/rw;)Z
 	METHOD k handleUpdate ()V
+	METHOD u getServer ()Lnet/minecraft/server/MinecraftServer;
 CLASS none/lu
+	METHOD a hasPermissions (ILjava/lang/String;)Z
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
+	METHOD c getPosition ()Lnone/cm;
 	METHOD c setDimension (I)Lnone/rw;
 	METHOD m handleUpdate ()V
+CLASS none/nb
+	METHOD a hasPermissions (ILjava/lang/String;)Z
+	METHOD c getPosition ()Lnone/cm;
+	METHOD e getWorld ()Lnone/aid;
+	METHOD f getEntity ()Lnone/rw;
+	METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
 CLASS none/nj net/minecraft/client/sound/Sounds
+	FIELD A BAT_TAKEOFF Lnone/ni;
+	FIELD B BLAZE_AMBIENT Lnone/ni;
+	FIELD C BLAZE_BURN Lnone/ni;
+	FIELD D BLAZE_DEATH Lnone/ni;
+	FIELD E BLAZE_HURT Lnone/ni;
+	FIELD F BLAZE_SHOOT Lnone/ni;
+	FIELD G BOBBER_SPLASH Lnone/ni;
+	FIELD H BOBBER_THROW Lnone/ni;
+	FIELD I BOTTLE_FILL Lnone/ni;
+	FIELD J BOTTLE_FILL_DRAGON_BREATH Lnone/ni;
+	FIELD K BREWING_STAND_BREW Lnone/ni;
+	FIELD L BUCKET_EMPTY Lnone/ni;
+	FIELD M BUCKET_EMPTY_LAVA Lnone/ni;
+	FIELD N BUCKET_FILL Lnone/ni;
+	FIELD O BUCKET_FILL_LAVA Lnone/ni;
+	FIELD P CAT_AMBIENT Lnone/ni;
+	FIELD Q CAT_DEATH Lnone/ni;
+	FIELD R CAT_HISS Lnone/ni;
+	FIELD S CAT_HURT Lnone/ni;
+	FIELD T CAT_PURR Lnone/ni;
+	FIELD U CAT_PURREOW Lnone/ni;
+	FIELD V CHEST_CLOSE Lnone/ni;
+	FIELD W CHEST_LOCKED Lnone/ni;
+	FIELD X CHEST_OPEN Lnone/ni;
+	FIELD Y CHICKEN_AMBIENT Lnone/ni;
+	FIELD Z CHICKEN_DEATH Lnone/ni;
+	FIELD aA DONKEY_DEATH Lnone/ni;
+	FIELD aB DONKEY_HURT Lnone/ni;
+	FIELD aC EGG_THROW Lnone/ni;
+	FIELD aD ELDER_GUARDIAN_AMBIENT Lnone/ni;
+	FIELD aE ELDER_GUARDIAN_AMBIENT_LAND Lnone/ni;
+	FIELD aF ELDER_GUARDIAN_CURSE Lnone/ni;
+	FIELD aG ELDER_GUARDIAN_DEATH Lnone/ni;
+	FIELD aH ELDER_GUARDIAN_DEATH_LAND Lnone/ni;
+	FIELD aI ELDER_GUARDIAN_HURT Lnone/ni;
+	FIELD aJ ELDER_GUARDIAN_HURT_LAND Lnone/ni;
+	FIELD aK ELYTRA_FLYING Lnone/ni;
+	FIELD aL ENCHANTMENT_TABLE Lnone/ni;
+	FIELD a CAVE Lnone/ni;
+	FIELD aM ENDER_CHEST_CLOSE Lnone/ni;
+	FIELD aN ENDER_CHEST_OPEN Lnone/ni;
+	FIELD aO ENDER_DRAGON_AMBIENT Lnone/ni;
+	FIELD aP ENDER_DRAGON_BREATH Lnone/ni;
+	FIELD aQ ENDER_DRAGON_FIREBALL_EXPLODE Lnone/ni;
+	FIELD aR ENDER_DRAGON_FLAP Lnone/ni;
+	FIELD aS ENDER_DRAGON_GROWL Lnone/ni;
+	FIELD aT ENDER_DRAGON_HURT Lnone/ni;
+	FIELD aU ENDER_DRAGON_SHOOT Lnone/ni;
+	FIELD aV ENDER_EYE_THROW Lnone/ni;
+	FIELD aW ENDERMAN_AMBIENT Lnone/ni;
+	FIELD aX ENDERMAN_DEATH Lnone/ni;
+	FIELD aY ENDERMAN_HURT Lnone/ni;
+	FIELD aZ ENDERMAN_SCREAM Lnone/ni;
+	FIELD aa CHICKEN_EGG Lnone/ni;
+	FIELD ab CHICKEN_HURT Lnone/ni;
+	FIELD ac CHICKEN_STEP Lnone/ni;
+	FIELD ad CHORUS_FLOWER_DEATH Lnone/ni;
+	FIELD ae CHORUS_FLOWER_GROW Lnone/ni;
+	FIELD af CHORUS_FRUIT_TELEPORT Lnone/ni;
+	FIELD ag CLOTH_BREAK Lnone/ni;
+	FIELD ah CLOTH_FALL Lnone/ni;
+	FIELD ai CLOTH_HIT Lnone/ni;
+	FIELD aj CLOTH_PLACE Lnone/ni;
+	FIELD ak CLOTH_STEP Lnone/ni;
+	FIELD al COMPARATOR_CLICK Lnone/ni;
+	FIELD am COW_AMBIENT Lnone/ni;
+	FIELD an COW_DEATH Lnone/ni;
+	FIELD ao COW_HURT Lnone/ni;
+	FIELD ap COW_MILK Lnone/ni;
+	FIELD aq COW_STEP Lnone/ni;
+	FIELD ar CREEPER_DEATH Lnone/ni;
+	FIELD as CREEPER_HURT Lnone/ni;
+	FIELD at CREEPER_PRIMED Lnone/ni;
+	FIELD au DISPENSER_DISPENSE Lnone/ni;
+	FIELD av DISPENSER_FAIL Lnone/ni;
+	FIELD aw DISPENSER_LAUNCH Lnone/ni;
+	FIELD ax DONKEY_AMBIENT Lnone/ni;
+	FIELD ay DONKEY_ANGRY Lnone/ni;
+	FIELD az DONKEY_CHEST Lnone/ni;
+	FIELD bA BIG_FALL Lnone/ni;
+	FIELD bB BURN Lnone/ni;
+	FIELD bC DEATH Lnone/ni;
+	FIELD bD DRINK Lnone/ni;
+	FIELD bE EAT Lnone/ni;
+	FIELD bF EXPLODE Lnone/ni;
+	FIELD bG EXTINGUISH_FIRE Lnone/ni;
+	FIELD bH HURT Lnone/ni;
+	FIELD bI SMALL_FALL Lnone/ni;
+	FIELD bJ SPLASH Lnone/ni;
+	FIELD bK SWIM Lnone/ni;
+	FIELD bL GHAST_AMBIEN Lnone/ni;
+	FIELD b ANVIL_BREAK Lnone/ni;
+	FIELD bM GHAST_DEATH Lnone/ni;
+	FIELD bN GHAST_HURT Lnone/ni;
+	FIELD bO GHAST_SCREAM Lnone/ni;
+	FIELD bP GHAST_SHOOT Lnone/ni;
+	FIELD bQ GHAST_WARN Lnone/ni;
+	FIELD bR GLASS_BREAK Lnone/ni;
+	FIELD bS GLASS_FALL Lnone/ni;
+	FIELD bT GLASS_HIT Lnone/ni;
+	FIELD bU GLASS_PLACE Lnone/ni;
+	FIELD bV GLASS_STEP Lnone/ni;
+	FIELD bW GRASS_BREAK Lnone/ni;
+	FIELD bX GRASS_FALL Lnone/ni;
+	FIELD bY GRASS_HIT Lnone/ni;
+	FIELD bZ GRASS_PLACE Lnone/ni;
+	FIELD ba ENDERMAN_STARE Lnone/ni;
+	FIELD bb ENDERMAN_TELEPORT Lnone/ni;
+	FIELD bc ENDERMITE_AMBIENT Lnone/ni;
+	FIELD bd ENDERMITE_DEATH Lnone/ni;
+	FIELD be ENDERMITE_HURT Lnone/ni;
+	FIELD bf ENDERMITE_STEP Lnone/ni;
+	FIELD bg ENDERPEARL_THROW Lnone/ni;
+	FIELD bh END_GATEWAY_SPAWN Lnone/ni;
+	FIELD bi EXPERIENCE_BOTTLE_THROW Lnone/ni;
+	FIELD bj EXPERIENCE_ORB_PICKUP Lnone/ni;
+	FIELD bk EXPERIENCE_ORB_TOUCH Lnone/ni;
+	FIELD bl FENCE_GATE_CLOSE Lnone/ni;
+	FIELD bm FENCE_GATE_OPEN Lnone/ni;
+	FIELD bn FIRECHARGE_USE Lnone/ni;
+	FIELD bo FIREWORK_BLAST Lnone/ni;
+	FIELD bp FIREWORK_BLAST_FAR Lnone/ni;
+	FIELD bq FIREWORK_LARGE_BLAST Lnone/ni;
+	FIELD br FIREWORK_LARGE_BLAST_FAR Lnone/ni;
+	FIELD bs FIREWORK_LAUNCH Lnone/ni;
+	FIELD bt FIREWORK_SHOOT Lnone/ni;
+	FIELD bu FIREWORK_TWINKLE Lnone/ni;
+	FIELD bv FIREWORK_TWINKLE_FAR Lnone/ni;
+	FIELD bw FIRE_AMBIENT Lnone/ni;
+	FIELD bx FIRE_EXTINGUISH Lnone/ni;
+	FIELD by FLINT_AND_STEEL Lnone/ni;
+	FIELD bz FIRE_CRACKLE Lnone/ni;
+	FIELD cA HORSE_STEP Lnone/ni;
+	FIELD cB HORSE_STEP_WOOD Lnone/ni;
+	FIELD cC HOSTILE_BIG_FALL Lnone/ni;
+	FIELD cD HOSTILE_DEATH Lnone/ni;
+	FIELD cE HOSTILE_HURT Lnone/ni;
+	FIELD cF HOSTILE_SMALL_FALL Lnone/ni;
+	FIELD cG HOSTILE_SPLASH Lnone/ni;
+	FIELD cH HOSTILE_SWIM Lnone/ni;
+	FIELD cI HUSK_AMBIENT Lnone/ni;
+	FIELD cJ HUSK_DEATH Lnone/ni;
+	FIELD cK HUSK_HURT Lnone/ni;
+	FIELD cL HUSK_STEP Lnone/ni;
+	FIELD c ANVIL_DESTROY Lnone/ni;
+	FIELD cM IRON_GOLEM_ATTACK Lnone/ni;
+	FIELD cN IRON_GOLEM_DEATH Lnone/ni;
+	FIELD cO IRON_GOLEM_HURT Lnone/ni;
+	FIELD cP IRON_GOLEM_STEP Lnone/ni;
+	FIELD cQ IRON_DOOR_CLOSE Lnone/ni;
+	FIELD cR IRON_DOOR_OPEN Lnone/ni;
+	FIELD cS IRON_TRAPDOOR_CLOSE Lnone/ni;
+	FIELD cT IRON_TRAPDOOR_OPEN Lnone/ni;
+	FIELD cU ITEM_FRAME_ADD_ITEM Lnone/ni;
+	FIELD cV ITEM_FRAME_BREAK Lnone/ni;
+	FIELD cW ITEM_FRAME_PLACE Lnone/ni;
+	FIELD cX ITEM_FRAME_REMOVE_ITEM Lnone/ni;
+	FIELD cY ITEM_FRAME_ROTATE Lnone/ni;
+	FIELD cZ ITEM_BREAK Lnone/ni;
+	FIELD ca GRASS_STEP Lnone/ni;
+	FIELD cb GRAVEL_BREAK Lnone/ni;
+	FIELD cc GRAVEL_FALL Lnone/ni;
+	FIELD cd GRAVEL_HIT Lnone/ni;
+	FIELD ce GRAVEL_PLACE Lnone/ni;
+	FIELD cf GRAVEL_STEP Lnone/ni;
+	FIELD cg GUARDIAN_AMBIENT Lnone/ni;
+	FIELD ch GUARDIAN_AMBIENT_LAND Lnone/ni;
+	FIELD ci GUARDIAN_ATTACK Lnone/ni;
+	FIELD cj GUARDIAN_DEATH Lnone/ni;
+	FIELD ck GUARDIAN_DEATH_LAND Lnone/ni;
+	FIELD cl GUARDIAN_FLOP Lnone/ni;
+	FIELD cm GUARDIAN_HURT Lnone/ni;
+	FIELD cn GUARDIAN_HURT_LAND Lnone/ni;
+	FIELD co HOE_TILL Lnone/ni;
+	FIELD cp HORSE_AMBIENT Lnone/ni;
+	FIELD cq HORSE_ANGRY Lnone/ni;
+	FIELD cr HORSE_ARMOR Lnone/ni;
+	FIELD cs HORSE_BREATHE Lnone/ni;
+	FIELD ct HORSE_DEATH Lnone/ni;
+	FIELD cu HORSE_EAT Lnone/ni;
+	FIELD cv HORSE_GALLOP Lnone/ni;
+	FIELD cw HORSE_HURT Lnone/ni;
+	FIELD cx HORSE_JUMP Lnone/ni;
+	FIELD cy HORSE_LAND Lnone/ni;
+	FIELD cz HORSE_SADDLE Lnone/ni;
+	FIELD dA MINECART_INSIDE Lnone/ni;
+	FIELD dB MINECART_RIDING Lnone/ni;
+	FIELD dC MOOSHROOM_SHEER Lnone/ni;
+	FIELD dD MULE_AMBIENT Lnone/ni;
+	FIELD dE MULE_DEATH Lnone/ni;
+	FIELD dF MULE_HURT Lnone/ni;
+	FIELD dG MUSIC_CREATIVE Lnone/ni;
+	FIELD dH MUSIC_CREDITS Lnone/ni;
+	FIELD dI MUSIC_DRAGON Lnone/ni;
+	FIELD dJ MUSIC_END Lnone/ni;
+	FIELD dK MUSIC_GAME Lnone/ni;
+	FIELD dL MUSIC_MENU Lnone/ni;
+	FIELD d ANVIL_FALL Lnone/ni;
+	FIELD dM MUSIC_NETHER Lnone/ni;
+	FIELD dN NOTEBLOCK_BASEDRUM Lnone/ni;
+	FIELD dO NOTEBLOCK_BASS Lnone/ni;
+	FIELD dP NOTEBLOCK_HARP Lnone/ni;
+	FIELD dQ NOTEBLOCK_HAT Lnone/ni;
+	FIELD dR NOTEBLOCK_PLING Lnone/ni;
+	FIELD dS NOTEBLOCK_SNARE Lnone/ni;
+	FIELD dT PAINTING_BREAK Lnone/ni;
+	FIELD dU PAINTING_PLACE Lnone/ni;
+	FIELD dV PIG_AMBIENT Lnone/ni;
+	FIELD dW PIG_DEATH Lnone/ni;
+	FIELD dX PIG_HURT Lnone/ni;
+	FIELD dY PIG_SADDLE Lnone/ni;
+	FIELD dZ PIG_STEP Lnone/ni;
+	FIELD da ITEM_PICKUP Lnone/ni;
+	FIELD db LADDER_BREAK Lnone/ni;
+	FIELD dc LADDER_FALL Lnone/ni;
+	FIELD dd LADDER_HIT Lnone/ni;
+	FIELD de LADDER_PLACE Lnone/ni;
+	FIELD df LADDER_STEP Lnone/ni;
+	FIELD dg LAVA_AMBIENT Lnone/ni;
+	FIELD dh LAVA_EXTINGUISH Lnone/ni;
+	FIELD di LAVA_POP Lnone/ni;
+	FIELD dj LEASH_BREAK Lnone/ni;
+	FIELD dk LEASH_PLACE Lnone/ni;
+	FIELD dl LEVER_CLICK Lnone/ni;
+	FIELD dm LIGHTNING_IMPACT Lnone/ni;
+	FIELD dn LIGHTNING_THUNDER Lnone/ni;
+	FIELD do LINGERING_POTION_THROW Lnone/ni;
+	FIELD dp MAGMA_CUBE_DEATH Lnone/ni;
+	FIELD dq MAGMA_CUBE_HURT Lnone/ni;
+	FIELD dr MAGMA_CUBE_JUMP Lnone/ni;
+	FIELD ds MAGMA_CUBE_SQUISH Lnone/ni;
+	FIELD dt METAL_BREAK Lnone/ni;
+	FIELD du METAL_FALL Lnone/ni;
+	FIELD dv METAL_HIT Lnone/ni;
+	FIELD dw METAL_PLACE Lnone/ni;
+	FIELD dx METAL_PRESSURE_PLATE_OFF Lnone/ni;
+	FIELD dy METAL_PRESSURE_PLATE_ON Lnone/ni;
+	FIELD dz METAL_STEP Lnone/ni;
+	FIELD eA RABBIT_AMBIENT Lnone/ni;
+	FIELD eB RABBIT_ATTACK Lnone/ni;
+	FIELD eC RABBIT_DEATH Lnone/ni;
+	FIELD eD RABBIT_HURT Lnone/ni;
+	FIELD eE RABBIT_JUMP Lnone/ni;
+	FIELD eF RECORD_11 Lnone/ni;
+	FIELD eG RECORD_13 Lnone/ni;
+	FIELD eH RECORD_BLOCKS Lnone/ni;
+	FIELD eI RECORD_CAT Lnone/ni;
+	FIELD eJ RECORD_CHIRP Lnone/ni;
+	FIELD eK RECORD_FAR Lnone/ni;
+	FIELD eL RECORD_MALL Lnone/ni;
+	FIELD e ANVIL_HIT Lnone/ni;
+	FIELD eM RECORD_MELLOHI Lnone/ni;
+	FIELD eN RECORD_STAL Lnone/ni;
+	FIELD eO RECORD_STRAD Lnone/ni;
+	FIELD eP RECORD_WAIT Lnone/ni;
+	FIELD eQ RECORD_WARD Lnone/ni;
+	FIELD eR REDSTONE_TORCH_BURNOUT Lnone/ni;
+	FIELD eS SAND_BREAK Lnone/ni;
+	FIELD eT SAND_FALL Lnone/ni;
+	FIELD eU SAND_HIT Lnone/ni;
+	FIELD eV PLACE Lnone/ni;
+	FIELD eW STEP Lnone/ni;
+	FIELD eX SHEEP_AMBIENT Lnone/ni;
+	FIELD eY SHEEP_DEATH Lnone/ni;
+	FIELD eZ SHEEP_HURT Lnone/ni;
+	FIELD ea PISTON_CONTRACT Lnone/ni;
+	FIELD eb PISTON_EXTEND Lnone/ni;
+	FIELD ec PLAYER_ATTACK_CRITICAL Lnone/ni;
+	FIELD ed PLAYER_ATTACK_KNOCKBACK Lnone/ni;
+	FIELD ee PLAYER_ATTACK_NO_DAMAGE Lnone/ni;
+	FIELD ef PLAYER_ATTACK_STRONG Lnone/ni;
+	FIELD eg PLAYER_ATTACK_SWEEP Lnone/ni;
+	FIELD eh PLAYER_ATTACK_WEAK Lnone/ni;
+	FIELD ei PLAYER_BIG_FALL Lnone/ni;
+	FIELD ej PLAYER_BREATH Lnone/ni;
+	FIELD ek PLAYER_BURP Lnone/ni;
+	FIELD el PLAYER_DEATH Lnone/ni;
+	FIELD em PLAYER_HURT Lnone/ni;
+	FIELD en PLAYER_LEVEL_UP Lnone/ni;
+	FIELD eo PLAYER_SMALL_FALL Lnone/ni;
+	FIELD ep PLAYER_SPLASH Lnone/ni;
+	FIELD eq PLAYER_SWIM Lnone/ni;
+	FIELD er POLAR_BEAR_AMBIENT Lnone/ni;
+	FIELD es POLAR_BEAR_BABY_AMBIENT Lnone/ni;
+	FIELD et POLAR_BEAR_DEATH Lnone/ni;
+	FIELD eu POLAR_BEAR_HURT Lnone/ni;
+	FIELD ev POLAR_BEAR_STEP Lnone/ni;
+	FIELD ew POLAR_BEAR_WARNING Lnone/ni;
+	FIELD ex PORTAL_AMBIENT Lnone/ni;
+	FIELD ey PORTAL_TRAVEL Lnone/ni;
+	FIELD ez PORTAL_TRIGGER Lnone/ni;
+	FIELD fA SKELETON_STEP Lnone/ni;
+	FIELD fB SLIME_ATTACK Lnone/ni;
+	FIELD fC SLIME_BREAK Lnone/ni;
+	FIELD fD SLIME_DEATH Lnone/ni;
+	FIELD fE SLIME_FALL Lnone/ni;
+	FIELD fF SLIME_HIT Lnone/ni;
+	FIELD fG SLIME_HURT Lnone/ni;
+	FIELD fH SLIME_JUMP Lnone/ni;
+	FIELD fI SLIME_BLOCK_PLACE Lnone/ni;
+	FIELD fJ SLIME_SQUISH Lnone/ni;
+	FIELD fK SLIME_BLOCK_STEP Lnone/ni;
+	FIELD fL SMALL_MAGMA_CUBE_DEATH Lnone/ni;
+	FIELD f ANVIL_LAND Lnone/ni;
+	FIELD fM SMALL_MAGMA_CUBE_HURT Lnone/ni;
+	FIELD fN SMALL_MAGMA_CUBE_SQUISH Lnone/ni;
+	FIELD fO SMALL_SLIME_DEATH Lnone/ni;
+	FIELD fP SMALL_SLIME_HURT Lnone/ni;
+	FIELD fQ SMALL_SLIME_JUMP Lnone/ni;
+	FIELD fR SMALL_SLIME_SQUISH Lnone/ni;
+	FIELD fS SNOWBALL_THROW Lnone/ni;
+	FIELD fT SNOWMAN_AMBIENT Lnone/ni;
+	FIELD fU SNOWMAN_DEATH Lnone/ni;
+	FIELD fV SNOWMAN_HURT Lnone/ni;
+	FIELD fW SHOOT Lnone/ni;
+	FIELD fX SNOW_BREAK Lnone/ni;
+	FIELD fY SNOW_FALL Lnone/ni;
+	FIELD fZ SNOW_HIT Lnone/ni;
+	FIELD fa SHEEP_SHEAR Lnone/ni;
+	FIELD fb SHEEP_STEP Lnone/ni;
+	FIELD fc SHIELD_BLOCK Lnone/ni;
+	FIELD fd SHIELD_BREAK Lnone/ni;
+	FIELD fe SHOVEL_FLATTEN Lnone/ni;
+	FIELD ff SHULKER_AMBIENT Lnone/ni;
+	FIELD fg SHULKER_BULLET_HIT Lnone/ni;
+	FIELD fh SHULKER_BULLET_HURT Lnone/ni;
+	FIELD fi SHULKER_CLOSE Lnone/ni;
+	FIELD fj SHULKER_DEATH Lnone/ni;
+	FIELD fk SHULKER_HURT Lnone/ni;
+	FIELD fl SHULKER_HURT_CLOSED Lnone/ni;
+	FIELD fm SHULKER_OPEN Lnone/ni;
+	FIELD fn SHULKER_SHOOT Lnone/ni;
+	FIELD fo SHULKER_TELEPORT Lnone/ni;
+	FIELD fp SILVERFISH_AMBIENT Lnone/ni;
+	FIELD fq SILVERFISH_DEATH Lnone/ni;
+	FIELD fr SILVERFISH_HURT Lnone/ni;
+	FIELD fs SILVERFISH_STEP Lnone/ni;
+	FIELD ft SKELETON_AMBIENT Lnone/ni;
+	FIELD fu SKELETON_DEATH Lnone/ni;
+	FIELD fv SKELETON_HORSE_AMBIENT Lnone/ni;
+	FIELD fw SKELETON_HORSE_DEATH Lnone/ni;
+	FIELD fx SKELETON_HORSE_HURT Lnone/ni;
+	FIELD fy SKELETON_HURT Lnone/ni;
+	FIELD fz SKELETON_SHOOT Lnone/ni;
+	FIELD gA TRIPWIRE_ATTACH Lnone/ni;
+	FIELD gB TRIPWIRE_OFF Lnone/ni;
+	FIELD gC TRIPWIRE_ON Lnone/ni;
+	FIELD gD TRIPWIRE_DETACH Lnone/ni;
+	FIELD gE UI_BUTTON_CLICK Lnone/ni;
+	FIELD gF VILLAGER_AMBIENT Lnone/ni;
+	FIELD gG VILLAGER_DEATH Lnone/ni;
+	FIELD gH VILLAGER_HURT Lnone/ni;
+	FIELD gI VILLAGER_NO Lnone/ni;
+	FIELD gJ VILLAGER_TRADING Lnone/ni;
+	FIELD gK VILLAGER_YES Lnone/ni;
+	FIELD gL WATERLILY_PLACE Lnone/ni;
+	FIELD g ANVIL_PLACE Lnone/ni;
+	FIELD gM WATER_AMBIENT Lnone/ni;
+	FIELD gN WEATHER_RAIN Lnone/ni;
+	FIELD gO WEATHER_RAIN_ABOVE Lnone/ni;
+	FIELD gP WITCH_AMBIENT Lnone/ni;
+	FIELD gQ WITCH_DEATH Lnone/ni;
+	FIELD gR WITCH_DRINK Lnone/ni;
+	FIELD gS WITCH_HURT Lnone/ni;
+	FIELD gT WITCH_THROW Lnone/ni;
+	FIELD gU WITHER_AMBIENT Lnone/ni;
+	FIELD gV WITHER_BREAK_BLOCK Lnone/ni;
+	FIELD gW WITHER_DEATH Lnone/ni;
+	FIELD gX WITHER_HURT Lnone/ni;
+	FIELD gY WITHER_SHOOT Lnone/ni;
+	FIELD gZ WITHER_SPAWN Lnone/ni;
+	FIELD ga SNOW_PLACE Lnone/ni;
+	FIELD gb SNOW_STEP Lnone/ni;
+	FIELD gc SPIDER_AMBIENT Lnone/ni;
+	FIELD gd SPIDER_DEATH Lnone/ni;
+	FIELD ge SPIDER_HURT Lnone/ni;
+	FIELD gf SPIDER_STEP Lnone/ni;
+	FIELD gg SPLASH_POTION_BREAK Lnone/ni;
+	FIELD gh SPLASH_POTION_THROW Lnone/ni;
+	FIELD gi SQUID_AMBIENT Lnone/ni;
+	FIELD gj SQUID_DEATH Lnone/ni;
+	FIELD gk SQUID_HURT Lnone/ni;
+	FIELD gl STONE_BREAK Lnone/ni;
+	FIELD gm STONE_BUTTON_OFF Lnone/ni;
+	FIELD gn STONE_BUTTON_ON Lnone/ni;
+	FIELD go STONE_FALL Lnone/ni;
+	FIELD gp STONE_HIT Lnone/ni;
+	FIELD gq STONE_PLACE Lnone/ni;
+	FIELD gr STONE_PRESSURE_PLATE_OFF Lnone/ni;
+	FIELD gs STONE_PRESSURE_PLATE_ON Lnone/ni;
+	FIELD gt STONE_STEP Lnone/ni;
+	FIELD gu STRAY_AMBIENT Lnone/ni;
+	FIELD gv STRAY_DEATH Lnone/ni;
+	FIELD gw STRAY_HURT Lnone/ni;
+	FIELD gx STRAY_STEP Lnone/ni;
+	FIELD gy THORNS_HIT Lnone/ni;
+	FIELD gz TNT_PRIMED Lnone/ni;
+	FIELD hA ZOMBIE_AMBIENT Lnone/ni;
+	FIELD hB ZOMBIE_ATTACK_DOOR_WOOD Lnone/ni;
+	FIELD hC ZOMBIE_ATTACK_DOOR_IRON Lnone/ni;
+	FIELD hD ZOMBIE_BREAK_DOOR_WOOD Lnone/ni;
+	FIELD hE ZOMBIE_DEATH Lnone/ni;
+	FIELD hF ZOMBIE_HORSE_AMBIENT Lnone/ni;
+	FIELD hG ZOMBIE_HORSE_DEATH Lnone/ni;
+	FIELD hH ZOMBIE_HORSE_HURT Lnone/ni;
+	FIELD hI ZOMBIE_HURT Lnone/ni;
+	FIELD hJ ZOMBIE_INFECT Lnone/ni;
+	FIELD hK ZOMBIE_PIG_AMBIENT Lnone/ni;
+	FIELD hL ZOMBIE_PIG_ANGRY Lnone/ni;
+	FIELD h ANVIL_STEP Lnone/ni;
+	FIELD hM ZOMBIE_PIG_DEATH Lnone/ni;
+	FIELD hN ZOMBIE_PIG_HURT Lnone/ni;
+	FIELD hO ZOMBIE_STEP Lnone/ni;
+	FIELD hP ZOMBIE_VILLAGER_AMBIENT Lnone/ni;
+	FIELD hQ ZOMBIE_VILLAGER_CONVERTED Lnone/ni;
+	FIELD hR ZOMBIE_VILLAGER_CURE Lnone/ni;
+	FIELD hS ZOMBIE_VILLAGER_DEATH Lnone/ni;
+	FIELD hT ZOMBIE_VILLAGER_HURT Lnone/ni;
+	FIELD hU ZOMBIE_VILLAGER_STEP Lnone/ni;
+	FIELD ha WITHER_SKELETON_AMBIENT Lnone/ni;
+	FIELD hb WITHER_SKELETON_DEATH Lnone/ni;
+	FIELD hc WITHER_SKELETON_HURT Lnone/ni;
+	FIELD hd WITHER_SKELETON_STEP Lnone/ni;
+	FIELD he WOLF_AMBIENT Lnone/ni;
+	FIELD hf WOLF_DEATH Lnone/ni;
+	FIELD hg WOLF_GROWL Lnone/ni;
+	FIELD hh WOLF_HOWL Lnone/ni;
+	FIELD hi WOLF_HURT Lnone/ni;
+	FIELD hj WOLF_PANT Lnone/ni;
+	FIELD hk WOLF_SHAKE Lnone/ni;
+	FIELD hl WOLF_STEP Lnone/ni;
+	FIELD hm WOLF_WHINE Lnone/ni;
+	FIELD hn WOODEN_DOOR_CLOSE Lnone/ni;
+	FIELD ho WOODEN_DOOR_OPEN Lnone/ni;
+	FIELD hp WOODEN_TRAPDOOR_CLOSE Lnone/ni;
+	FIELD hq WOODEN_TRAPDOOR_OPEN Lnone/ni;
+	FIELD hr WOOD_BREAK Lnone/ni;
+	FIELD hs WOOD_BUTTON_OFF Lnone/ni;
+	FIELD ht WOOD_BUTTON_ON Lnone/ni;
+	FIELD hu WOOD_FALL Lnone/ni;
+	FIELD hv WOOD_HIT Lnone/ni;
+	FIELD hw WOOD_PLACE Lnone/ni;
+	FIELD hx WOOD_PRESSURE_PLATE_OFF Lnone/ni;
+	FIELD hy WOOD_PRESSURE_PLATE_ON Lnone/ni;
+	FIELD hz WOOD_STEP Lnone/ni;
+	FIELD i ANVIL_USE Lnone/ni;
+	FIELD j ARMOR_STAND_BREAK Lnone/ni;
+	FIELD k ARMOR_STAND_FALL Lnone/ni;
+	FIELD l ARMOR_STAND_HIT Lnone/ni;
+	FIELD m ARMOR_STAND_PLACE Lnone/ni;
+	FIELD n ARMOR_EQUIP_CHAIN Lnone/ni;
+	FIELD o ARMOR_EQUIP_DIAMOND Lnone/ni;
+	FIELD p ARMOR_EQUIP_gENERIC Lnone/ni;
+	FIELD q ARMOR_EQUIP_GOLD Lnone/ni;
+	FIELD r ARMOR_EQUIP_IRON Lnone/ni;
+	FIELD s ARMOR_EQUIP_LEATHER Lnone/ni;
+	FIELD t ARROW_HIT Lnone/ni;
+	FIELD u ARROW_HIT_PLAYER Lnone/ni;
+	FIELD v ARROW_SHOOT Lnone/ni;
+	FIELD w BAT_AMBIENT Lnone/ni;
+	FIELD x BAT_DEATH Lnone/ni;
+	FIELD y BAT_HURT Lnone/ni;
+	FIELD z BAT_LOOP Lnone/ni;
+	METHOD a getSound (Ljava/lang/String;)Lnone/ni;
 CLASS none/op net/minecraft/util/MathUtil
 	FIELD a SQRT_2 F
 	FIELD b SIN [F
@@ -866,6 +1575,7 @@ CLASS none/rw net/minecraft/entity/Entity
 		ARG 0 world
 	METHOD O getEntityID ()I
 	METHOD U onUpdate ()V
+	METHOD a hasPermissions (ILjava/lang/String;)Z
 	METHOD a deserialize (Lnone/dr;)V
 		ARG 0 tag
 	METHOD a onDataValueChange (Lnone/kh;)V
@@ -885,6 +1595,7 @@ CLASS none/rw net/minecraft/entity/Entity
 	METHOD bi getCustomName ()Ljava/lang/String;
 	METHOD bj isCustomNameVisible ()Z
 	METHOD bx getPassengers ()Ljava/util/List;
+	METHOD c getPosition ()Lnone/cm;
 	METHOD c setDimension (I)Lnone/rw;
 		ARG 0 dimension
 	METHOD d move (DDD)V
@@ -893,16 +1604,19 @@ CLASS none/rw net/minecraft/entity/Entity
 		ARG 2 motionZ
 	METHOD d (Lnone/dr;)Z
 		ARG 0 tag
+	METHOD e getWorld ()Lnone/aid;
 	METHOD e (Lnone/cm;)V
 		ARG 0 position
 	METHOD e handleSerialize (Lnone/dr;)Lnone/dr;
 		ARG 0 tag
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 0 object
+	METHOD f getEntity ()Lnone/rw;
 	METHOD f handleDeserialize (Lnone/dr;)V
 		ARG 0 tag
 	METHOD g setGlowing (Z)V
 		ARG 0 glowing
+	METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
 	METHOD h setEntityID (I)V
 		ARG 0 entityID
 	METHOD i setMotion (DDD)V
@@ -958,9 +1672,12 @@ CLASS none/sf
 	METHOD au isAlive ()Z
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD cd getAttributeHandler ()Lnone/sv;
 	METHOD m handleUpdate ()V
 CLASS none/sg
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD U onUpdate ()V
 	METHOD a deserialize (Lnone/dr;)V
@@ -1005,76 +1722,118 @@ CLASS none/sy net/minecraft/entity/attribute/ClampedAttributeType
 		ARG 3 minimum
 		ARG 4 maximum
 CLASS none/wa net/minecraft/entity/living/BatEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/wc
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 CLASS none/wd net/minecraft/entity/living/ChickenEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/we net/minecraft/entity/living/CowEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
+CLASS none/wf
+	METHOD G getAmbientSound ()Lnone/ni;
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/wg net/minecraft/entity/living/MooshroomEntity
 	METHOD J getLootTable ()Lnone/kn;
 CLASS none/wh net/minecraft/entity/living/OcelotEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/wi net/minecraft/entity/living/PigEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/wj net/minecraft/entity/living/PolarBearEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/wk net/minecraft/entity/living/RabbitEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/wl net/minecraft/entity/living/SheepEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD df isSheared ()Z
 CLASS none/wm net/minecraft/entity/living/SnowmanEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/wn net/minecraft/entity/living/SquidEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/wo net/minecraft/entity/living/IronGolemEntity
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/wp
 	METHOD U onUpdate ()V
 CLASS none/wq net/minecraft/entity/living/WolfEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/wr net/minecraft/entity/living/HorseEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/ws net/minecraft/entity/living/HorseArmor
 	FIELD a NONE Lnone/ws;
@@ -1092,17 +1851,24 @@ CLASS none/xa net/minecraft/entity/EnderCrystalEntity
 	METHOD b serialize (Lnone/dr;)V
 	METHOD m handleUpdate ()V
 CLASS none/xb net/minecraft/entity/boss/EnderDragonEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
 CLASS none/xv net/minecraft/entity/boss/WitherEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/xx net/minecraft/entity/ArmorStandEntity
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/xy
 	METHOD a deserialize (Lnone/dr;)V
@@ -1145,8 +1911,11 @@ CLASS none/yl net/minecraft/entity/PrimedTNTEntity
 	METHOD b serialize (Lnone/dr;)V
 	METHOD m handleUpdate ()V
 CLASS none/yn net/minecraft/entity/living/BlazeEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/yo net/minecraft/entity/living/CaveSpiderEntity
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
@@ -1155,45 +1924,66 @@ CLASS none/yp net/minecraft/entity/living/CreeperEntity
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/yq net/minecraft/entity/living/EndermanEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/yr net/minecraft/entity/living/EndermiteEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/yt net/minecraft/entity/living/GhastEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/yu net/minecraft/entity/living/GiantEntity
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
 CLASS none/yv net/minecraft/entity/living/GuardianEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/yw net/minecraft/entity/living/MagmaCubeEntity
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/yx
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/yy net/minecraft/entity/living/PigZombieEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/za net/minecraft/entity/attribute/EntityAttributes
 	FIELD a MAX_HEALTH Lnone/sr;
@@ -1207,45 +1997,68 @@ CLASS none/za net/minecraft/entity/attribute/EntityAttributes
 	FIELD i LUCK Lnone/sr;
 	FIELD j LOGGER Lorg/apache/logging/log4j/Logger;
 CLASS none/zb net/minecraft/entity/living/ShulkerEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/zc net/minecraft/entity/living/SilverfishEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/zd net/minecraft/entity/living/SkeletonEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/zf net/minecraft/entity/living/SlimeEntity
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/zg net/minecraft/entity/living/SpiderEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/zh net/minecraft/entity/living/WitchEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/zi net/minecraft/entity/living/ZombieEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/zn net/minecraft/entity/living/VillagerEntity
+	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 CLASS none/zs net/minecraft/entity/player/PlayerEntity
 	FIELD bT profile Lcom/mojang/authlib/GameProfile;
 	METHOD <init> (Lnone/aid;Lcom/mojang/authlib/GameProfile;)V
@@ -1254,6 +2067,8 @@ CLASS none/zs net/minecraft/entity/player/PlayerEntity
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD bD setAttributes ()V
+	METHOD bV getHurtSound ()Lnone/ni;
+	METHOD bW getDeathSound ()Lnone/ni;
 	METHOD m handleUpdate ()V
 CLASS none/zt net/minecraft/client/util/ModelPart
 	FIELD a CAPE Lnone/zt;
@@ -1347,6 +2162,11 @@ CLASS none/aaq net/minecraft/entity/minecart/MinecartEntity
 CLASS none/aar net/minecraft/entity/minecart/ChestMinecartEntity
 	METHOD v getType ()Lnone/aaq$a;
 CLASS none/aas net/minecraft/entity/minecart/CommandBlockMinecartEntity
+	CLASS none/aas$1
+		METHOD c getPosition ()Lnone/cm;
+		METHOD e getWorld ()Lnone/aid;
+		METHOD f getEntity ()Lnone/rw;
+		METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
@@ -1728,11 +2548,33 @@ CLASS none/afg net/minecraft/item/SwordItem
 CLASS none/afi net/minecraft/item/TippedArrowItem
 CLASS none/afl net/minecraft/item/WritableBookItem
 CLASS none/afm net/minecraft/item/WrittenBookItem
+CLASS none/ahs
+	METHOD a hasPermissions (ILjava/lang/String;)Z
 CLASS none/aid net/minecraft/world/World
 	FIELD E isClient Z
 	FIELD r random Ljava/util/Random;
+	METHOD <init> (Lnone/bab;Lnone/baa;Lnone/atl;Lnone/oq;Z)V
+		ARG 4 isClient
 	METHOD a spawnEntity (Lnone/rw;)Z
+	METHOD b getBiome (Lnone/cm;)Lnone/aiq;
+		ARG 0 position
 	METHOD k handleUpdate ()V
+	METHOD r getBlockEntity (Lnone/cm;)Lnone/aqk;
+	METHOD u getServer ()Lnet/minecraft/server/MinecraftServer;
+CLASS none/aih net/minecraft/world/WorldAccessor
+	METHOD b getBiome (Lnone/cm;)Lnone/aiq;
+		ARG 0 position
+	METHOD b (Lnone/cm;I)I
+		ARG 0 position
+	METHOD d (Lnone/cm;)Z
+		ARG 0 position
+	METHOD o (Lnone/cm;)Lnone/ars;
+		ARG 0 position
+	METHOD r getBlockEntity (Lnone/cm;)Lnone/aqk;
+		ARG 0 position
+CLASS none/aim
+	METHOD b getBiome (Lnone/cm;)Lnone/aiq;
+	METHOD r getBlockEntity (Lnone/cm;)Lnone/aqk;
 CLASS none/aip net/minecraft/world/biome/ColdBeachBiome
 CLASS none/aiq net/minecraft/world/biome/Biome
 	FIELD r topBlock Lnone/ars;
@@ -2379,6 +3221,11 @@ CLASS none/aqm net/minecraft/block/entity/ChestBlockEntity
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)Lnone/dr;
 CLASS none/aqn
+	CLASS none/aqn$1
+		METHOD c getPosition ()Lnone/cm;
+		METHOD e getWorld ()Lnone/aid;
+		METHOD f getEntity ()Lnone/rw;
+		METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)Lnone/dr;
 CLASS none/aqo net/minecraft/block/entity/ComparatorBlockEntity
@@ -2417,6 +3264,18 @@ CLASS none/ara
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)Lnone/dr;
 CLASS none/arc net/minecraft/block/entity/SignBlockEntity
+	CLASS none/arc$1
+		METHOD a hasPermissions (ILjava/lang/String;)Z
+		METHOD c getPosition ()Lnone/cm;
+		METHOD e getWorld ()Lnone/aid;
+		METHOD f getEntity ()Lnone/rw;
+		METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
+	CLASS none/arc$2
+		METHOD a hasPermissions (ILjava/lang/String;)Z
+		METHOD c getPosition ()Lnone/cm;
+		METHOD e getWorld ()Lnone/aid;
+		METHOD f getEntity ()Lnone/rw;
+		METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)Lnone/dr;
 	METHOD c handleSerialize ()Lnone/dr;
@@ -2654,6 +3513,7 @@ CLASS none/bcx net/minecraft/client/MinecraftClient
 	FIELD aM sessionService Lcom/mojang/authlib/minecraft/MinecraftSessionService;
 	FIELD a RUNNING_OSX Z
 	FIELD ae session Lnone/bde;
+	FIELD h clientPlayer Lnone/bnn;
 	FIELD m openScreen Lnone/bft;
 	FIELD u options Lnone/bcz;
 	METHOD K getSession ()Lnone/bde;
@@ -2668,7 +3528,7 @@ CLASS none/bcx net/minecraft/client/MinecraftClient
 		ARG 0 resourceHandler
 	METHOD an initialize ()V
 	METHOD h stop ()V
-	METHOD z getInstance ()Lnone/bcx;
+	METHOD z get ()Lnone/bcx;
 CLASS none/bcz net/minecraft/client/options/Options
 	CLASS none/bcz$a Type
 		FIELD A CHAT_WIDTH Lnone/bcz$a;
@@ -2901,13 +3761,27 @@ CLASS none/bgo
 CLASS none/bhd
 	CLASS none/bhd$a
 		METHOD a render (Lnone/bcx;II)V
-CLASS none/bln
+CLASS none/bln net/minecraft/world/LocalWorld
+	FIELD K client Lnone/bcx;
 	METHOD a spawnEntity (Lnone/rw;)Z
-CLASS none/bnn
+		ARG 0 entity
+CLASS none/bnk net/minecraft/entity/player/client/ClientPlayerEntity
+	METHOD <init> (Lnone/aid;Lcom/mojang/authlib/GameProfile;)V
+		ARG 0 world
+		ARG 1 profile
+CLASS none/bnn net/minecraft/entity/player/client/ControllingPlayerEntity
+	FIELD f client Lnone/bcx;
+	METHOD <init> (Lnone/bcx;Lnone/aid;Lnone/bll;Lnone/nx;)V
+		ARG 0 client
+		ARG 1 world
+	METHOD a hasPermissions (ILjava/lang/String;)Z
 	METHOD a onDataValueChange (Lnone/kh;)V
+	METHOD c getPosition ()Lnone/cm;
 	METHOD d move (DDD)V
 	METHOD m handleUpdate ()V
 CLASS none/bno
+	METHOD a hasPermissions (ILjava/lang/String;)Z
+	METHOD c getPosition ()Lnone/cm;
 	METHOD m handleUpdate ()V
 CLASS none/bob net/minecraft/client/render/OpenGL
 	CLASS none/bob$b
@@ -3166,10 +4040,16 @@ CLASS none/bzl
 	METHOD Z isSnooperEnabled ()Z
 CLASS none/bzw net/minecraft/client/sound/SoundHandler
 	METHOD a play (Lnone/bzg;)V
+	METHOD a play (Lnone/bzg;I)V
 CLASS net/minecraft/client/main/Main net/minecraft/client/main/Main
 	METHOD main main ([Ljava/lang/String;)V
 		ARG 0 args
 CLASS net/minecraft/server/MinecraftServer
 	METHOD Z isSnooperEnabled ()Z
+	METHOD a hasPermissions (ILjava/lang/String;)Z
+	METHOD c getPosition ()Lnone/cm;
+	METHOD e getWorld ()Lnone/aid;
+	METHOD f getEntity ()Lnone/rw;
+	METHOD h getServer ()Lnet/minecraft/server/MinecraftServer;
 CLASS net/minecraft/client/ClientBrandRetriever net/minecraft/client/ClientBrandRetriever
 	METHOD getClientModName getClientModName ()Ljava/lang/String;
