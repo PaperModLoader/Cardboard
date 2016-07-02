@@ -3729,6 +3729,11 @@ CLASS none/bdr net/minecraft/client/gui/ButtonGUI
 		ARG 2 mouseY
 CLASS none/bdw
 	METHOD a mouseReleased (II)V
+CLASS none/bdx net/minecraft/client/gui/LabelGUI
+	METHOD a render (Lnone/bcx;II)V
+		ARG 0 client
+	METHOD b (Lnone/bcx;II)V
+		ARG 0 client
 CLASS none/bdy
 	METHOD a render (Lnone/bcx;II)V
 CLASS none/bec
@@ -3738,29 +3743,386 @@ CLASS none/bej
 CLASS none/bep
 	METHOD a mouseReleased (II)V
 	METHOD b getWidth ()I
+CLASS none/ber net/minecraft/client/gui/RealmsGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bev net/minecraft/client/gui/ChatOptionsGUI
+	FIELD a OPTION_TYPES [Lnone/bcz$a;
+	FIELD g options Lnone/bcz;
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bex
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bez
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfa
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfb net/minecraft/client/gui/CustomizeFlatGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfc net/minecraft/client/gui/CustomizeFlatPresetsGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfd
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfe
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bff
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfg
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfh
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfi
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfj
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfk
+	METHOD a onButtonClicked (Lnone/bdr;)V
 CLASS none/bfl net/minecraft/client/gui/SelectLanguageGUI
 	FIELD a returnGUI Lnone/bft;
 	METHOD <init> (Lnone/bft;Lnone/bcz;Lnone/bxn;)V
 		ARG 0 returnGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfn net/minecraft/client/gui/OptionsGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfo
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfp
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfq net/minecraft/client/gui/CreateWorldGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
 CLASS none/bft net/minecraft/client/gui/ScreenGUI
 	FIELD a LOGGER Lorg/apache/logging/log4j/Logger;
 	FIELD j client Lnone/bcx;
 	FIELD n buttons Ljava/util/List;
 	FIELD o labels Ljava/util/List;
+	METHOD a (Lnone/bcx;II)V
+		ARG 0 client
+	METHOD a onButtonClicked (Lnone/bdr;)V
+		ARG 0 button
+	METHOD b addButton (Lnone/bdr;)Lnone/bdr;
+		ARG 0 button
+CLASS none/bfu net/minecraft/client/gui/OpenLANServerGUI
+	METHOD <init> (Lnone/bft;)V
+		ARG 0 gui
+	METHOD a onButtonClicked (Lnone/bdr;)V
+		ARG 0 button
+CLASS none/bfv net/minecraft/client/gui/SkinCustomisationGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bfw net/minecraft/client/gui/SnooperGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
 CLASS none/bfx
 	CLASS none/bfx$a
 		METHOD a mouseReleased (II)V
 		METHOD a playClickSound (Lnone/bzw;)V
+	METHOD a onButtonClicked (Lnone/bdr;)V
 CLASS none/bga net/minecraft/client/gui/MainMenuGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bgb net/minecraft/client/gui/VideoSettingsGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bge
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bgf
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bgj net/minecraft/client/gui/ControlsGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
 CLASS none/bgn
 	CLASS none/bgn$d
 		METHOD a render (Lnone/bcx;II)V
-CLASS none/bgo
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bgo net/minecraft/client/gui/WrittenBookGUI
 	CLASS none/bgo$a
 		METHOD a render (Lnone/bcx;II)V
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bgq
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bgu
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bhc
+	METHOD a onButtonClicked (Lnone/bdr;)V
 CLASS none/bhd
 	CLASS none/bhd$a
 		METHOD a render (Lnone/bcx;II)V
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bhe
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bhf net/minecraft/client/gui/SignEditGUI
+	FIELD a sign Lnone/arc;
+	FIELD h doneButton Lnone/bdr;
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bhg net/minecraft/client/gui/StructureBlockGUI
+	FIELD F doneButton Lnone/bdr;
+	FIELD G cancelButton Lnone/bdr;
+	FIELD H saveButton Lnone/bdr;
+	FIELD I loadButton Lnone/bdr;
+	FIELD J rotation0Button Lnone/bdr;
+	FIELD K rotation90Button Lnone/bdr;
+	FIELD L rotation180Button Lnone/bdr;
+	FIELD M rotation270Button Lnone/bdr;
+	FIELD N modeButton Lnone/bdr;
+	FIELD O detectSizeButton Lnone/bdr;
+	FIELD P entitiesButton Lnone/bdr;
+	FIELD Q mirrorButton Lnone/bdr;
+	FIELD R showAirButton Lnone/bdr;
+	FIELD S showBoundingBoxButton Lnone/bdr;
+	FIELD f LOGGER Lorg/apache/logging/log4j/Logger;
+	FIELD g structureBlock Lnone/are;
+	METHOD <init> (Lnone/are;)V
+		ARG 0 structureBlock
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bhj net/minecraft/client/gui/MultiplayerGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bhq
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bic
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bid
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bie net/minecraft/client/gui/SingleplayerGUI
+	METHOD a onButtonClicked (Lnone/bdr;)V
+CLASS none/bix
+	METHOD a animate (FFFFFFLnone/rw;)V
+CLASS none/biy
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bja net/minecraft/client/model/BatModel
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjb
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjc net/minecraft/client/model/BoatModel
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjd
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjf
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjh
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bji
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjj
+	METHOD a animate (FFFFFFLnone/rw;)V
+CLASS none/bjk
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjl
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjm
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjn net/minecraft/client/model/HorseModel
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjo
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjp
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjr net/minecraft/client/model/MagmaCubeModel
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjs
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjt
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bju net/minecraft/client/model/EntityModel
+	FIELD a texturePositions Ljava/util/Map;
+	FIELD r bodies Ljava/util/List;
+	FIELD s textureWidth I
+	FIELD t textureHeight I
+	METHOD a animate (FFFFFFLnone/rw;)V
+		ARG 6 entity
+	METHOD a getTexturePosition (Ljava/lang/String;)Lnone/blg;
+		ARG 0 name
+	METHOD a addTexturePosition (Ljava/lang/String;II)V
+		ARG 0 name
+		ARG 1 textureX
+		ARG 2 textureY
+	METHOD a getRandomBody (Ljava/util/Random;)Lnone/blf;
+		ARG 0 random
+	METHOD a (Lnone/bju;)V
+		ARG 0 model
+	METHOD a render (Lnone/rw;FFFFFF)V
+		ARG 0 entity
+CLASS none/bjv
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjx
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bjy
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bka
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bkb
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bkc
+	METHOD a animate (FFFFFFLnone/rw;)V
+CLASS none/bkd
+	METHOD a animate (FFFFFFLnone/rw;)V
+CLASS none/bkf
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bkg
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bki
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bkj
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bkk
+	METHOD a animate (FFFFFFLnone/rw;)V
+CLASS none/bkm
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bkn
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bko
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bkp
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bks net/minecraft/client/model/IronGolemModel
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+		ARG 0 entity
+CLASS none/bkt
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bku
+	METHOD a animate (FFFFFFLnone/rw;)V
+CLASS none/bkv
+	METHOD a animate (FFFFFFLnone/rw;)V
+CLASS none/bkw net/minecraft/client/model/WitherModel
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bkx
+	METHOD a animate (FFFFFFLnone/rw;)V
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bky
+	METHOD a animate (FFFFFFLnone/rw;)V
+CLASS none/bkz
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bla net/minecraft/client/model/EnderDragonModel
+	FIELD a head Lnone/blf;
+	FIELD b neck Lnone/blf;
+	FIELD c jaw Lnone/blf;
+	FIELD d body Lnone/blf;
+	FIELD e rearLeg Lnone/blf;
+	FIELD f frontLeg Lnone/blf;
+	FIELD g rearLegTip Lnone/blf;
+	FIELD h frontLegTip Lnone/blf;
+	FIELD i rearFoot Lnone/blf;
+	FIELD j frontFoot Lnone/blf;
+	FIELD k wing Lnone/blf;
+	FIELD l wingTip Lnone/blf;
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/blb net/minecraft/client/model/BeaconModel
+	FIELD a cube Lnone/blf;
+	FIELD b glass Lnone/blf;
+	FIELD c base Lnone/blf;
+	METHOD a render (Lnone/rw;FFFFFF)V
+CLASS none/bld net/minecraft/client/model/Cuboid
+	METHOD <init> (Lnone/blf;IIFFFIIIF)V
+		ARG 0 body
+	METHOD <init> (Lnone/blf;IIFFFIIIFZ)V
+		ARG 0 body
+	METHOD a setName (Ljava/lang/String;)Lnone/bld;
+	METHOD a render (Lnone/bnt;F)V
+CLASS none/blf net/minecraft/client/model/CuboidBody
+	FIELD a textureWidth F
+	FIELD b textureHeight F
+	FIELD c positionX F
+	FIELD d positionY F
+	FIELD e positionZ F
+	FIELD f rotationX F
+	FIELD g rotationY F
+	FIELD h rotationZ F
+	FIELD l cuboids Ljava/util/List;
+	FIELD m children Ljava/util/List;
+	FIELD n name Ljava/lang/String;
+	FIELD o offsetX F
+	FIELD p offsetY F
+	FIELD q offsetZ F
+	FIELD r textureX I
+	FIELD s textureY I
+	FIELD t hasDisplayList Z
+	FIELD u displayList I
+	FIELD v model Lnone/bju;
+	METHOD <init> (Lnone/bju;)V
+		ARG 0 model
+	METHOD <init> (Lnone/bju;II)V
+		ARG 0 model
+		ARG 1 textureX
+		ARG 2 textureY
+	METHOD <init> (Lnone/bju;Ljava/lang/String;)V
+		ARG 0 model
+		ARG 1 name
+	METHOD a render (F)V
+		ARG 0 scale
+	METHOD a setPosition (FFF)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD a addCuboid (FFFIII)Lnone/blf;
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+		ARG 3 dimensionX
+		ARG 4 dimensionY
+		ARG 5 dimensionZ
+	METHOD a addCuboid (FFFIIIF)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+		ARG 3 dimensionX
+		ARG 4 dimensionY
+		ARG 5 dimensionZ
+	METHOD a addCuboid (FFFIIIZ)Lnone/blf;
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+		ARG 3 dimensionX
+		ARG 4 dimensionY
+		ARG 5 dimensionZ
+	METHOD a setTexturePosition (II)Lnone/blf;
+		ARG 0 textureX
+		ARG 1 textureY
+	METHOD a addCuboid (Ljava/lang/String;FFFIII)Lnone/blf;
+		ARG 0 name
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 dimensionX
+		ARG 5 dimensionY
+		ARG 6 dimensionZ
+	METHOD a addChild (Lnone/blf;)V
+		ARG 0 child
+	METHOD b renderStandalone (F)V
+		ARG 0 scale
+	METHOD b setTextureDimensions (II)Lnone/blf;
+		ARG 0 textureWidth
+		ARG 1 textureHeight
+	METHOD c applyTranslation (F)V
+		ARG 0 scale
+	METHOD d generateDisplayList (F)V
+		ARG 0 scale
+CLASS none/blg net/minecraft/client/model/TexturePosition
+	FIELD a textureX I
+	FIELD b textureY I
+	METHOD <init> (II)V
+		ARG 0 textureX
+		ARG 1 textureY
 CLASS none/bln net/minecraft/world/LocalWorld
 	FIELD K client Lnone/bcx;
 	METHOD a spawnEntity (Lnone/rw;)Z
@@ -3849,6 +4211,7 @@ CLASS none/bob net/minecraft/client/render/OpenGL
 		ARG 0 x
 		ARG 1 y
 		ARG 2 z
+	METHOD f (II)V
 	METHOD m clear (I)V
 		ARG 0 mask
 	METHOD n matrixMode (I)V
