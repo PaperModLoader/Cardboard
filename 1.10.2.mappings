@@ -475,7 +475,7 @@ CLASS none/ch net/minecraft/command/exception/NotFoundCommandException
 		ARG 0 localization
 		ARG 1 parameters
 CLASS none/cm net/minecraft/util/Position
-	CLASS none/cm$a
+	CLASS none/cm$a Mutable
 		FIELD b x I
 		FIELD c y I
 		FIELD d z I
@@ -495,6 +495,11 @@ CLASS none/cm net/minecraft/util/Position
 			ARG 0 x
 			ARG 1 y
 			ARG 2 z
+		METHOD c offset (Lnone/ct;)Lnone/cm$a;
+			ARG 0 direction
+		METHOD c offset (Lnone/ct;I)Lnone/cm$a;
+			ARG 0 direction
+			ARG 1 amount
 		METHOD g setPosition (Lnone/di;)Lnone/cm$a;
 			ARG 0 position
 		METHOD h copy ()Lnone/cm;
@@ -503,23 +508,49 @@ CLASS none/cm net/minecraft/util/Position
 			ARG 0 y
 		METHOD q getY ()I
 		METHOD r getZ ()I
-	CLASS none/cm$b
-		METHOD a setPosition (Lnone/rw;)Lnone/cm$a;
-		METHOD c setPosition (DDD)Lnone/cm$a;
-		METHOD c setPosition (III)Lnone/cm$a;
-		METHOD c setPosition (Lnone/rw;)Lnone/cm$b;
-			ARG 0 entity
-		METHOD d (DDD)Lnone/cm$b;
+	CLASS none/cm$b MutablePooled
+		FIELD f released Z
+		FIELD g POOL Ljava/util/List;
+		METHOD <init> (III)V
 			ARG 0 x
 			ARG 1 y
 			ARG 2 z
+		METHOD a setPosition (Lnone/rw;)Lnone/cm$a;
+		METHOD c setPosition (DDD)Lnone/cm$a;
+		METHOD c setPosition (III)Lnone/cm$a;
+		METHOD c offset (Lnone/ct;)Lnone/cm$a;
+		METHOD c offset (Lnone/ct;I)Lnone/cm$a;
+		METHOD c setPosition (Lnone/rw;)Lnone/cm$b;
+			ARG 0 entity
+		METHOD d getPooled (DDD)Lnone/cm$b;
+			ARG 0 x
+			ARG 1 y
+			ARG 2 z
+		METHOD d offset (Lnone/ct;)Lnone/cm$b;
+			ARG 0 direction
+		METHOD d offset (Lnone/ct;I)Lnone/cm$b;
+			ARG 0 direction
+			ARG 1 amount
 		METHOD e setPosition (DDD)Lnone/cm$b;
 			ARG 0 x
 			ARG 1 y
 			ARG 2 z
+		METHOD e getPooled (III)Lnone/cm$b;
+			ARG 0 x
+			ARG 1 y
+			ARG 2 z
+		METHOD f setPosition (III)Lnone/cm$b;
+			ARG 0 x
+			ARG 1 y
+			ARG 2 z
 		METHOD g setPosition (Lnone/di;)Lnone/cm$a;
+		METHOD i getPooled (Lnone/di;)Lnone/cm$b;
 		METHOD j setPosition (Lnone/di;)Lnone/cm$b;
 			ARG 0 position
+		METHOD s getZero ()Lnone/cm$b;
+		METHOD t release ()V
+	FIELD a ZERO Lnone/cm;
+	FIELD b LOGGER Lorg/apache/logging/log4j/Logger;
 	METHOD <init> (DDD)V
 		ARG 0 x
 		ARG 1 y
@@ -530,6 +561,7 @@ CLASS none/cm net/minecraft/util/Position
 		ARG 2 z
 	METHOD <init> (Lnone/rw;)V
 		ARG 0 entity
+	METHOD a up ()Lnone/cm;
 	METHOD a offset (DDD)Lnone/cm;
 		ARG 0 x
 		ARG 1 y
@@ -540,14 +572,94 @@ CLASS none/cm net/minecraft/util/Position
 		ARG 2 z
 	METHOD a deserialize (J)Lnone/cm;
 		ARG 0 value
-	METHOD c ()Lnone/cm;
-	METHOD d (I)Lnone/cm;
+	METHOD a offset (Lnone/ct;)Lnone/cm;
+		ARG 0 direction
+	METHOD a offset (Lnone/ct;I)Lnone/cm;
+		ARG 0 direction
+		ARG 1 amount
+	METHOD b down ()Lnone/cm;
+	METHOD b up (I)Lnone/cm;
+		ARG 0 amount
+	METHOD c north ()Lnone/cm;
+	METHOD c down (I)Lnone/cm;
+		ARG 0 amount
+	METHOD d south ()Lnone/cm;
+	METHOD d north (I)Lnone/cm;
+		ARG 0 amount
+	METHOD e west ()Lnone/cm;
+	METHOD e south (I)Lnone/cm;
+		ARG 0 amount
+	METHOD f east ()Lnone/cm;
+	METHOD f west (I)Lnone/cm;
+		ARG 0 amount
 	METHOD g serialize ()J
+	METHOD g east (I)Lnone/cm;
+		ARG 0 amount
 	METHOD h copy ()Lnone/cm;
 CLASS none/ct net/minecraft/util/Direction
-	CLASS none/ct$a
-		METHOD m getName ()Ljava/lang/String;
-	METHOD m getName ()Ljava/lang/String;
+	CLASS none/ct$a Axis
+		FIELD a X Lnone/ct$a;
+		FIELD b Y Lnone/ct$a;
+		FIELD c Z Lnone/ct$a;
+		FIELD d AXIS_NAMES Ljava/util/Map;
+		FIELD e name Ljava/lang/String;
+		FIELD f type Lnone/ct$c;
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnone/ct$c;)V
+			ARG 3 name
+		METHOD a getName ()Ljava/lang/String;
+		METHOD a get (Ljava/lang/String;)Lnone/ct$a;
+			ARG 0 name
+		METHOD a hasAxis (Lnone/ct;)Z
+			ARG 0 direction
+		METHOD b isVertical ()Z
+		METHOD c isHorizontal ()Z
+		METHOD d getDirectionType ()Lnone/ct$c;
+		METHOD m ()Ljava/lang/String;
+	CLASS none/ct$b AxisDirection
+		FIELD a POSITIVE Lnone/ct$b;
+		FIELD b NEGATIVE Lnone/ct$b;
+		FIELD c offset I
+		FIELD d name Ljava/lang/String;
+		METHOD <init> (Ljava/lang/String;IILjava/lang/String;)V
+			ARG 3 offset
+		METHOD a getOffset ()I
+	CLASS none/ct$c DirectionType
+		FIELD a HORIZONTAL Lnone/ct$c;
+		FIELD b VERTICAL Lnone/ct$c;
+	FIELD a DOWN Lnone/ct;
+	FIELD b UP Lnone/ct;
+	FIELD c NORTH Lnone/ct;
+	FIELD d SOUTH Lnone/ct;
+	FIELD e WEST Lnone/ct;
+	FIELD f EAST Lnone/ct;
+	FIELD j name Ljava/lang/String;
+	FIELD k axis Lnone/ct$a;
+	FIELD l axisDirection Lnone/ct$b;
+	FIELD p NAME_MAP Ljava/util/Map;
+	METHOD <init> (Ljava/lang/String;IIIILjava/lang/String;Lnone/ct$b;Lnone/ct$a;Lnone/di;)V
+		ARG 6 name
+		ARG 7 axisDirection
+		ARG 8 axis
+	METHOD a get (Ljava/lang/String;)Lnone/ct;
+		ARG 0 name
+	METHOD a getRandomDirection (Ljava/util/Random;)Lnone/ct;
+		ARG 0 random
+	METHOD a rotateClockWise (Lnone/ct$a;)Lnone/ct;
+		ARG 0 axis
+	METHOD a get (Lnone/ct$b;Lnone/ct$a;)Lnone/ct;
+		ARG 0 axisDirection
+		ARG 1 axis
+	METHOD c getAxisDirection ()Lnone/ct$b;
+	METHOD e rotateY ()Lnone/ct;
+	METHOD f rotateBackY ()Lnone/ct;
+	METHOD g getOffsetX ()I
+	METHOD h getOffsetY ()I
+	METHOD i getOffsetZ ()I
+	METHOD j getName ()Ljava/lang/String;
+	METHOD k getAxis ()Lnone/ct$a;
+	METHOD m ()Ljava/lang/String;
+	METHOD o rotateX ()Lnone/ct;
+	METHOD q rotateZ ()Lnone/ct;
 CLASS none/di
 	METHOD p getX ()I
 	METHOD q getY ()I
@@ -963,26 +1075,52 @@ CLASS none/ld
 	METHOD Z isSnooperEnabled ()Z
 CLASS none/ln
 	METHOD a onBlockInteract (Lnone/cm;Lnone/ct;)V
+	METHOD b canDestroyBlock (Lnone/cm;)Z
 CLASS none/ls net/minecraft/world/RemoteWorld
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnone/bab;Lnone/baa;ILnone/oq;)V
 		ARG 0 server
 	METHOD a spawnEntity (Lnone/rw;)Z
 	METHOD k handleUpdate ()V
 	METHOD u getServer ()Lnet/minecraft/server/MinecraftServer;
-CLASS none/lu
+CLASS none/lu net/minecraft/entity/player/server/ServerPlayerEntity
 	METHOD a hasPermissions (ILjava/lang/String;)Z
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD c getPosition ()Lnone/cm;
 	METHOD c setDimension (I)Lnone/rw;
 	METHOD m handleUpdate ()V
-CLASS none/lv net/minecraft/server/InputHandler
+CLASS none/lv net/minecraft/util/InputHandler
 	FIELD a world Lnone/aid;
+	FIELD b player Lnone/lu;
+	FIELD c gameMode Lnone/aib;
 	METHOD <init> (Lnone/aid;)V
 		ARG 0 world
+	METHOD a (Lnone/aib;)V
+		ARG 0 gameMode
+	METHOD a (Lnone/cm;)V
+		ARG 0 position
 	METHOD a onBlockInteract (Lnone/cm;Lnone/ct;)V
 		ARG 0 position
 		ARG 1 direction
+	METHOD a setWorld (Lnone/ls;)V
+		ARG 0 world
+	METHOD a (Lnone/zs;Lnone/aid;Lnone/adz;Lnone/qr;)Lnone/qt;
+		ARG 0 player
+		ARG 1 world
+	METHOD a (Lnone/zs;Lnone/aid;Lnone/adz;Lnone/qr;Lnone/cm;Lnone/ct;FFF)Lnone/qt;
+		ARG 0 player
+		ARG 1 world
+		ARG 4 position
+		ARG 5 direction
+	METHOD b getGameMode ()Lnone/aib;
+	METHOD b setGameMode (Lnone/aib;)V
+		ARG 0 gameMode
+	METHOD b canDestroyBlock (Lnone/cm;)Z
+		ARG 0 position
+	METHOD c hasHealth ()Z
+	METHOD c (Lnone/cm;)Z
+		ARG 0 position
+	METHOD d isCreative ()Z
 CLASS none/nb
 	METHOD a hasPermissions (ILjava/lang/String;)Z
 	METHOD c getPosition ()Lnone/cm;
@@ -1541,7 +1679,7 @@ CLASS none/op net/minecraft/util/MathUtil
 	METHOD g wrapAngle (F)F
 		ARG 0 angle
 CLASS none/ot
-	METHOD m getName ()Ljava/lang/String;
+	METHOD m ()Ljava/lang/String;
 CLASS none/qy
 	METHOD n_ hasCustomName ()Z
 CLASS none/rc
@@ -2088,6 +2226,7 @@ CLASS none/zs net/minecraft/entity/player/PlayerEntity
 	METHOD bD setAttributes ()V
 	METHOD bV getHurtSound ()Lnone/ni;
 	METHOD bW getDeathSound ()Lnone/ni;
+	METHOD cZ ()Z
 	METHOD m handleUpdate ()V
 CLASS none/zt net/minecraft/client/util/ModelPart
 	FIELD a CAPE Lnone/zt;
@@ -2327,7 +2466,7 @@ CLASS none/adc net/minecraft/util/Color
 	FIELD n GREEN Lnone/adc;
 	FIELD o RED Lnone/adc;
 	FIELD p BLACK Lnone/adc;
-	METHOD m getName ()Ljava/lang/String;
+	METHOD m ()Ljava/lang/String;
 CLASS none/add net/minecraft/item/DyeItem
 CLASS none/adf net/minecraft/item/EggItem
 CLASS none/adg net/minecraft/item/ElytraItem
@@ -2352,7 +2491,7 @@ CLASS none/adx net/minecraft/item/Item
 	METHOD a registerItem (ILjava/lang/String;Lnone/adx;)V
 	METHOD a setTab (Lnone/acz;)Lnone/adx;
 		ARG 0 tab
-CLASS none/aeb net/minecraft/item/ItemHandler
+CLASS none/aeb net/minecraft/item/Items
 	FIELD A STICK Lnone/adx;
 	FIELD B BOWL Lnone/adx;
 	FIELD C MUSHROOM_STEW Lnone/adx;
@@ -2596,30 +2735,55 @@ CLASS none/afl net/minecraft/item/WritableBookItem
 CLASS none/afm net/minecraft/item/WrittenBookItem
 CLASS none/ahs
 	METHOD a hasPermissions (ILjava/lang/String;)Z
+CLASS none/aib net/minecraft/entity/player/GameMode
+	FIELD a NONE Lnone/aib;
+	FIELD b SURVIVAL Lnone/aib;
+	FIELD c CREATIVE Lnone/aib;
+	FIELD d ADVENTURE Lnone/aib;
+	FIELD e SPECTATOR Lnone/aib;
+	METHOD c isEditingDisabled ()Z
+	METHOD d isCreative ()Z
+	METHOD e hasHealth ()Z
 CLASS none/aid net/minecraft/world/World
 	FIELD E isClient Z
 	FIELD r random Ljava/util/Random;
 	METHOD <init> (Lnone/bab;Lnone/baa;Lnone/atl;Lnone/oq;Z)V
 		ARG 4 isClient
+	METHOD E isInvalidY (Lnone/cm;)Z
+		ARG 0 position
+	METHOD a isValidPosition (Lnone/cm;)Z
+		ARG 0 position
+	METHOD a setBlockState (Lnone/cm;Lnone/ars;I)Z
+		ARG 0 position
+		ARG 1 state
 	METHOD a spawnEntity (Lnone/rw;)Z
 	METHOD b getBiome (Lnone/cm;)Lnone/aiq;
 		ARG 0 position
+	METHOD d isAir (Lnone/cm;)Z
+		ARG 0 position
+	METHOD g removeBlock (Lnone/cm;)Z
+		ARG 0 position
 	METHOD k handleUpdate ()V
+	METHOD o getBlockState (Lnone/cm;)Lnone/ars;
+		ARG 0 position
 	METHOD r getBlockEntity (Lnone/cm;)Lnone/aqk;
+		ARG 0 position
 	METHOD u getServer ()Lnet/minecraft/server/MinecraftServer;
 CLASS none/aih net/minecraft/world/WorldAccessor
 	METHOD b getBiome (Lnone/cm;)Lnone/aiq;
 		ARG 0 position
 	METHOD b (Lnone/cm;I)I
 		ARG 0 position
-	METHOD d (Lnone/cm;)Z
+	METHOD d isAir (Lnone/cm;)Z
 		ARG 0 position
-	METHOD o (Lnone/cm;)Lnone/ars;
+	METHOD o getBlockState (Lnone/cm;)Lnone/ars;
 		ARG 0 position
 	METHOD r getBlockEntity (Lnone/cm;)Lnone/aqk;
 		ARG 0 position
 CLASS none/aim
 	METHOD b getBiome (Lnone/cm;)Lnone/aiq;
+	METHOD d isAir (Lnone/cm;)Z
+	METHOD o getBlockState (Lnone/cm;)Lnone/ars;
 	METHOD r getBlockEntity (Lnone/cm;)Lnone/aqk;
 CLASS none/aip net/minecraft/world/biome/ColdBeachBiome
 CLASS none/aiq net/minecraft/world/biome/Biome
@@ -2741,12 +2905,12 @@ CLASS none/ajy net/minecraft/block/BarrierBlock
 CLASS none/ajz net/minecraft/block/EntityBlock
 CLASS none/akb net/minecraft/block/BaseRailBlock
 	CLASS none/akb$b
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/akc net/minecraft/block/BeaconBlock
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/akd net/minecraft/block/BedBlock
 	CLASS none/akd$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/ake net/minecraft/block/BeetrootBlock
 CLASS none/akf net/minecraft/block/Block
 	FIELD a AIR Lnone/kn;
@@ -2756,7 +2920,8 @@ CLASS none/akf net/minecraft/block/Block
 	METHOD a register (ILjava/lang/String;Lnone/akf;)V
 	METHOD a setTab (Lnone/acz;)Lnone/akf;
 	METHOD c setName (Ljava/lang/String;)Lnone/akf;
-CLASS none/akg net/minecraft/block/BlockHandler
+	METHOD u getDefaultState ()Lnone/ars;
+CLASS none/akg net/minecraft/block/Blocks
 	FIELD A SANDSTONE Lnone/akf;
 	FIELD B NOTEBLOCK Lnone/akf;
 	FIELD C BED Lnone/akf;
@@ -2999,7 +3164,7 @@ CLASS none/akx net/minecraft/block/CommandBlock
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/aky net/minecraft/block/ComparatorBlock
 	CLASS none/aky$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/akz net/minecraft/block/CraftingTableBlock
 CLASS none/ala net/minecraft/block/CropBlock
@@ -3010,19 +3175,19 @@ CLASS none/ald net/minecraft/block/DetectorRailBlock
 CLASS none/alf net/minecraft/block/RotatedBlock
 CLASS none/alg net/minecraft/block/DirtBlock
 	CLASS none/alg$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/alh net/minecraft/block/DispenserBlock
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/ali net/minecraft/block/DoorBlock
 	CLASS none/ali$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 	CLASS none/ali$b
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/alj net/minecraft/block/DoublePlantBlock
 	CLASS none/alj$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 	CLASS none/alj$b
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/alk net/minecraft/block/DragonEgg
 CLASS none/all net/minecraft/block/DropperBlock
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
@@ -3048,10 +3213,10 @@ CLASS none/alx net/minecraft/block/FenceGateBlock
 CLASS none/aly net/minecraft/block/FireBlock
 CLASS none/alz
 	CLASS none/alz$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/ama net/minecraft/block/FlowerPotBlock
 	CLASS none/ama$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/amb net/minecraft/block/FrostedIceBlock
 CLASS none/amc net/minecraft/block/DoubleStoneSlab2Block
@@ -3070,7 +3235,7 @@ CLASS none/amm net/minecraft/block/SlabBlock
 		FIELD a TOP Lnone/amm$a;
 		FIELD b BOTTOM Lnone/amm$a;
 		FIELD c name Ljava/lang/String;
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/amn net/minecraft/block/StoneSlabBlock
 CLASS none/amp net/minecraft/block/WoodenSlabBlock
 CLASS none/amq net/minecraft/block/HardenedClayBlock
@@ -3080,7 +3245,7 @@ CLASS none/ams net/minecraft/block/HopperBlock
 CLASS none/amt net/minecraft/block/RotatedHorizontalBlock
 CLASS none/amu net/minecraft/block/BigMushroomBlock
 	CLASS none/amu$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/amv net/minecraft/block/IceBlock
 CLASS none/amw net/minecraft/block/JukeboxBlock
 	CLASS none/amw$a
@@ -3091,17 +3256,17 @@ CLASS none/amx net/minecraft/block/LadderBlock
 CLASS none/amy net/minecraft/block/LeavesBlock
 CLASS none/ana net/minecraft/block/LeverBlock
 	CLASS none/ana$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/anc
 	CLASS none/anc$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/and net/minecraft/block/MagmaBlock
 CLASS none/ane net/minecraft/block/MelonBlock
 CLASS none/ang net/minecraft/block/SpawnerBlock
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/anh net/minecraft/block/MonsterEggBlock
 	CLASS none/anh$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/ani net/minecraft/block/MushroomBlock
 CLASS none/anj net/minecraft/block/MyceliumBlock
 CLASS none/ank net/minecraft/block/NetherBrickBlock
@@ -3111,7 +3276,7 @@ CLASS none/ann net/minecraft/block/Leaves2Block
 CLASS none/ano net/minecraft/block/Log2Block
 CLASS none/anp
 	CLASS none/anp$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/anq net/minecraft/block/BedrockBlock
 CLASS none/anr net/minecraft/block/NoteblockBlock
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
@@ -3122,7 +3287,7 @@ CLASS none/anv net/minecraft/block/OreBlock
 CLASS none/anw net/minecraft/block/PackedIceBlock
 CLASS none/anx net/minecraft/block/PlanksBlock
 	CLASS none/anx$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/any net/minecraft/block/NetherPortalBlock
 CLASS none/anz net/minecraft/block/PotatoesBlock
 CLASS none/aoa net/minecraft/block/RedstoneBlock
@@ -3130,25 +3295,25 @@ CLASS none/aob net/minecraft/block/PoweredRailBlock
 CLASS none/aoc net/minecraft/block/PressurePlateBlock
 CLASS none/aod net/minecraft/block/PrismarineBlock
 	CLASS none/aod$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aoe net/minecraft/block/PumpkinBlock
 CLASS none/aof net/minecraft/block/PurpurSlab
 	CLASS none/aof$a Double
 	CLASS none/aof$b Single
 	CLASS none/aof$c
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aog net/minecraft/block/QuartzBlock
 	CLASS none/aog$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aoh net/minecraft/block/RailBlock
 CLASS none/aoi net/minecraft/block/PoppyBlock
 CLASS none/aoj net/minecraft/block/RedSandstoneBlock
 	CLASS none/aoj$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aok net/minecraft/block/RedstoneOreBlock
 CLASS none/aol net/minecraft/block/RedstoneWireBlock
 	CLASS none/aol$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aom net/minecraft/block/RedstoneLampBlock
 CLASS none/aon net/minecraft/block/RedstoneTorchBlock
 CLASS none/aoo net/minecraft/block/SugarCaneBlock
@@ -3156,10 +3321,10 @@ CLASS none/aoq net/minecraft/block/RepeaterBlock
 CLASS none/aor net/minecraft/block/PillarBlock
 CLASS none/aot net/minecraft/block/SandBlock
 	CLASS none/aot$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aou net/minecraft/block/SandstoneBlock
 	CLASS none/aou$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aov net/minecraft/block/SaplingBlock
 CLASS none/aow net/minecraft/block/SeaLanternBlock
 CLASS none/aox net/minecraft/block/SignBlock
@@ -3175,40 +3340,40 @@ CLASS none/apf net/minecraft/block/StainedGlassBlock
 CLASS none/apg net/minecraft/block/StainedGlassPaneBlock
 CLASS none/aph net/minecraft/block/StairsBlock
 	CLASS none/aph$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 	CLASS none/aph$b
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/api net/minecraft/block/StandingSignBlock
 CLASS none/apj net/minecraft/block/LavaBlock
 CLASS none/apk net/minecraft/block/StemBlock
 CLASS none/apl net/minecraft/block/StoneBlock
 	CLASS none/apl$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/apm net/minecraft/block/StoneBrickBlock
 	CLASS none/apm$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/apn net/minecraft/block/StoneButtonBlock
 CLASS none/apo
 	CLASS none/apo$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/app net/minecraft/block/StructureBlock
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/apq net/minecraft/block/StructureVoidBlock
 CLASS none/apr net/minecraft/block/TallgrassBlock
 	CLASS none/apr$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aps net/minecraft/block/PaneBlock
 CLASS none/apt net/minecraft/block/TNTBlock
 CLASS none/apu net/minecraft/block/TorchBlock
 CLASS none/apv net/minecraft/block/TrapdoorBlock
 	CLASS none/apv$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/apw net/minecraft/block/TripwireBlock
 CLASS none/apx net/minecraft/block/TripwireHookBlock
 CLASS none/apy net/minecraft/block/VineBlock
 CLASS none/apz net/minecraft/block/CobblestoneWallBlock
 	CLASS none/apz$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/aqa net/minecraft/block/WallSignBlock
 CLASS none/aqb net/minecraft/block/WaterLilyBlock
 CLASS none/aqc net/minecraft/block/WebBlock
@@ -3331,7 +3496,7 @@ CLASS none/ard net/minecraft/block/entity/SkullBlockEntity
 	METHOD c handleSerialize ()Lnone/dr;
 CLASS none/are net/minecraft/block/entity/StructureBlockEntity
 	CLASS none/are$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)Lnone/dr;
 	METHOD c handleSerialize ()Lnone/dr;
@@ -3343,12 +3508,19 @@ CLASS none/arf net/minecraft/block/entity/EndGatewayBlockEntity
 CLASS none/arj net/minecraft/block/PistonBlock
 CLASS none/ark net/minecraft/block/PistonHeadBlock
 	CLASS none/ark$a
-		METHOD m getName ()Ljava/lang/String;
+		METHOD m ()Ljava/lang/String;
 CLASS none/arl net/minecraft/block/PistonExtensionBlock
 	METHOD a create (Lnone/aid;I)Lnone/aqk;
 CLASS none/arm net/minecraft/block/entity/PistonBlockEntity
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)Lnone/dr;
+CLASS none/arr
+	METHOD a getMaterial ()Lnone/axx;
+CLASS none/ars net/minecraft/block/state/BlockState
+	METHOD t getBlock ()Lnone/akf;
+CLASS none/art
+	CLASS none/art$a
+		METHOD t getBlock ()Lnone/akf;
 CLASS none/awh
 	CLASS none/awh$a
 		METHOD a serialize (Lnone/dr;)V
@@ -3560,6 +3732,8 @@ CLASS none/bcx net/minecraft/client/MinecraftClient
 	FIELD aM sessionService Lcom/mojang/authlib/minecraft/MinecraftSessionService;
 	FIELD a RUNNING_OSX Z
 	FIELD ae session Lnone/bde;
+	FIELD c inputHandler Lnone/blm;
+	FIELD f clientWorld Lnone/bln;
 	FIELD h clientPlayer Lnone/bnn;
 	FIELD m openScreen Lnone/bft;
 	FIELD u options Lnone/bcz;
@@ -4172,8 +4346,12 @@ CLASS none/blg net/minecraft/client/model/TexturePosition
 		ARG 1 textureY
 CLASS none/blm net/minecraft/client/util/ClientInputHandler
 	FIELD a client Lnone/bcx;
+	FIELD i gameMode Lnone/aib;
 	METHOD <init> (Lnone/bcx;Lnone/bll;)V
 		ARG 0 client
+	METHOD a isSpectator ()Z
+	METHOD a (Lnone/aib;)V
+		ARG 0 gameMode
 	METHOD a (Lnone/bcx;Lnone/blm;Lnone/cm;Lnone/ct;)V
 		ARG 0 client
 		ARG 1 inputHandler
@@ -4186,9 +4364,12 @@ CLASS none/blm net/minecraft/client/util/ClientInputHandler
 		ARG 1 direction
 	METHOD a (Lnone/zs;)V
 		ARG 0 player
+	METHOD b hasHealth ()Z
 	METHOD b onBlockDamage (Lnone/cm;Lnone/ct;)Z
 		ARG 0 position
 		ARG 1 direction
+	METHOD d getBlockReach ()F
+	METHOD l getGameMode ()Lnone/aib;
 CLASS none/bln net/minecraft/world/LocalWorld
 	FIELD K client Lnone/bcx;
 	METHOD a spawnEntity (Lnone/rw;)Z
@@ -4232,17 +4413,60 @@ CLASS none/bob net/minecraft/client/render/OpenGL
 			ARG 1 green
 			ARG 2 blue
 			ARG 3 alpha
+	CLASS none/bob$i CullFace
+		FIELD a FRONT Lnone/bob$i;
+		FIELD b BACK Lnone/bob$i;
+		FIELD c FRONT_AND_BACK Lnone/bob$i;
+	FIELD d LIGHTING_STATE Lnone/bob$c;
+	FIELD e LIGHT_MODES [Lnone/bob$c;
+	FIELD p NORMALIZE_STATE Lnone/bob$c;
+	FIELD s SMOOTH_STATE I
+	FIELD t RESCALE_NORMAL_STATE Lnone/bob$c;
 	FIELD v COLOR_STATE Lnone/bob$e;
+	METHOD A genTextures ()I
+	METHOD B enableNormalize ()V
+	METHOD C disableNormalize ()V
 	METHOD F loadIdentity ()V
 	METHOD G pushMatrix ()V
 	METHOD H popMatrix ()V
+	METHOD I resetColor ()V
+	METHOD J end ()V
+	METHOD K endList ()V
+	METHOD a pushAttrib ()V
+	METHOD a clearDepth (D)V
+		ARG 0 depth
 	METHOD a scale (DDD)V
 		ARG 0 x
 		ARG 1 y
 		ARG 2 z
 	METHOD a ortho (DDDDDD)V
+	METHOD a normal (FFF)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD a clearColor (FFFF)V
+		ARG 0 red
+		ARG 1 green
+		ARG 2 blue
+		ARG 3 alpha
+	METHOD a enableLightMode (I)V
+		ARG 0 mode
+	METHOD a colorMaterial (II)V
 	METHOD a normalPointer (IILjava/nio/ByteBuffer;)V
 		ARG 0 a1
+	METHOD a light (IILjava/nio/FloatBuffer;)V
+	METHOD a lightModel (ILjava/nio/FloatBuffer;)V
+	METHOD a multiplyMatrix (Ljava/nio/FloatBuffer;)V
+		ARG 0 buffer
+	METHOD a cullFace (Lnone/bob$i;)V
+		ARG 0 face
+	METHOD a depthMask (Z)V
+		ARG 0 mask
+	METHOD a colorMask (ZZZZ)V
+		ARG 0 red
+		ARG 1 green
+		ARG 2 blue
+		ARG 3 alpha
 	METHOD b translate (DDD)V
 		ARG 0 x
 		ARG 1 y
@@ -4259,6 +4483,9 @@ CLASS none/bob net/minecraft/client/render/OpenGL
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD b disableLightMode (I)V
+		ARG 0 mode
+	METHOD c popAttrib ()V
 	METHOD c translate (FFF)V
 		ARG 0 x
 		ARG 1 y
@@ -4268,20 +4495,34 @@ CLASS none/bob net/minecraft/client/render/OpenGL
 		ARG 1 green
 		ARG 2 blue
 		ARG 3 alpha
+	METHOD c depthFunc (I)V
+		ARG 0 func
 	METHOD c getFloat (ILjava/nio/FloatBuffer;)V
+	METHOD d lineWidth (F)V
 	METHOD d color (FFF)V
 		ARG 0 red
 		ARG 1 green
 		ARG 2 blue
+	METHOD d blendEquation (I)V
 	METHOD e vertex (FFF)V
 		ARG 0 x
 		ARG 1 y
 		ARG 2 z
-	METHOD f (II)V
+	METHOD e deleteList (II)V
+	METHOD f enableLighting ()V
+	METHOD f newList (II)V
+	METHOD g disableLighting ()V
+	METHOD j shade (I)V
+		ARG 0 shadeMode
 	METHOD m clear (I)V
 		ARG 0 mask
 	METHOD n matrixMode (I)V
 		ARG 0 mode
+	METHOD r begin (I)V
+		ARG 0 cap
+	METHOD s callList (I)V
+	METHOD x cullFace (I)V
+		ARG 0 face
 CLASS none/bqd net/minecraft/client/render/block/entity/BannerRenderer
 CLASS none/bqe net/minecraft/client/render/block/entity/BeaconRenderer
 CLASS none/bqf net/minecraft/client/render/block/entity/BlockEntityRenderHandler
