@@ -544,7 +544,7 @@ CLASS none/cm net/minecraft/util/Position
 	METHOD d (I)Lnone/cm;
 	METHOD g serialize ()J
 	METHOD h copy ()Lnone/cm;
-CLASS none/ct
+CLASS none/ct net/minecraft/util/Direction
 	CLASS none/ct$a
 		METHOD m getName ()Ljava/lang/String;
 	METHOD m getName ()Ljava/lang/String;
@@ -641,16 +641,18 @@ CLASS none/dr net/minecraft/util/nbt/CompoundTag
 		ARG 0 input
 	METHOD b (Ljava/lang/String;)Z
 		ARG 0 key
-	METHOD b (Ljava/lang/String;I)Z
+	METHOD b hasKey (Ljava/lang/String;I)Z
 	METHOD b_ isEmpty ()Z
 	METHOD c getKeys ()Ljava/util/Set;
 	METHOD c get (Ljava/lang/String;)Lnone/ef;
 		ARG 0 key
 	METHOD c get (Ljava/lang/String;I)Lnone/dx;
 	METHOD d size ()I
-	METHOD d getByte (Ljava/lang/String;)B
+	METHOD d getTagID (Ljava/lang/String;)B
 		ARG 0 key
 	METHOD e hasTag (Ljava/lang/String;)Z
+		ARG 0 key
+	METHOD f getByte (Ljava/lang/String;)B
 		ARG 0 key
 	METHOD g getShort (Ljava/lang/String;)S
 		ARG 0 key
@@ -959,6 +961,8 @@ CLASS none/kk net/minecraft/entity/data/DataHandler
 CLASS none/kn net/minecraft/util/Identifier
 CLASS none/ld
 	METHOD Z isSnooperEnabled ()Z
+CLASS none/ln
+	METHOD a onBlockInteract (Lnone/cm;Lnone/ct;)V
 CLASS none/ls net/minecraft/world/RemoteWorld
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnone/bab;Lnone/baa;ILnone/oq;)V
 		ARG 0 server
@@ -972,6 +976,13 @@ CLASS none/lu
 	METHOD c getPosition ()Lnone/cm;
 	METHOD c setDimension (I)Lnone/rw;
 	METHOD m handleUpdate ()V
+CLASS none/lv net/minecraft/server/InputHandler
+	FIELD a world Lnone/aid;
+	METHOD <init> (Lnone/aid;)V
+		ARG 0 world
+	METHOD a onBlockInteract (Lnone/cm;Lnone/ct;)V
+		ARG 0 position
+		ARG 1 direction
 CLASS none/nb
 	METHOD a hasPermissions (ILjava/lang/String;)Z
 	METHOD c getPosition ()Lnone/cm;
@@ -1536,6 +1547,7 @@ CLASS none/qy
 CLASS none/rc
 	METHOD Z isSnooperEnabled ()Z
 CLASS none/rt
+	METHOD a setBounds (FF)V
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
@@ -1546,6 +1558,8 @@ CLASS none/ru net/minecraft/entity/AreaEffectCloudEntity
 	METHOD m handleUpdate ()V
 CLASS none/rw net/minecraft/entity/Entity
 	FIELD F dead Z
+	FIELD G width F
+	FIELD H height F
 	FIELD L fallDistance F
 	FIELD S random Ljava/util/Random;
 	FIELD T age I
@@ -1574,7 +1588,11 @@ CLASS none/rw net/minecraft/entity/Entity
 	METHOD <init> (Lnone/aid;)V
 		ARG 0 world
 	METHOD O getEntityID ()I
+	METHOD R getDataHandler ()Lnone/kk;
 	METHOD U onUpdate ()V
+	METHOD a setBounds (FF)V
+		ARG 0 width
+		ARG 1 height
 	METHOD a hasPermissions (ILjava/lang/String;)Z
 	METHOD a deserialize (Lnone/dr;)V
 		ARG 0 tag
@@ -2045,6 +2063,7 @@ CLASS none/zh net/minecraft/entity/living/WitchEntity
 CLASS none/zi net/minecraft/entity/living/ZombieEntity
 	METHOD G getAmbientSound ()Lnone/ni;
 	METHOD J getLootTable ()Lnone/kn;
+	METHOD a setBounds (FF)V
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD a onDataValueChange (Lnone/kh;)V
 	METHOD b serialize (Lnone/dr;)V
@@ -2084,10 +2103,37 @@ CLASS none/zt net/minecraft/client/util/ModelPart
 		ARG 3 id
 	METHOD b getID ()I
 	METHOD c getName ()Ljava/lang/String;
-CLASS none/zv
+CLASS none/zv net/minecraft/entity/ArrowEntity
+	CLASS none/zv$a PickupType
+		METHOD a get (I)Lnone/zv$a;
+			ARG 0 ordinal
+	FIELD aA damage D
+	FIELD a inGround Z
+	FIELD au landedY I
+	FIELD av landedZ I
+	FIELD aw landedBlock Lnone/akf;
+	FIELD ax landedMetadata I
+	FIELD ay life I
+	FIELD c pickup Lnone/zv$a;
+	FIELD d shake I
+	FIELD h landedX I
+	METHOD <init> (Lnone/aid;)V
+		ARG 0 world
+	METHOD <init> (Lnone/aid;DDD)V
+		ARG 0 world
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD <init> (Lnone/aid;Lnone/sf;)V
+		ARG 0 world
 	METHOD a deserialize (Lnone/dr;)V
+		ARG 0 tag
 	METHOD b serialize (Lnone/dr;)V
+		ARG 0 tag
 	METHOD i setMotion (DDD)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
 	METHOD m handleUpdate ()V
 CLASS none/zw net/minecraft/entity/DragonFireballEntity
 CLASS none/zx net/minecraft/entity/EyeOfEnderEntity
@@ -2129,7 +2175,7 @@ CLASS none/aak net/minecraft/entity/ExperienceBottleEntity
 CLASS none/aal net/minecraft/entity/PotionEntity
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
-CLASS none/aam net/minecraft/entity/ArrowEntity
+CLASS none/aam net/minecraft/entity/TippedArrowEntity
 	METHOD a deserialize (Lnone/dr;)V
 	METHOD b serialize (Lnone/dr;)V
 	METHOD m handleUpdate ()V
@@ -3502,6 +3548,7 @@ CLASS none/bak net/minecraft/util/loot/LootTables
 		ARG 0 identifier
 	METHOD a get (Lnone/kn;)Lnone/kn;
 		ARG 0 identifier
+CLASS none/bby net/minecraft/util/BoundingBox
 CLASS none/bcu net/minecraft/client/key/KeyBind
 CLASS none/bcx net/minecraft/client/MinecraftClient
 	FIELD J LOGGER Lorg/apache/logging/log4j/Logger;
@@ -4123,6 +4170,25 @@ CLASS none/blg net/minecraft/client/model/TexturePosition
 	METHOD <init> (II)V
 		ARG 0 textureX
 		ARG 1 textureY
+CLASS none/blm net/minecraft/client/util/ClientInputHandler
+	FIELD a client Lnone/bcx;
+	METHOD <init> (Lnone/bcx;Lnone/bll;)V
+		ARG 0 client
+	METHOD a (Lnone/bcx;Lnone/blm;Lnone/cm;Lnone/ct;)V
+		ARG 0 client
+		ARG 1 inputHandler
+		ARG 2 position
+		ARG 3 direction
+	METHOD a (Lnone/cm;)Z
+		ARG 0 position
+	METHOD a onBlockStartBreaking (Lnone/cm;Lnone/ct;)Z
+		ARG 0 position
+		ARG 1 direction
+	METHOD a (Lnone/zs;)V
+		ARG 0 player
+	METHOD b onBlockDamage (Lnone/cm;Lnone/ct;)Z
+		ARG 0 position
+		ARG 1 direction
 CLASS none/bln net/minecraft/world/LocalWorld
 	FIELD K client Lnone/bcx;
 	METHOD a spawnEntity (Lnone/rw;)Z
