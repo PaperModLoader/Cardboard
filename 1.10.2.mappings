@@ -3520,6 +3520,7 @@ CLASS none/ars net/minecraft/block/state/BlockState
 	METHOD t getBlock ()Lnone/akf;
 CLASS none/art
 	CLASS none/art$a
+		METHOD a getMaterial ()Lnone/axx;
 		METHOD t getBlock ()Lnone/akf;
 CLASS none/awh
 	CLASS none/awh$a
