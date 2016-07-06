@@ -39335,7 +39335,46 @@
         "parameters": []
       }
     ],
-    "classes": []
+    "classes": [
+      {
+        "obf": "1",
+        "deobf": "Comparator",
+        "javadoc": "",
+        "fields": [
+          {
+            "obf": "b",
+            "deobf": "builder",
+            "desc": "Lbnt;",
+            "javadoc": ""
+          }
+        ],
+        "methods": [],
+        "classes": []
+      },
+      {
+        "obf": "2",
+        "deobf": "Format",
+        "javadoc": "",
+        "fields": [
+          {
+            "obf": "a",
+            "deobf": "FORMATS",
+            "desc": "[I;",
+            "javadoc": ""
+          }
+        ],
+        "methods": [],
+        "classes": []
+      },
+      {
+        "obf": "a",
+        "deobf": "State",
+        "javadoc": "",
+        "fields": [],
+        "methods": [],
+        "classes": []
+      }
+    ]
   },
   {
     "obf": "bob",
