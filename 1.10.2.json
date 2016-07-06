@@ -34610,6 +34610,18 @@
         "javadoc": ""
       },
       {
+        "obf": "T",
+        "deobf": "fullscreen",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "W",
+        "deobf": "crash",
+        "desc": "Lb;",
+        "javadoc": ""
+      },
+      {
         "obf": "aJ",
         "deobf": "soundHandler",
         "desc": "Lbzw;",
@@ -34640,6 +34652,18 @@
         "javadoc": ""
       },
       {
+        "obf": "d",
+        "deobf": "width",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "e",
+        "deobf": "height",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
         "obf": "f",
         "deobf": "clientWorld",
         "desc": "Lbln;",
@@ -34655,6 +34679,12 @@
         "obf": "m",
         "deobf": "openScreen",
         "desc": "Lbft;",
+        "javadoc": ""
+      },
+      {
+        "obf": "t",
+        "deobf": "hitResult",
+        "desc": "Lbbz;",
         "javadoc": ""
       },
       {
@@ -34687,11 +34717,34 @@
         "parameters": []
       },
       {
+        "obf": "X",
+        "deobf": "getSessionService",
+        "desc": "()Lcom/mojang/authlib/minecraft/MinecraftSessionService;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "Z",
         "deobf": "isSnooperEnabled",
         "desc": "()Z",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "setDimensions",
+        "desc": "(II)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "width"
+          },
+          {
+            "id": 1,
+            "deobf": "height"
+          }
+        ]
       },
       {
         "obf": "a",
@@ -34740,6 +34793,20 @@
         "obf": "h",
         "deobf": "stop",
         "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "r",
+        "deobf": "toggleFullscreen",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "x",
+        "deobf": "hasFancyGraphics",
+        "desc": "()Z",
         "javadoc": "",
         "parameters": []
       },
@@ -39204,7 +39271,7 @@
       },
       {
         "obf": "b",
-        "deobf": "b",
+        "deobf": "builder",
         "desc": "()V",
         "javadoc": "",
         "parameters": []
@@ -39255,7 +39322,7 @@
       },
       {
         "obf": "e",
-        "deobf": "build",
+        "deobf": "end",
         "desc": "()V",
         "javadoc": "",
         "parameters": []
@@ -40062,6 +40129,13 @@
         "obf": "a",
         "deobf": "get",
         "desc": "()Lbon;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "end",
+        "desc": "()V",
         "javadoc": "",
         "parameters": []
       },
@@ -41445,6 +41519,304 @@
     "classes": []
   },
   {
+    "obf": "bwm",
+    "deobf": "net/minecraft/client/render/VertexFormats",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "BLOCK",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "ITEM",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "e",
+        "deobf": "POSITION",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "f",
+        "deobf": "POSITION_COLOR",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "g",
+        "deobf": "POSITION_UV",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "h",
+        "deobf": "POSITION_NORMAL",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "i",
+        "deobf": "POSITION_UV_COLOR",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "j",
+        "deobf": "POSITION_UV_NORMAL",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "POSITION_UV_COLOR_NORMAL",
+        "desc": "Lbwo;",
+        "javadoc": ""
+      },
+      {
+        "obf": "m",
+        "deobf": "POSITION",
+        "desc": "Lbwp;",
+        "javadoc": ""
+      },
+      {
+        "obf": "n",
+        "deobf": "COLOR",
+        "desc": "Lbwp;",
+        "javadoc": ""
+      },
+      {
+        "obf": "o",
+        "deobf": "FLOAT_UV",
+        "desc": "Lbwp;",
+        "javadoc": ""
+      },
+      {
+        "obf": "p",
+        "deobf": "SHORT_UV",
+        "desc": "Lbwp;",
+        "javadoc": ""
+      },
+      {
+        "obf": "q",
+        "deobf": "NORMAL",
+        "desc": "Lbwp;",
+        "javadoc": ""
+      },
+      {
+        "obf": "r",
+        "deobf": "PADDING",
+        "desc": "Lbwp;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [],
+    "classes": []
+  },
+  {
+    "obf": "bwo",
+    "deobf": "net/minecraft/client/render/VertexFormat",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "LOGGER",
+        "desc": "Lorg/apache/logging/log4j/Logger;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "elements",
+        "desc": "Ljava/util/List;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "reset",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "add",
+        "desc": "(Lbwp;)Lbwo;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "c",
+        "deobf": "get",
+        "desc": "(I)Lbwp;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "index"
+          }
+        ]
+      },
+      {
+        "obf": "i",
+        "deobf": "getElementCount",
+        "desc": "()I",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
+    "classes": []
+  },
+  {
+    "obf": "bwp",
+    "deobf": "net/minecraft/client/render/VertexFormatElement",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "LOGGER",
+        "desc": "Lorg/apache/logging/log4j/Logger;",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "type",
+        "desc": "Lbwp$b;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "<init>",
+        "deobf": "<init>",
+        "desc": "(ILbwp$a;Lbwp$b;I)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 2,
+            "deobf": "type"
+          }
+        ]
+      },
+      {
+        "obf": "b",
+        "deobf": "getType",
+        "desc": "()Lbwp$b;",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
+    "classes": [
+      {
+        "obf": "a",
+        "deobf": "Format",
+        "javadoc": "",
+        "fields": [
+          {
+            "obf": "a",
+            "deobf": "FLOAT",
+            "desc": "Lbwp$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "b",
+            "deobf": "U_BYTE",
+            "desc": "Lbwp$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "c",
+            "deobf": "BYTE",
+            "desc": "Lbwp$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "d",
+            "deobf": "U_SHORT",
+            "desc": "Lbwp$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "e",
+            "deobf": "SHORT",
+            "desc": "Lbwp$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "f",
+            "deobf": "U_INT",
+            "desc": "Lbwp$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "g",
+            "deobf": "INT",
+            "desc": "Lbwp$a;",
+            "javadoc": ""
+          }
+        ],
+        "methods": [],
+        "classes": []
+      },
+      {
+        "obf": "b",
+        "deobf": "ElementType",
+        "javadoc": "",
+        "fields": [
+          {
+            "obf": "a",
+            "deobf": "POSITION",
+            "desc": "Lbwp$b;",
+            "javadoc": ""
+          },
+          {
+            "obf": "b",
+            "deobf": "NORMAL",
+            "desc": "Lbwp$b;",
+            "javadoc": ""
+          },
+          {
+            "obf": "c",
+            "deobf": "COLOR",
+            "desc": "Lbwp$b;",
+            "javadoc": ""
+          },
+          {
+            "obf": "d",
+            "deobf": "UV",
+            "desc": "Lbwp$b;",
+            "javadoc": ""
+          },
+          {
+            "obf": "e",
+            "deobf": "BONE_MATRIX",
+            "desc": "Lbwp$b;",
+            "javadoc": ""
+          },
+          {
+            "obf": "f",
+            "deobf": "BLEND_WEIGHT",
+            "desc": "Lbwp$b;",
+            "javadoc": ""
+          },
+          {
+            "obf": "g",
+            "deobf": "PADDING",
+            "desc": "Lbwp$b;",
+            "javadoc": ""
+          }
+        ],
+        "methods": [],
+        "classes": []
+      }
+    ]
+  },
+  {
     "obf": "bxl",
     "deobf": "net/minecraft/client/translate/Translator",
     "javadoc": "",
@@ -41562,15 +41934,184 @@
     "deobf": "net/minecraft/client/main/Main",
     "javadoc": "",
     "fields": [],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "main",
+        "deobf": "main",
+        "desc": "([Ljava/lang/String;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "args"
+          }
+        ]
+      }
+    ],
     "classes": []
   },
   {
     "obf": "net/minecraft/server/MinecraftServer",
     "deobf": "net/minecraft/server/MinecraftServer",
     "javadoc": "",
-    "fields": [],
-    "methods": [],
+    "fields": [
+      {
+        "obf": "Z",
+        "deobf": "serverThread",
+        "desc": "Ljava/lang/Thread;",
+        "javadoc": ""
+      },
+      {
+        "obf": "a",
+        "deobf": "USER_CACHE",
+        "desc": "Ljava/io/File;",
+        "javadoc": ""
+      },
+      {
+        "obf": "d",
+        "deobf": "worlds",
+        "desc": "[Lls;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "LOGGER",
+        "desc": "Lorg/apache/logging/log4j/Logger;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "A",
+        "deobf": "getRootDirectory",
+        "desc": "()Ljava/io/File;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "F",
+        "deobf": "startServerThread",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "G",
+        "deobf": "getVersion",
+        "desc": "()Ljava/lang/String;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "Z",
+        "deobf": "isSnooperEnabled",
+        "desc": "()Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getWorldFromDimension",
+        "desc": "(I)Lls;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "dimensionID"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "hasPermissions",
+        "desc": "(ILjava/lang/String;)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "a",
+        "desc": "(Laib;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "gameMode"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "a",
+        "desc": "(Laib;Z)Ljava/lang/String;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "gameMode"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "getSpawnRadius",
+        "desc": "(Lls;)I",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "world"
+          }
+        ]
+      },
+      {
+        "obf": "c",
+        "deobf": "getPosition",
+        "desc": "()Lcm;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "e",
+        "deobf": "getWorld",
+        "desc": "()Laid;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "f",
+        "deobf": "getEntity",
+        "desc": "()Lrw;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "f",
+        "deobf": "warn",
+        "desc": "(Ljava/lang/String;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "message"
+          }
+        ]
+      },
+      {
+        "obf": "h",
+        "deobf": "getServer",
+        "desc": "()Lnet/minecraft/server/MinecraftServer;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "u",
+        "deobf": "stop",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
     "classes": []
   },
   {
@@ -41578,7 +42119,15 @@
     "deobf": "net/minecraft/client/ClientBrandRetriever",
     "javadoc": "",
     "fields": [],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "getClientModName",
+        "deobf": "getClientModName",
+        "desc": "()Ljava/lang/String;",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
     "classes": []
   }
 ]
