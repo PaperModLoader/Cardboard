@@ -35771,6 +35771,81 @@
     "classes": []
   },
   {
+    "obf": "bdp",
+    "deobf": "net/minecraft/client/render/GameResolution",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "width",
+        "desc": "D",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "height",
+        "desc": "D",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "ceilWidth",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "d",
+        "deobf": "ceilHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "e",
+        "deobf": "scale",
+        "desc": "I",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "getCeilWidth",
+        "desc": "()I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "getCeilHeight",
+        "desc": "()I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "c",
+        "deobf": "getWidth",
+        "desc": "()D",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "d",
+        "deobf": "getHeight",
+        "desc": "()D",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "e",
+        "deobf": "getScale",
+        "desc": "()I",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
+    "classes": []
+  },
+  {
     "obf": "bdr",
     "deobf": "net/minecraft/client/gui/ButtonGUI",
     "javadoc": "",
@@ -39271,7 +39346,7 @@
       },
       {
         "obf": "b",
-        "deobf": "builder",
+        "deobf": "reset",
         "desc": "()V",
         "javadoc": "",
         "parameters": []
@@ -39335,46 +39410,7 @@
         "parameters": []
       }
     ],
-    "classes": [
-      {
-        "obf": "1",
-        "deobf": "Comparator",
-        "javadoc": "",
-        "fields": [
-          {
-            "obf": "b",
-            "deobf": "builder",
-            "desc": "Lbnt;",
-            "javadoc": ""
-          }
-        ],
-        "methods": [],
-        "classes": []
-      },
-      {
-        "obf": "2",
-        "deobf": "Format",
-        "javadoc": "",
-        "fields": [
-          {
-            "obf": "a",
-            "deobf": "FORMATS",
-            "desc": "[I;",
-            "javadoc": ""
-          }
-        ],
-        "methods": [],
-        "classes": []
-      },
-      {
-        "obf": "a",
-        "deobf": "State",
-        "javadoc": "",
-        "fields": [],
-        "methods": [],
-        "classes": []
-      }
-    ]
+    "classes": []
   },
   {
     "obf": "bob",
