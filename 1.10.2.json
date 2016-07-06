@@ -39123,6 +39123,154 @@
     "classes": []
   },
   {
+    "obf": "bnt",
+    "deobf": "net/minecraft/client/render/BufferBuilder",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "LOGGER",
+        "desc": "Lorg/apache/logging/log4j/Logger;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "bytes",
+        "desc": "Ljava/nio/ByteBuffer;",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "intBuffer",
+        "desc": "Ljava/nio/IntBuffer;",
+        "javadoc": ""
+      },
+      {
+        "obf": "d",
+        "deobf": "shortBuffer",
+        "desc": "Ljava/nio/ShortBuffer;",
+        "javadoc": ""
+      },
+      {
+        "obf": "e",
+        "deobf": "floatBuffer",
+        "desc": "Ljava/nio/FloatBuffer;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "<init>",
+        "deobf": "<init>",
+        "desc": "(I)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "size"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "color",
+        "desc": "(FFFF)Lbnt;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "red"
+          },
+          {
+            "id": 1,
+            "deobf": "green"
+          },
+          {
+            "id": 2,
+            "deobf": "blue"
+          },
+          {
+            "id": 3,
+            "deobf": "alpha"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "start",
+        "desc": "(ILbwo;)V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "b",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "position",
+        "desc": "(DDD)Lbnt;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "x"
+          },
+          {
+            "id": 1,
+            "deobf": "y"
+          },
+          {
+            "id": 2,
+            "deobf": "z"
+          }
+        ]
+      },
+      {
+        "obf": "b",
+        "deobf": "color",
+        "desc": "(IIII)Lbnt;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "red"
+          },
+          {
+            "id": 1,
+            "deobf": "green"
+          },
+          {
+            "id": 2,
+            "deobf": "blue"
+          },
+          {
+            "id": 3,
+            "deobf": "alpha"
+          }
+        ]
+      },
+      {
+        "obf": "e",
+        "deobf": "build",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "f",
+        "deobf": "toByteBuffer",
+        "desc": "()Ljava/nio/ByteBuffer;",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
+    "classes": []
+  },
+  {
     "obf": "bob",
     "deobf": "net/minecraft/client/render/OpenGL",
     "javadoc": "",
@@ -39890,6 +40038,42 @@
         "classes": []
       }
     ]
+  },
+  {
+    "obf": "bon",
+    "deobf": "net/minecraft/client/render/Tesselator",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "buffer",
+        "desc": "Lbnt;",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "INSTANCE",
+        "desc": "Lbon;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "get",
+        "desc": "()Lbon;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "c",
+        "deobf": "getBuffer",
+        "desc": "()Lbnt;",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
+    "classes": []
   },
   {
     "obf": "bqd",
@@ -41261,6 +41445,43 @@
     "classes": []
   },
   {
+    "obf": "bxl",
+    "deobf": "net/minecraft/client/translate/Translator",
+    "javadoc": "",
+    "fields": [],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "translate",
+        "desc": "(Ljava/lang/String;)Z",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "text"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "translate",
+        "desc": "(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "text"
+          },
+          {
+            "id": 1,
+            "deobf": "formatting"
+          }
+        ]
+      }
+    ],
+    "classes": []
+  },
+  {
     "obf": "bzl",
     "deobf": "bzl",
     "javadoc": "",
@@ -41341,184 +41562,15 @@
     "deobf": "net/minecraft/client/main/Main",
     "javadoc": "",
     "fields": [],
-    "methods": [
-      {
-        "obf": "main",
-        "deobf": "main",
-        "desc": "([Ljava/lang/String;)V",
-        "javadoc": "",
-        "parameters": [
-          {
-            "id": 0,
-            "deobf": "args"
-          }
-        ]
-      }
-    ],
+    "methods": [],
     "classes": []
   },
   {
     "obf": "net/minecraft/server/MinecraftServer",
     "deobf": "net/minecraft/server/MinecraftServer",
     "javadoc": "",
-    "fields": [
-      {
-        "obf": "Z",
-        "deobf": "serverThread",
-        "desc": "Ljava/lang/Thread;",
-        "javadoc": ""
-      },
-      {
-        "obf": "a",
-        "deobf": "USER_CACHE",
-        "desc": "Ljava/io/File;",
-        "javadoc": ""
-      },
-      {
-        "obf": "d",
-        "deobf": "worlds",
-        "desc": "[Lls;",
-        "javadoc": ""
-      },
-      {
-        "obf": "k",
-        "deobf": "LOGGER",
-        "desc": "Lorg/apache/logging/log4j/Logger;",
-        "javadoc": ""
-      }
-    ],
-    "methods": [
-      {
-        "obf": "A",
-        "deobf": "getRootDirectory",
-        "desc": "()Ljava/io/File;",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "F",
-        "deobf": "startServerThread",
-        "desc": "()V",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "G",
-        "deobf": "getVersion",
-        "desc": "()Ljava/lang/String;",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "Z",
-        "deobf": "isSnooperEnabled",
-        "desc": "()Z",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "a",
-        "deobf": "getWorldFromDimension",
-        "desc": "(I)Lls;",
-        "javadoc": "",
-        "parameters": [
-          {
-            "id": 0,
-            "deobf": "dimensionID"
-          }
-        ]
-      },
-      {
-        "obf": "a",
-        "deobf": "hasPermissions",
-        "desc": "(ILjava/lang/String;)Z",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "a",
-        "deobf": "a",
-        "desc": "(Laib;)V",
-        "javadoc": "",
-        "parameters": [
-          {
-            "id": 0,
-            "deobf": "gameMode"
-          }
-        ]
-      },
-      {
-        "obf": "a",
-        "deobf": "a",
-        "desc": "(Laib;Z)Ljava/lang/String;",
-        "javadoc": "",
-        "parameters": [
-          {
-            "id": 0,
-            "deobf": "gameMode"
-          }
-        ]
-      },
-      {
-        "obf": "a",
-        "deobf": "getSpawnRadius",
-        "desc": "(Lls;)I",
-        "javadoc": "",
-        "parameters": [
-          {
-            "id": 0,
-            "deobf": "world"
-          }
-        ]
-      },
-      {
-        "obf": "c",
-        "deobf": "getPosition",
-        "desc": "()Lcm;",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "e",
-        "deobf": "getWorld",
-        "desc": "()Laid;",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "f",
-        "deobf": "getEntity",
-        "desc": "()Lrw;",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "f",
-        "deobf": "warn",
-        "desc": "(Ljava/lang/String;)V",
-        "javadoc": "",
-        "parameters": [
-          {
-            "id": 0,
-            "deobf": "message"
-          }
-        ]
-      },
-      {
-        "obf": "h",
-        "deobf": "getServer",
-        "desc": "()Lnet/minecraft/server/MinecraftServer;",
-        "javadoc": "",
-        "parameters": []
-      },
-      {
-        "obf": "u",
-        "deobf": "stop",
-        "desc": "()V",
-        "javadoc": "",
-        "parameters": []
-      }
-    ],
+    "fields": [],
+    "methods": [],
     "classes": []
   },
   {
@@ -41526,15 +41578,7 @@
     "deobf": "net/minecraft/client/ClientBrandRetriever",
     "javadoc": "",
     "fields": [],
-    "methods": [
-      {
-        "obf": "getClientModName",
-        "deobf": "getClientModName",
-        "desc": "()Ljava/lang/String;",
-        "javadoc": "",
-        "parameters": []
-      }
-    ],
+    "methods": [],
     "classes": []
   }
 ]
