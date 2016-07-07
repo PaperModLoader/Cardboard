@@ -354,7 +354,7 @@
   },
   {
     "obf": "f",
-    "deobf": "net/minecraft/util/crash/CapturedException",
+    "deobf": "net/minecraft/util/ReportedException",
     "javadoc": "",
     "fields": [
       {
@@ -4209,8 +4209,132 @@
     "obf": "cr",
     "deobf": "net/minecraft/registry/DefaultedMappedRegistry",
     "javadoc": "",
+    "fields": [
+      {
+        "obf": "d",
+        "deobf": "defaultKey",
+        "desc": "Ljava/lang/Object;",
+        "javadoc": ""
+      },
+      {
+        "obf": "e",
+        "deobf": "defaultValue",
+        "desc": "Ljava/lang/Object;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "<init>",
+        "deobf": "<init>",
+        "desc": "(Ljava/lang/Object;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "defaultKey"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "validate",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "get",
+        "desc": "(I)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "id"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "set",
+        "desc": "(ILjava/lang/Object;Ljava/lang/Object;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "id"
+          },
+          {
+            "id": 1,
+            "deobf": "key"
+          },
+          {
+            "id": 2,
+            "deobf": "value"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "getID",
+        "desc": "(Ljava/lang/Object;)I",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "value"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "getRandomValue",
+        "desc": "(Ljava/util/Random;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "getKey",
+        "desc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "value"
+          }
+        ]
+      },
+      {
+        "obf": "c",
+        "deobf": "get",
+        "desc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          }
+        ]
+      }
+    ],
+    "classes": []
+  },
+  {
+    "obf": "cs",
+    "deobf": "cs",
+    "javadoc": "",
     "fields": [],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "c",
+        "deobf": "get",
+        "desc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
     "classes": []
   },
   {
@@ -4625,10 +4749,410 @@
     ]
   },
   {
-    "obf": "da",
-    "deobf": "net/minecraft/registry/MappedRegistry",
+    "obf": "cv",
+    "deobf": "net/minecraft/util/IterableInteger",
     "javadoc": "",
     "fields": [],
+    "methods": [],
+    "classes": []
+  },
+  {
+    "obf": "da",
+    "deobf": "net/minecraft/registry/IdentifierMappedRegistry",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "identifierMap",
+        "desc": "Lod;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "keys",
+        "desc": "Ljava/util/Map;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "get",
+        "desc": "(I)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "id"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "set",
+        "desc": "(ILjava/lang/Object;Ljava/lang/Object;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "id"
+          },
+          {
+            "id": 1,
+            "deobf": "key"
+          },
+          {
+            "id": 2,
+            "deobf": "value"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "getID",
+        "desc": "(Ljava/lang/Object;)I",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "value"
+          }
+        ]
+      },
+      {
+        "obf": "b",
+        "deobf": "getValues",
+        "desc": "()Ljava/util/Map;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "getKey",
+        "desc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "value"
+          }
+        ]
+      },
+      {
+        "obf": "c",
+        "deobf": "get",
+        "desc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          }
+        ]
+      },
+      {
+        "obf": "d",
+        "deobf": "has",
+        "desc": "(Ljava/lang/Object;)Z",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          }
+        ]
+      }
+    ],
+    "classes": []
+  },
+  {
+    "obf": "db",
+    "deobf": "net/minecraft/particle/ParticleType",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "A",
+        "deobf": "FLAME",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "B",
+        "deobf": "LAVA",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "C",
+        "deobf": "FOOTSTEP",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "D",
+        "deobf": "CLOUD",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "E",
+        "deobf": "REDDUST",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "F",
+        "deobf": "SNOWBALL_POOF",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "G",
+        "deobf": "SNOWSHOVEL",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "H",
+        "deobf": "SLIME",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "I",
+        "deobf": "HEART",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "J",
+        "deobf": "BARRIER",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "K",
+        "deobf": "ICON_CRACK",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "L",
+        "deobf": "BLOCK_CRACK",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "M",
+        "deobf": "BLOCK_DUST",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "N",
+        "deobf": "DROPLET",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "O",
+        "deobf": "TAKE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "P",
+        "deobf": "MOB_APPEARANCE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "Q",
+        "deobf": "DRAGON_BREATH",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "R",
+        "deobf": "END_ROD",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "S",
+        "deobf": "DAMAGE_INDICATOR",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "T",
+        "deobf": "SWEEP_ATTACK",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "U",
+        "deobf": "FALLING_DUST",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "a",
+        "deobf": "EXPLODE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "LARGE_EXPLODE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "HUGE_EXPLOSION",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "d",
+        "deobf": "FIREWORKS_SPARK",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "e",
+        "deobf": "BUBBLE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "f",
+        "deobf": "SLASH",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "g",
+        "deobf": "WAKE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "h",
+        "deobf": "SUSPENDED",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "i",
+        "deobf": "DEPTH_SUSPEND",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "j",
+        "deobf": "CRITICAL",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "MAGIC_CRITICAL",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "SMOKE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "m",
+        "deobf": "LARGE_SMOKE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "n",
+        "deobf": "SPELL",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "o",
+        "deobf": "INSTANT_SPELL",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "p",
+        "deobf": "MOB_SPELL",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "q",
+        "deobf": "MOB_SPELL_AMBIENT",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "r",
+        "deobf": "WITCH_MAGIC",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "s",
+        "deobf": "DRIP_WATER",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "t",
+        "deobf": "DRIP_LAVA",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "u",
+        "deobf": "ANGRY_VILLAGER",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "v",
+        "deobf": "HAPPY_VILLAGER",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "w",
+        "deobf": "TOWNAURA",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "x",
+        "deobf": "NOTE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "y",
+        "deobf": "PORTAL",
+        "desc": "Ldb;",
+        "javadoc": ""
+      },
+      {
+        "obf": "z",
+        "deobf": "ENCHANTMENT_TABLE",
+        "desc": "Ldb;",
+        "javadoc": ""
+      }
+    ],
     "methods": [],
     "classes": []
   },
@@ -4637,12 +5161,48 @@
     "deobf": "net/minecraft/registry/Registry",
     "javadoc": "",
     "fields": [],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "set",
+        "desc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          },
+          {
+            "id": 1,
+            "deobf": "value"
+          }
+        ]
+      },
+      {
+        "obf": "c",
+        "deobf": "getKeys",
+        "desc": "()Ljava/util/Set;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "c",
+        "deobf": "get",
+        "desc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          }
+        ]
+      }
+    ],
     "classes": []
   },
   {
     "obf": "dg",
-    "deobf": "net/minecraft/registry/DefaultRegistry",
+    "deobf": "net/minecraft/registry/MappedRegistry",
     "javadoc": "",
     "fields": [
       {
@@ -4650,9 +5210,83 @@
         "deobf": "LOGGER",
         "desc": "Lorg/apache/logging/log4j/Logger;",
         "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "valuesArray",
+        "desc": "[Ljava/lang/Object;",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "values",
+        "desc": "Ljava/util/Map;",
+        "javadoc": ""
       }
     ],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "set",
+        "desc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          },
+          {
+            "id": 1,
+            "deobf": "value"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "getRandomValue",
+        "desc": "(Ljava/util/Random;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "getValues",
+        "desc": "()Ljava/util/Map;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "c",
+        "deobf": "getKeys",
+        "desc": "()Ljava/util/Set;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "c",
+        "deobf": "get",
+        "desc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          }
+        ]
+      },
+      {
+        "obf": "d",
+        "deobf": "has",
+        "desc": "(Ljava/lang/Object;)Z",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          }
+        ]
+      }
+    ],
     "classes": []
   },
   {
@@ -10560,6 +11194,20 @@
         "desc": "()Z",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "n",
+        "deobf": "getGameMode",
+        "desc": "()Laib;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "o",
+        "deobf": "getDifficulty",
+        "desc": "()Lqp;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -10591,7 +11239,20 @@
     "obf": "ls",
     "deobf": "net/minecraft/world/RemoteWorld",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "I",
+        "deobf": "server",
+        "desc": "Lnet/minecraft/server/MinecraftServer;",
+        "javadoc": ""
+      },
+      {
+        "obf": "a",
+        "deobf": "LOGGER",
+        "desc": "Lorg/apache/logging/log4j/Logger;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "<init>",
@@ -10607,8 +11268,22 @@
       },
       {
         "obf": "a",
+        "deobf": "getEntity",
+        "desc": "(Ljava/util/UUID;)Lrw;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
         "deobf": "spawnEntity",
         "desc": "(Lrw;)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "save",
+        "desc": "(ZLor;)V",
         "javadoc": "",
         "parameters": []
       },
@@ -14458,6 +15133,58 @@
     "classes": []
   },
   {
+    "obf": "od",
+    "deobf": "net/minecraft/registry/IdentifierMap",
+    "javadoc": "",
+    "fields": [],
+    "methods": [
+      {
+        "obf": "<init>",
+        "deobf": "<init>",
+        "desc": "(I)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "size"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "get",
+        "desc": "(I)Ljava/lang/Object;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "id"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "get",
+        "desc": "(Ljava/lang/Object;)I",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "key"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "set",
+        "desc": "(Ljava/lang/Object;I)V",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
+    "classes": []
+  },
+  {
     "obf": "og",
     "deobf": "net/minecraft/util/JSONHelper",
     "javadoc": "",
@@ -15211,7 +15938,7 @@
     "fields": [
       {
         "obf": "F",
-        "deobf": "dead",
+        "deobf": "removed",
         "desc": "Z",
         "javadoc": ""
       },
@@ -16084,7 +16811,7 @@
   },
   {
     "obf": "se",
-    "deobf": "net/minecraft/client/option/HandOption",
+    "deobf": "net/minecraft/client/options/HandOption",
     "javadoc": "",
     "fields": [
       {
@@ -23246,6 +23973,13 @@
         "desc": "()Lacz;",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "d",
+        "deobf": "getBlock",
+        "desc": "()Lakf;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -28293,6 +29027,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -28350,6 +29091,13 @@
             "parameters": []
           },
           {
+            "obf": "b",
+            "deobf": "createProperties",
+            "desc": "()Lart;",
+            "javadoc": "",
+            "parameters": []
+          },
+          {
             "obf": "e",
             "deobf": "serialize",
             "desc": "(Lars;)I",
@@ -28369,6 +29117,13 @@
             "obf": "a",
             "deobf": "deserialize",
             "desc": "(I)Lars;",
+            "javadoc": "",
+            "parameters": []
+          },
+          {
+            "obf": "b",
+            "deobf": "createProperties",
+            "desc": "()Lart;",
             "javadoc": "",
             "parameters": []
           },
@@ -28526,6 +29281,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -28605,6 +29367,13 @@
     ],
     "methods": [
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "getAgeProperty",
         "desc": "()Lash;",
@@ -28620,6 +29389,12 @@
     "javadoc": "",
     "fields": [
       {
+        "obf": "A",
+        "deobf": "properties",
+        "desc": "Lart;",
+        "javadoc": ""
+      },
+      {
         "obf": "a",
         "deobf": "DEFAULT_BLOCK",
         "desc": "Lkn;",
@@ -28629,6 +29404,12 @@
         "obf": "b",
         "deobf": "tab",
         "desc": "Lacz;",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "defaultState",
+        "desc": "Lars;",
         "javadoc": ""
       },
       {
@@ -28680,10 +29461,67 @@
       },
       {
         "obf": "a",
+        "deobf": "get",
+        "desc": "(Ladx;)Lakf;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getID",
+        "desc": "(Lakf;)I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "get",
+        "desc": "(I)Lakf;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "id"
+          }
+        ]
+      },
+      {
+        "obf": "b",
+        "deobf": "get",
+        "desc": "(Ljava/lang/String;)Lakf;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "identifier"
+          }
+        ]
+      },
+      {
+        "obf": "c",
+        "deobf": "getState",
+        "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "id"
+          }
+        ]
       },
       {
         "obf": "c",
@@ -28714,9 +29552,30 @@
         "parameters": []
       },
       {
+        "obf": "j",
+        "deobf": "getStateID",
+        "desc": "(Lars;)I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "t",
+        "deobf": "getProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "u",
         "deobf": "getDefaultState",
         "desc": "()Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "w",
+        "deobf": "setDefaultState",
+        "desc": "(Lars;)V",
         "javadoc": "",
         "parameters": []
       }
@@ -30116,6 +30975,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30169,6 +31035,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30188,6 +31061,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -30225,6 +31105,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -30274,6 +31161,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30287,7 +31181,14 @@
     "obf": "akr",
     "deobf": "net/minecraft/block/ChestBlock",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "VARIANT",
+        "desc": "Lasf;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
@@ -30307,6 +31208,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -30334,6 +31242,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30356,6 +31271,13 @@
     "javadoc": "",
     "fields": [],
     "methods": [
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "e",
         "deobf": "serialize",
@@ -30395,6 +31317,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30421,6 +31350,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -30462,6 +31398,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30495,6 +31438,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -30555,6 +31505,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "getAgeProperty",
         "desc": "()Lash;",
@@ -30599,6 +31556,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30630,6 +31594,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30641,9 +31612,16 @@
   },
   {
     "obf": "ale",
-    "deobf": "ale",
+    "deobf": "net/minecraft/block/DirectionalCircuitBlock",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "c",
+        "deobf": "BOUNDS",
+        "desc": "Lbby;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "f",
@@ -30673,6 +31651,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -30731,6 +31716,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -30757,6 +31749,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -30827,6 +31826,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -30982,6 +31988,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -31001,6 +32014,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -31052,6 +32072,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -31112,6 +32139,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -31131,6 +32165,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -31165,6 +32206,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -31184,6 +32232,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -31221,6 +32276,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -31333,6 +32395,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -31376,6 +32445,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -31465,6 +32541,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -31504,6 +32587,13 @@
     "javadoc": "",
     "fields": [],
     "methods": [
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "e",
         "deobf": "serialize",
@@ -31681,6 +32771,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -31729,6 +32826,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -31889,6 +32993,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -31932,6 +33043,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -31989,6 +33107,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32032,6 +33157,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32130,6 +33262,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32171,6 +33310,13 @@
     "fields": [],
     "methods": [
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32198,6 +33344,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32233,6 +33386,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32252,6 +33412,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32288,6 +33455,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32371,6 +33545,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32397,6 +33578,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32443,6 +33631,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32543,6 +33738,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32589,6 +33791,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32612,6 +33821,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32631,6 +33847,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32675,6 +33898,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32694,6 +33924,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32770,6 +34007,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32810,6 +34054,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32837,6 +34088,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32893,6 +34151,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -32960,6 +34225,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -32997,6 +34269,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33016,6 +34295,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33076,6 +34362,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33116,6 +34409,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33152,6 +34452,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33217,6 +34524,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33260,6 +34574,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33504,6 +34825,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33523,6 +34851,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33553,6 +34888,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33590,6 +34932,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33657,6 +35006,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33688,6 +35044,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33707,6 +35070,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33747,6 +35117,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33795,6 +35172,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33853,6 +35237,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33880,6 +35271,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -33916,6 +35314,13 @@
     "javadoc": "",
     "fields": [],
     "methods": [
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "e",
         "deobf": "serialize",
@@ -33954,6 +35359,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -33973,6 +35385,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -34010,6 +35429,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -34061,6 +35487,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -34087,6 +35520,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -34121,6 +35561,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -34147,6 +35594,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -34187,6 +35641,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -34246,6 +35707,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -34277,6 +35745,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -34296,6 +35771,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -35308,6 +36790,13 @@
         "parameters": []
       },
       {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "e",
         "deobf": "serialize",
         "desc": "(Lars;)I",
@@ -35327,6 +36816,13 @@
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(I)Lars;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -35381,6 +36877,13 @@
         "obf": "a",
         "deobf": "onInteract",
         "desc": "(Laid;Lcm;Lars;Lzs;Lqr;Ladz;Lct;FFF)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "createProperties",
+        "desc": "()Lart;",
         "javadoc": "",
         "parameters": []
       },
@@ -35451,10 +36954,18 @@
   },
   {
     "obf": "art",
-    "deobf": "art",
+    "deobf": "net/minecraft/block/state/BlockProperties",
     "javadoc": "",
     "fields": [],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "b",
+        "deobf": "createState",
+        "desc": "()Lars;",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
     "classes": [
       {
         "obf": "a",
@@ -38530,9 +40041,21 @@
         "javadoc": ""
       },
       {
+        "obf": "aH",
+        "deobf": "framebuffer",
+        "desc": "Lbom;",
+        "javadoc": ""
+      },
+      {
         "obf": "aJ",
         "deobf": "soundHandler",
         "desc": "Lbzw;",
+        "javadoc": ""
+      },
+      {
+        "obf": "aL",
+        "deobf": "mojangLogo",
+        "desc": "Lkn;",
         "javadoc": ""
       },
       {
@@ -38551,6 +40074,12 @@
         "obf": "ae",
         "deobf": "session",
         "desc": "Lbde;",
+        "javadoc": ""
+      },
+      {
+        "obf": "ao",
+        "deobf": "saveFormat",
+        "desc": "Lbad;",
         "javadoc": ""
       },
       {
@@ -38581,6 +40110,18 @@
         "obf": "h",
         "deobf": "clientPlayer",
         "desc": "Lbnn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "fontRenderer",
+        "desc": "Lbdl;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "sgaFontRenderer",
+        "desc": "Lbdl;",
         "javadoc": ""
       },
       {
@@ -38680,7 +40221,7 @@
       },
       {
         "obf": "a",
-        "deobf": "a",
+        "deobf": "renderLogo",
         "desc": "(Lbwf;)V",
         "javadoc": "",
         "parameters": [
@@ -38693,6 +40234,13 @@
       {
         "obf": "an",
         "deobf": "initialize",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "ap",
+        "deobf": "setupDisplay",
         "desc": "()V",
         "javadoc": "",
         "parameters": []
@@ -39671,6 +41219,14 @@
     ]
   },
   {
+    "obf": "bdl",
+    "deobf": "net/minecraft/client/render/FontRenderer",
+    "javadoc": "",
+    "fields": [],
+    "methods": [],
+    "classes": []
+  },
+  {
     "obf": "bdn",
     "deobf": "net/minecraft/client/gui/BaseGUI",
     "javadoc": "",
@@ -40413,7 +41969,7 @@
   },
   {
     "obf": "bfo",
-    "deobf": "bfo",
+    "deobf": "net/minecraft/client/gui/OutOfMemoryGUI",
     "javadoc": "",
     "fields": [],
     "methods": [
@@ -43991,6 +45547,13 @@
       },
       {
         "obf": "e",
+        "deobf": "enableAlpha",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "e",
         "deobf": "vertex",
         "desc": "(FFF)V",
         "javadoc": "",
@@ -44039,6 +45602,13 @@
       },
       {
         "obf": "j",
+        "deobf": "disableDepth",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "j",
         "deobf": "shade",
         "desc": "(I)V",
         "javadoc": "",
@@ -44074,6 +45644,13 @@
         ]
       },
       {
+        "obf": "p",
+        "deobf": "disableFog",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "r",
         "deobf": "begin",
         "desc": "(I)V",
@@ -44103,6 +45680,13 @@
             "deobf": "face"
           }
         ]
+      },
+      {
+        "obf": "y",
+        "deobf": "enableTexture",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": [
@@ -45821,7 +47405,22 @@
     "deobf": "net/minecraft/client/resource/ResourceHandler",
     "javadoc": "",
     "fields": [],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "loadDynamicResource",
+        "desc": "(Ljava/lang/String;Lbvu;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "bind",
+        "desc": "(Lkn;)V",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
     "classes": []
   },
   {
@@ -45885,37 +47484,37 @@
       },
       {
         "obf": "m",
-        "deobf": "POSITION",
+        "deobf": "POSITION_ELEMENT",
         "desc": "Lbwp;",
         "javadoc": ""
       },
       {
         "obf": "n",
-        "deobf": "COLOR",
+        "deobf": "COLOR_ELEMENT",
         "desc": "Lbwp;",
         "javadoc": ""
       },
       {
         "obf": "o",
-        "deobf": "FLOAT_UV",
+        "deobf": "FLOAT_UV_ELEMENT",
         "desc": "Lbwp;",
         "javadoc": ""
       },
       {
         "obf": "p",
-        "deobf": "SHORT_UV",
+        "deobf": "SHORT_UV_ELEMENT",
         "desc": "Lbwp;",
         "javadoc": ""
       },
       {
         "obf": "q",
-        "deobf": "NORMAL",
+        "deobf": "NORMAL_ELEMENT",
         "desc": "Lbwp;",
         "javadoc": ""
       },
       {
         "obf": "r",
-        "deobf": "PADDING",
+        "deobf": "PADDING_ELEMENT",
         "desc": "Lbwp;",
         "javadoc": ""
       }
@@ -46160,6 +47759,14 @@
     "classes": []
   },
   {
+    "obf": "bzg",
+    "deobf": "net/minecraft/client/sound/SoundChannel",
+    "javadoc": "",
+    "fields": [],
+    "methods": [],
+    "classes": []
+  },
+  {
     "obf": "bzl",
     "deobf": "bzl",
     "javadoc": "",
@@ -46176,6 +47783,27 @@
         "obf": "Z",
         "deobf": "isSnooperEnabled",
         "desc": "()Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "save",
+        "desc": "(Z)V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "n",
+        "deobf": "getGameMode",
+        "desc": "()Laib;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "o",
+        "deobf": "getDifficulty",
+        "desc": "()Lqp;",
         "javadoc": "",
         "parameters": []
       },
@@ -46205,6 +47833,45 @@
     "classes": []
   },
   {
+    "obf": "bzu",
+    "deobf": "net/minecraft/client/sound/SoundSystem",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "MARKER",
+        "desc": "Lorg/apache/logging/log4j/Marker;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "LOGGER",
+        "desc": "Lorg/apache/logging/log4j/Logger;",
+        "javadoc": ""
+      },
+      {
+        "obf": "d",
+        "deobf": "soundHandler",
+        "desc": "Lbzw;",
+        "javadoc": ""
+      },
+      {
+        "obf": "e",
+        "deobf": "options",
+        "desc": "Lbcz;",
+        "javadoc": ""
+      },
+      {
+        "obf": "i",
+        "deobf": "channels",
+        "desc": "Ljava/util/Map;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [],
+    "classes": []
+  },
+  {
     "obf": "bzw",
     "deobf": "net/minecraft/client/sound/SoundHandler",
     "javadoc": "",
@@ -46221,6 +47888,22 @@
         "obf": "a",
         "deobf": "play",
         "desc": "(Lbzg;I)V",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
+    "classes": []
+  },
+  {
+    "obf": "bzx",
+    "deobf": "bzx",
+    "javadoc": "",
+    "fields": [],
+    "methods": [
+      {
+        "obf": "b",
+        "deobf": "getValues",
+        "desc": "()Ljava/util/Map;",
         "javadoc": "",
         "parameters": []
       }
@@ -46310,8 +47993,54 @@
     "obf": "net/minecraft/server/MinecraftServer",
     "deobf": "net/minecraft/server/MinecraftServer",
     "javadoc": "",
-    "fields": [],
-    "methods": [],
+    "fields": [
+      {
+        "obf": "d",
+        "deobf": "worlds",
+        "desc": "[Lls;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "LOGGER",
+        "desc": "Lorg/apache/logging/log4j/Logger;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "saveFormat",
+        "desc": "Lbad;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "save",
+        "desc": "(Z)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "print"
+          }
+        ]
+      },
+      {
+        "obf": "n",
+        "deobf": "getGameMode",
+        "desc": "()Laib;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "o",
+        "deobf": "getDifficulty",
+        "desc": "()Lqp;",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
     "classes": []
   },
   {
