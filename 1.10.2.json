@@ -3771,7 +3771,7 @@
       },
       {
         "obf": "d",
-        "deobf": "getDistanceSquared",
+        "deobf": "getDistanceVector",
         "desc": "(Ldi;)Ldi;",
         "javadoc": "",
         "parameters": []
@@ -3981,7 +3981,7 @@
           },
           {
             "obf": "d",
-            "deobf": "getDistanceSquared",
+            "deobf": "getDistanceVector",
             "desc": "(Ldi;)Ldi;",
             "javadoc": "",
             "parameters": []
@@ -5437,7 +5437,7 @@
       },
       {
         "obf": "d",
-        "deobf": "getDistanceSquared",
+        "deobf": "getDistanceVector",
         "desc": "(Ldi;)Ldi;",
         "javadoc": "",
         "parameters": [
@@ -18419,6 +18419,12 @@
         "javadoc": ""
       },
       {
+        "obf": "be",
+        "deobf": "jumping",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
         "obf": "br",
         "deobf": "attributeHandler",
         "desc": "Lsv;",
@@ -18608,6 +18614,18 @@
         "parameters": []
       },
       {
+        "obf": "l",
+        "deobf": "setJumping",
+        "desc": "(Z)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "jumping"
+          }
+        ]
+      },
+      {
         "obf": "m",
         "deobf": "handleUpdate",
         "desc": "()V",
@@ -18693,6 +18711,12 @@
         "obf": "by",
         "deobf": "armorItems",
         "desc": "[Ladz;",
+        "javadoc": ""
+      },
+      {
+        "obf": "g",
+        "deobf": "jumpHandler",
+        "desc": "Ltc;",
         "javadoc": ""
       }
     ],
@@ -19194,6 +19218,54 @@
             "deobf": "maximum"
           }
         ]
+      }
+    ],
+    "classes": []
+  },
+  {
+    "obf": "tc",
+    "deobf": "net/minecraft/entity/mob/JumpHandler",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "jumping",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "entity",
+        "desc": "Lsg;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "<init>",
+        "deobf": "<init>",
+        "desc": "(Lsg;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "entity"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "setJumping",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "onUpdate",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -21868,7 +21940,20 @@
     "obf": "wk",
     "deobf": "net/minecraft/entity/mob/RabbitEntity",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "bC",
+        "deobf": "bounceTimer",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "bD",
+        "deobf": "moreCarrotTicks",
+        "desc": "I",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "G",
@@ -21925,6 +22010,69 @@
         "desc": "()Lni;",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "de",
+        "deobf": "jump",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "df",
+        "deobf": "getJumpSound",
+        "desc": "()Lni;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "dg",
+        "deobf": "getRabbitType",
+        "desc": "()I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "di",
+        "deobf": "startJumping",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "dm",
+        "deobf": "stopJumping",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "dn",
+        "deobf": "updateBounceTimer",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "do",
+        "deobf": "resetJumpState",
+        "desc": "()V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "g",
+        "deobf": "setRabbitType",
+        "desc": "(I)V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "l",
+        "deobf": "setJumping",
+        "desc": "(Z)V",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": [
@@ -21938,6 +22086,59 @@
             "obf": "a",
             "deobf": "canActivate",
             "desc": "()Z",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "d",
+        "deobf": "JumpHelper",
+        "javadoc": "",
+        "fields": [
+          {
+            "obf": "c",
+            "deobf": "rabbit",
+            "desc": "Lwk;",
+            "javadoc": ""
+          },
+          {
+            "obf": "d",
+            "deobf": "jumping",
+            "desc": "Z",
+            "javadoc": ""
+          }
+        ],
+        "methods": [
+          {
+            "obf": "<init>",
+            "deobf": "<init>",
+            "desc": "(Lwk;Lwk;)V",
+            "javadoc": "",
+            "parameters": [
+              {
+                "id": 1,
+                "deobf": "rabbit"
+              }
+            ]
+          },
+          {
+            "obf": "a",
+            "deobf": "setJumping",
+            "desc": "(Z)V",
+            "javadoc": "",
+            "parameters": [
+              {
+                "id": 0,
+                "deobf": "jumping"
+              }
+            ]
+          },
+          {
+            "obf": "b",
+            "deobf": "onUpdate",
+            "desc": "()V",
             "javadoc": "",
             "parameters": []
           }
@@ -22373,6 +22574,13 @@
         "parameters": []
       },
       {
+        "obf": "do",
+        "deobf": "isAngry",
+        "desc": "()Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "m",
         "deobf": "handleUpdate",
         "desc": "()V",
@@ -22386,7 +22594,14 @@
     "obf": "wr",
     "deobf": "net/minecraft/entity/mob/HorseEntity",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "bz",
+        "deobf": "isJumping",
+        "desc": "Z",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "G",
@@ -22448,6 +22663,13 @@
         "obf": "bW",
         "deobf": "getDeathSound",
         "desc": "()Lni;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "do",
+        "deobf": "isJumping",
+        "desc": "()Z",
         "javadoc": "",
         "parameters": []
       },
@@ -25014,6 +25236,13 @@
         "obf": "dh",
         "deobf": "isTrading",
         "desc": "()Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "do",
+        "deobf": "setupAdditionalGoals",
+        "desc": "()V",
         "javadoc": "",
         "parameters": []
       },
