@@ -11064,6 +11064,188 @@
     "classes": []
   },
   {
+    "obf": "kc",
+    "deobf": "net/minecraft/network/ServerStatus",
+    "javadoc": "",
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "description",
+        "desc": "Ley;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "players",
+        "desc": "Lkc$a;",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "version",
+        "desc": "Lkc$c;",
+        "javadoc": ""
+      },
+      {
+        "obf": "d",
+        "deobf": "favicon",
+        "desc": "Ljava/lang/String;",
+        "javadoc": ""
+      }
+    ],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "getDescription",
+        "desc": "()Ley;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "setFavicon",
+        "desc": "(Ljava/lang/String;)V",
+        "javadoc": "",
+        "parameters": [
+          {
+            "id": 0,
+            "deobf": "favicon"
+          }
+        ]
+      },
+      {
+        "obf": "a",
+        "deobf": "setDescription",
+        "desc": "(Ley;)V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "setPlayers",
+        "desc": "(Lkc$a;)V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "setVersion",
+        "desc": "(Lkc$c;)V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "getPlayers",
+        "desc": "()Lkc$a;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "c",
+        "deobf": "getVersion",
+        "desc": "()Lkc$c;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "d",
+        "deobf": "getFavicon",
+        "desc": "()Ljava/lang/String;",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
+    "classes": [
+      {
+        "obf": "a",
+        "deobf": "Players",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "deserialize",
+            "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lkc;",
+            "javadoc": "",
+            "parameters": []
+          },
+          {
+            "obf": "a",
+            "deobf": "serialize",
+            "desc": "(Lkc;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": [
+          {
+            "obf": "a",
+            "deobf": "Serializer",
+            "javadoc": "",
+            "fields": [],
+            "methods": [
+              {
+                "obf": "a",
+                "deobf": "deserialize",
+                "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lkc$a;",
+                "javadoc": "",
+                "parameters": []
+              },
+              {
+                "obf": "a",
+                "deobf": "serialize",
+                "desc": "(Lkc$a;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;",
+                "javadoc": "",
+                "parameters": []
+              }
+            ],
+            "classes": []
+          },
+          {
+            "obf": "a",
+            "deobf": "Serializer",
+            "javadoc": "",
+            "fields": [],
+            "methods": [],
+            "classes": []
+          }
+        ]
+      },
+      {
+        "obf": "b",
+        "deobf": "Status",
+        "javadoc": "",
+        "fields": [],
+        "methods": [],
+        "classes": []
+      },
+      {
+        "obf": "c",
+        "deobf": "Version",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "deserialize",
+            "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lkc$c;",
+            "javadoc": "",
+            "parameters": []
+          },
+          {
+            "obf": "a",
+            "deobf": "serialize",
+            "desc": "(Lkc$c;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      }
+    ]
+  },
+  {
     "obf": "ke",
     "deobf": "ke",
     "javadoc": "",
@@ -15750,6 +15932,97 @@
             "deobf": "key"
           }
         ]
+      },
+      {
+        "obf": "a",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonObject;Ljava/lang/String;F)F",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonObject;Ljava/lang/String;I)I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonObject;Ljava/lang/String;Z)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/String;)Ladx;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "c",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/String;)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "e",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/String;)F",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "g",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/String;)I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "i",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ladx;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "j",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonObject;Ljava/lang/String;)Z",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "l",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonObject;Ljava/lang/String;)F",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "m",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/String;)Lcom/google/gson/JsonObject;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "n",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonObject;Ljava/lang/String;)I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "t",
+        "deobf": "get",
+        "desc": "(Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -18066,7 +18339,72 @@
         ]
       }
     ],
-    "classes": []
+    "classes": [
+      {
+        "obf": "1",
+        "deobf": "1",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "call",
+            "desc": "()Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "2",
+        "deobf": "2",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "call",
+            "desc": "()Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "3",
+        "deobf": "3",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "call",
+            "desc": "()Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "4",
+        "deobf": "4",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "call",
+            "desc": "()Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      }
+    ]
   },
   {
     "obf": "sa",
@@ -18330,7 +18668,7 @@
   },
   {
     "obf": "sc",
-    "deobf": "net/minecraft/entity/XPOrbEntity",
+    "deobf": "net/minecraft/entity/ExperienceOrbEntity",
     "javadoc": "",
     "fields": [],
     "methods": [
@@ -18902,6 +19240,13 @@
         "obf": "b",
         "deobf": "serialize",
         "desc": "(Ldr;)V",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "de",
+        "deobf": "isTamed",
+        "desc": "()Z",
         "javadoc": "",
         "parameters": []
       }
@@ -21730,6 +22075,13 @@
         "desc": "()Lni;",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "dm",
+        "deobf": "getType",
+        "desc": "()I",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -23886,6 +24238,13 @@
         "desc": "()V",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "o",
+        "deobf": "isShooting",
+        "desc": "()Z",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": [
@@ -24063,6 +24422,13 @@
         "obf": "bW",
         "deobf": "getDeathSound",
         "desc": "()Lni;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "dg",
+        "deobf": "isElder",
+        "desc": "()Z",
         "javadoc": "",
         "parameters": []
       }
@@ -26188,7 +26554,15 @@
     "deobf": "net/minecraft/entity/WitherSkullEntity",
     "javadoc": "",
     "fields": [],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "n",
+        "deobf": "isInvulnerable",
+        "desc": "()Z",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
     "classes": []
   },
   {
@@ -28042,7 +28416,327 @@
         "parameters": []
       }
     ],
-    "classes": []
+    "classes": [
+      {
+        "obf": "2",
+        "deobf": "2",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "3",
+        "deobf": "3",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "4",
+        "deobf": "4",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "5",
+        "deobf": "5",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "6",
+        "deobf": "6",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "7",
+        "deobf": "7",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "8",
+        "deobf": "8",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "9",
+        "deobf": "9",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "a",
+        "deobf": "ToolMaterial",
+        "javadoc": "",
+        "fields": [
+          {
+            "obf": "a",
+            "deobf": "WOOD",
+            "desc": "Ladx$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "b",
+            "deobf": "STONE",
+            "desc": "Ladx$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "c",
+            "deobf": "IRON",
+            "desc": "Ladx$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "d",
+            "deobf": "DIAMOND",
+            "desc": "Ladx$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "e",
+            "deobf": "GOLD",
+            "desc": "Ladx$a;",
+            "javadoc": ""
+          }
+        ],
+        "methods": [
+          {
+            "obf": "f",
+            "deobf": "getItem",
+            "desc": "()Ladx;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "10",
+        "deobf": "10",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "11",
+        "deobf": "11",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "13",
+        "deobf": "13",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "14",
+        "deobf": "14",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "17",
+        "deobf": "17",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "18",
+        "deobf": "18",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "19",
+        "deobf": "19",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "20",
+        "deobf": "20",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "21",
+        "deobf": "21",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "apply",
+            "desc": "(Ladz;)Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      }
+    ]
   },
   {
     "obf": "adz",
@@ -36522,18 +37216,18 @@
       },
       {
         "obf": "b",
-        "deobf": "Version",
+        "deobf": "LegacyVariant",
         "javadoc": "",
         "fields": [
           {
             "obf": "a",
-            "deobf": "LEGACY",
+            "deobf": "DANDELION",
             "desc": "Lalz$b;",
             "javadoc": ""
           },
           {
             "obf": "b",
-            "deobf": "NEW",
+            "deobf": "POPPY",
             "desc": "Lalz$b;",
             "javadoc": ""
           }
@@ -41329,8 +42023,40 @@
     "obf": "aqi",
     "deobf": "net/minecraft/block/entity/BannerBlockEntity",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "base",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "f",
+        "deobf": "patternsTag",
+        "desc": "Ldx;",
+        "javadoc": ""
+      },
+      {
+        "obf": "h",
+        "deobf": "patterns",
+        "desc": "Ljava/util/List;",
+        "javadoc": ""
+      },
+      {
+        "obf": "i",
+        "deobf": "colors",
+        "desc": "Ljava/util/List;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
+      {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "deserialize",
@@ -41351,9 +42077,281 @@
         "desc": "()Ldr;",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "d",
+        "deobf": "getBase",
+        "desc": "()I",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "e",
+        "deobf": "getPatterns",
+        "desc": "()Ljava/util/List;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "g",
+        "deobf": "getPatternsTag",
+        "desc": "()Ldx;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "h",
+        "deobf": "getColors",
+        "desc": "()Ljava/util/List;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
-    "classes": []
+    "classes": [
+      {
+        "obf": "a",
+        "deobf": "Pattern",
+        "javadoc": "",
+        "fields": [
+          {
+            "obf": "A",
+            "deobf": "HALF_VERTICAL",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "B",
+            "deobf": "HALF_HORIZONTAL",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "C",
+            "deobf": "HALF_VERTICAL_RIGHT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "D",
+            "deobf": "HALF_HORIZONTAL_BOTTOM",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "E",
+            "deobf": "BORDER",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "F",
+            "deobf": "CURLY_BORDER",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "G",
+            "deobf": "CREEPER",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "H",
+            "deobf": "GRADIENT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "I",
+            "deobf": "GRADIENT_UP",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "J",
+            "deobf": "BRICKS",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "K",
+            "deobf": "SKULL",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "L",
+            "deobf": "FLOWER",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "M",
+            "deobf": "MOJANG",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "a",
+            "deobf": "BASE",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "b",
+            "deobf": "SQUARE_BOTTOM_LEFT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "c",
+            "deobf": "SQUARE_BOTTOM_RIGHT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "d",
+            "deobf": "SQUARE_TOP_LEFT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "e",
+            "deobf": "SQUARE_TOP_RIGHT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "f",
+            "deobf": "STRIPE_BOTTOM",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "g",
+            "deobf": "STRIPE_TOP",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "h",
+            "deobf": "STRIPE_LEFT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "i",
+            "deobf": "STRIPE_RIGHT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "j",
+            "deobf": "STRIPE_CENTER",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "k",
+            "deobf": "STRIPE_MIDDLE",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "l",
+            "deobf": "STRIPE_DOWNRIGHT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "m",
+            "deobf": "STRIPE_DOWNLEFT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "n",
+            "deobf": "SMALL_STRIPES",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "o",
+            "deobf": "CROSS",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "p",
+            "deobf": "STRAIGHT_CROSS",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "q",
+            "deobf": "TRIANGLE_BOTTOM",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "r",
+            "deobf": "TRIANGLE_TOP",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "s",
+            "deobf": "TRIANGLES_BOTTOM",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "t",
+            "deobf": "TRIANGLES_TOP",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "u",
+            "deobf": "DIAGONAL_LEFT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "v",
+            "deobf": "DIAGONAL_UP_RIGHT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "w",
+            "deobf": "DIAGONAL_UP_LEFT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "x",
+            "deobf": "DIAGONAL_RIGHT",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "y",
+            "deobf": "CIRCLE",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          },
+          {
+            "obf": "z",
+            "deobf": "RHOMBUS",
+            "desc": "Laqi$a;",
+            "javadoc": ""
+          }
+        ],
+        "methods": [],
+        "classes": []
+      }
+    ]
   },
   {
     "obf": "aqj",
@@ -41361,6 +42359,13 @@
     "javadoc": "",
     "fields": [],
     "methods": [
+      {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "deserialize",
@@ -41439,6 +42444,13 @@
         "obf": "D",
         "deobf": "getWorld",
         "desc": "()Laid;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
         "javadoc": "",
         "parameters": []
       },
@@ -41602,7 +42614,56 @@
         "parameters": []
       }
     ],
-    "classes": []
+    "classes": [
+      {
+        "obf": "1",
+        "deobf": "1",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "call",
+            "desc": "()Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "2",
+        "deobf": "2",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "call",
+            "desc": "()Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      },
+      {
+        "obf": "3",
+        "deobf": "3",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "call",
+            "desc": "()Ljava/lang/String;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      }
+    ]
   },
   {
     "obf": "aql",
@@ -41663,6 +42724,13 @@
       }
     ],
     "methods": [
+      {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "deserialize",
@@ -41866,6 +42934,13 @@
     "fields": [],
     "methods": [
       {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(Ldr;)V",
@@ -42051,6 +43126,13 @@
     "fields": [],
     "methods": [
       {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(Ldr;)V",
@@ -42148,6 +43230,13 @@
     "javadoc": "",
     "fields": [],
     "methods": [
+      {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "deserialize",
@@ -42268,6 +43357,13 @@
     "fields": [],
     "methods": [
       {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "a",
         "deobf": "deserialize",
         "desc": "(Ldr;)V",
@@ -42297,6 +43393,13 @@
     "javadoc": "",
     "fields": [],
     "methods": [
+      {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "deserialize",
@@ -42369,6 +43472,13 @@
     "javadoc": "",
     "fields": [],
     "methods": [
+      {
+        "obf": "D_",
+        "deobf": "getUpdatePacket",
+        "desc": "()Lfw;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "deserialize",
@@ -42742,7 +43852,7 @@
       },
       {
         "obf": "a",
-        "deobf": "a",
+        "deobf": "serializeString",
         "desc": "(Ljava/lang/Boolean;)Ljava/lang/String;",
         "javadoc": "",
         "parameters": []
@@ -42846,6 +43956,13 @@
     "methods": [
       {
         "obf": "a",
+        "deobf": "serializeString",
+        "desc": "(Ljava/lang/Enum;)Ljava/lang/String;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
         "deobf": "create",
         "desc": "(Ljava/lang/String;Ljava/lang/Class;)Lasg;",
         "javadoc": "",
@@ -42896,7 +44013,7 @@
       },
       {
         "obf": "a",
-        "deobf": "a",
+        "deobf": "serializeString",
         "desc": "(Ljava/lang/Integer;)Ljava/lang/String;",
         "javadoc": "",
         "parameters": []
@@ -42941,6 +44058,13 @@
         "obf": "a",
         "deobf": "getName",
         "desc": "()Ljava/lang/String;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "serializeString",
+        "desc": "(Ljava/lang/Comparable;)Ljava/lang/String;",
         "javadoc": "",
         "parameters": []
       },
@@ -43414,9 +44538,985 @@
     "obf": "atw",
     "deobf": "net/minecraft/world/GenerationSettings",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "A",
+        "deobf": "useWaterLakes",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "B",
+        "deobf": "waterLakeChance",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "C",
+        "deobf": "useLavaLakes",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "D",
+        "deobf": "lavaLakeChance",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "E",
+        "deobf": "useLavaOceans",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "F",
+        "deobf": "fixedBiome",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "G",
+        "deobf": "biomeSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "H",
+        "deobf": "riverSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "I",
+        "deobf": "dirtSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "J",
+        "deobf": "dirtCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "K",
+        "deobf": "dirtMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "L",
+        "deobf": "dirtMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "M",
+        "deobf": "gravelSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "N",
+        "deobf": "gravelCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "O",
+        "deobf": "gravelMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "P",
+        "deobf": "gravelMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "Q",
+        "deobf": "graniteSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "R",
+        "deobf": "graniteCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "S",
+        "deobf": "graniteMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "T",
+        "deobf": "graniteMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "U",
+        "deobf": "dioriteSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "V",
+        "deobf": "dioriteCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "W",
+        "deobf": "dioriteMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "X",
+        "deobf": "dioriteMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "Y",
+        "deobf": "andesiteSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "Z",
+        "deobf": "andesiteCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "a",
+        "deobf": "coordinateScale",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "aa",
+        "deobf": "andesiteMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ab",
+        "deobf": "andesiteMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ac",
+        "deobf": "coalSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ad",
+        "deobf": "coalCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ae",
+        "deobf": "coalMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "af",
+        "deobf": "coalMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ag",
+        "deobf": "ironSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ah",
+        "deobf": "ironCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ai",
+        "deobf": "ironMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "aj",
+        "deobf": "ironMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ak",
+        "deobf": "goldSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "al",
+        "deobf": "goldCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "am",
+        "deobf": "goldMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "an",
+        "deobf": "goldMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ao",
+        "deobf": "redstoneSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ap",
+        "deobf": "redstoneCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "aq",
+        "deobf": "redstoneMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ar",
+        "deobf": "redstoneMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "as",
+        "deobf": "diamondSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "at",
+        "deobf": "diamondCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "au",
+        "deobf": "diamondMinHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "av",
+        "deobf": "diamondMaxHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "aw",
+        "deobf": "lapisSize",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ax",
+        "deobf": "lapisCount",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "ay",
+        "deobf": "lapisCenterHeight",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "az",
+        "deobf": "lapisSpread",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "heightScale",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "c",
+        "deobf": "upperLimitScale",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "d",
+        "deobf": "lowerLimitScale",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "e",
+        "deobf": "depthNoiseScaleX",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "f",
+        "deobf": "depthNoiseScaleY",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "g",
+        "deobf": "depthNoiseScaleExponent",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "h",
+        "deobf": "mainNoiseScaleX",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "i",
+        "deobf": "mainNoiseScaleY",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "j",
+        "deobf": "mainNoiseScaleZ",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "baseSize",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "stretchY",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "m",
+        "deobf": "biomeDepthWeight",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "n",
+        "deobf": "biomeDepthOffset",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "o",
+        "deobf": "biomeScaleWeight",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "p",
+        "deobf": "biomeScaleOffset",
+        "desc": "F",
+        "javadoc": ""
+      },
+      {
+        "obf": "q",
+        "deobf": "seaLevel",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "r",
+        "deobf": "useCaves",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "s",
+        "deobf": "useDungeons",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "t",
+        "deobf": "dungeonChance",
+        "desc": "I",
+        "javadoc": ""
+      },
+      {
+        "obf": "u",
+        "deobf": "useStrongholds",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "v",
+        "deobf": "useVillages",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "w",
+        "deobf": "useMineshafts",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "x",
+        "deobf": "useTemples",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "y",
+        "deobf": "useMonuments",
+        "desc": "Z",
+        "javadoc": ""
+      },
+      {
+        "obf": "z",
+        "deobf": "useRavines",
+        "desc": "Z",
+        "javadoc": ""
+      }
+    ],
     "methods": [],
-    "classes": []
+    "classes": [
+      {
+        "obf": "a",
+        "deobf": "Factory",
+        "javadoc": "",
+        "fields": [
+          {
+            "obf": "A",
+            "deobf": "useRavines",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "B",
+            "deobf": "useWaterLakes",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "C",
+            "deobf": "waterLakeChance",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "D",
+            "deobf": "useLavaLakes",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "E",
+            "deobf": "lavaLakeChance",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "F",
+            "deobf": "useLavaOceans",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "G",
+            "deobf": "fixedBiome",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "H",
+            "deobf": "biomeSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "I",
+            "deobf": "riverSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "J",
+            "deobf": "dirtSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "K",
+            "deobf": "dirtCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "L",
+            "deobf": "dirtMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "M",
+            "deobf": "dirtMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "N",
+            "deobf": "gravelSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "O",
+            "deobf": "gravelCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "P",
+            "deobf": "gravelMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "Q",
+            "deobf": "gravelMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "R",
+            "deobf": "graniteSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "S",
+            "deobf": "graniteCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "T",
+            "deobf": "graniteMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "U",
+            "deobf": "graniteMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "V",
+            "deobf": "dioriteSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "W",
+            "deobf": "dioriteCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "X",
+            "deobf": "dioriteMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "Y",
+            "deobf": "dioriteMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "Z",
+            "deobf": "andesiteSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "aA",
+            "deobf": "lapisSpread",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "a",
+            "deobf": "GSON",
+            "desc": "Lcom/google/gson/Gson;",
+            "javadoc": ""
+          },
+          {
+            "obf": "aa",
+            "deobf": "andesiteCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ab",
+            "deobf": "andesiteMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ac",
+            "deobf": "andesiteMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ad",
+            "deobf": "coalSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ae",
+            "deobf": "coalCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "af",
+            "deobf": "coalMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ag",
+            "deobf": "coalMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ah",
+            "deobf": "ironSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ai",
+            "deobf": "ironCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "aj",
+            "deobf": "ironMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ak",
+            "deobf": "ironMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "al",
+            "deobf": "goldSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "am",
+            "deobf": "goldCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "an",
+            "deobf": "goldMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ao",
+            "deobf": "goldMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ap",
+            "deobf": "redstoneSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "aq",
+            "deobf": "redstoneCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ar",
+            "deobf": "redstoneMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "as",
+            "deobf": "redstoneMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "at",
+            "deobf": "diamondSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "au",
+            "deobf": "diamondCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "av",
+            "deobf": "diamondMinHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "aw",
+            "deobf": "diamondMaxHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ax",
+            "deobf": "lapisSize",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "ay",
+            "deobf": "lapisCount",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "az",
+            "deobf": "lapisCenterHeight",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "b",
+            "deobf": "coordinateScale",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "c",
+            "deobf": "heightScale",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "d",
+            "deobf": "upperLimitScale",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "e",
+            "deobf": "lowerLimitScale",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "f",
+            "deobf": "depthNoiseScaleX",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "g",
+            "deobf": "depthNoiseScaleY",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "h",
+            "deobf": "depthNoiseScaleExponent",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "i",
+            "deobf": "mainNoiseScaleX",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "j",
+            "deobf": "mainNoiseScaleY",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "k",
+            "deobf": "mainNoiseScaleZ",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "l",
+            "deobf": "baseSize",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "m",
+            "deobf": "stretchY",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "n",
+            "deobf": "biomeDepthWeight",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "o",
+            "deobf": "biomeDepthOffset",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "p",
+            "deobf": "biomeScaleWeight",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "q",
+            "deobf": "biomeScaleOffset",
+            "desc": "F",
+            "javadoc": ""
+          },
+          {
+            "obf": "r",
+            "deobf": "seaLevel",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "s",
+            "deobf": "useCaves",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "t",
+            "deobf": "useDungeons",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "u",
+            "deobf": "dungeonChance",
+            "desc": "I",
+            "javadoc": ""
+          },
+          {
+            "obf": "v",
+            "deobf": "useStrongholds",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "w",
+            "deobf": "useVillages",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "x",
+            "deobf": "useMineshafts",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "y",
+            "deobf": "useTemples",
+            "desc": "Z",
+            "javadoc": ""
+          },
+          {
+            "obf": "z",
+            "deobf": "useMonuments",
+            "desc": "Z",
+            "javadoc": ""
+          }
+        ],
+        "methods": [],
+        "classes": []
+      },
+      {
+        "obf": "b",
+        "deobf": "Serializer",
+        "javadoc": "",
+        "fields": [],
+        "methods": [
+          {
+            "obf": "a",
+            "deobf": "deserialize",
+            "desc": "(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Latw$a;",
+            "javadoc": "",
+            "parameters": []
+          },
+          {
+            "obf": "a",
+            "deobf": "serialize",
+            "desc": "(Latw$a;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;",
+            "javadoc": "",
+            "parameters": []
+          }
+        ],
+        "classes": []
+      }
+    ]
   },
   {
     "obf": "atx",
@@ -46095,7 +48195,15 @@
     "deobf": "net/minecraft/client/key/KeyBind",
     "javadoc": "",
     "fields": [],
-    "methods": [],
+    "methods": [
+      {
+        "obf": "a",
+        "deobf": "compare",
+        "desc": "(Lbcu;)I",
+        "javadoc": "",
+        "parameters": []
+      }
+    ],
     "classes": []
   },
   {
@@ -49030,7 +51138,7 @@
   },
   {
     "obf": "bjb",
-    "deobf": "bjb",
+    "deobf": "net/minecraft/client/model/BlazeModel",
     "javadoc": "",
     "fields": [],
     "methods": [
@@ -49192,7 +51300,7 @@
   },
   {
     "obf": "bjk",
-    "deobf": "bjk",
+    "deobf": "net/minecraft/client/model/EndermiteModel",
     "javadoc": "",
     "fields": [],
     "methods": [
@@ -50885,6 +52993,13 @@
             "deobf": "profile"
           }
         ]
+      },
+      {
+        "obf": "o",
+        "deobf": "getSkin",
+        "desc": "()Lkn;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -52357,6 +54472,13 @@
       {
         "obf": "a",
         "deobf": "getTexture",
+        "desc": "(Lru;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
         "javadoc": "",
         "parameters": []
@@ -52385,6 +54507,13 @@
         "parameters": []
       },
       {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lxx;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
         "obf": "b",
         "deobf": "getModel",
         "desc": "()Lbju;",
@@ -52398,12 +54527,26 @@
     "obf": "bru",
     "deobf": "net/minecraft/client/render/entity/BatRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwa;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52414,12 +54557,26 @@
     "obf": "brv",
     "deobf": "net/minecraft/client/render/entity/BlazeRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyn;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52430,8 +54587,22 @@
     "obf": "brw",
     "deobf": "net/minecraft/client/render/entity/BoatRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "b",
+        "deobf": "TEXTURES",
+        "desc": "[Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Laap;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "getTexture",
@@ -52446,12 +54617,33 @@
     "obf": "brx",
     "deobf": "net/minecraft/client/render/entity/CaveSpiderRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyo;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzg;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52462,12 +54654,26 @@
     "obf": "bry",
     "deobf": "net/minecraft/client/render/entity/ChickenRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwd;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52478,12 +54684,26 @@
     "obf": "brz",
     "deobf": "net/minecraft/client/render/entity/CowRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwe;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52507,6 +54727,13 @@
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyp;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52533,12 +54760,26 @@
     "obf": "bsc",
     "deobf": "net/minecraft/client/render/entity/DragonFireballRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzw;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52549,12 +54790,26 @@
     "obf": "bsd",
     "deobf": "net/minecraft/client/render/entity/EnderCrystalRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lxa;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52565,12 +54820,38 @@
     "obf": "bse",
     "deobf": "net/minecraft/client/render/entity/EnderDragonRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "CRYSTAL_BEAM_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "EXPLODING_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lxb;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52581,12 +54862,26 @@
     "obf": "bsf",
     "deobf": "net/minecraft/client/render/entity/EndermanRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyq;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52597,12 +54892,26 @@
     "obf": "bsg",
     "deobf": "net/minecraft/client/render/entity/EndermiteRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "getTexture",
+        "desc": "(Lyr;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52788,12 +55097,26 @@
     "obf": "bsj",
     "deobf": "net/minecraft/client/render/entity/ExperienceRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lsc;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52815,7 +55138,7 @@
       },
       {
         "obf": "a",
-        "deobf": "a",
+        "deobf": "getTexture",
         "desc": "(Lyj;)Lkn;",
         "javadoc": "",
         "parameters": [
@@ -52852,6 +55175,13 @@
         "desc": "(Lrw;)Lkn;",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzy;)Lkn;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -52860,12 +55190,26 @@
     "obf": "bsm",
     "deobf": "net/minecraft/client/render/entity/FishHookRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyd;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52876,12 +55220,32 @@
     "obf": "bsn",
     "deobf": "net/minecraft/client/render/entity/GhastRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "SHOOTING_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyt;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52892,12 +55256,26 @@
     "obf": "bso",
     "deobf": "net/minecraft/client/render/entity/GiantRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyu;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52908,12 +55286,38 @@
     "obf": "bsp",
     "deobf": "net/minecraft/client/render/entity/GuardianRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "b",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "ELDER_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "BEAM_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyv;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52924,12 +55328,33 @@
     "obf": "bsq",
     "deobf": "net/minecraft/client/render/entity/HorseRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURES",
+        "desc": "Ljava/util/Map;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwr;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "b",
+        "deobf": "getHorseTexture",
+        "desc": "(Lwr;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52964,6 +55389,13 @@
         "desc": "(Lrw;)Lkn;",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyk;)Lkn;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -52972,12 +55404,26 @@
     "obf": "bst",
     "deobf": "net/minecraft/client/render/entity/ItemFrameRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "MAP_BACKGROUND_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTextire",
+        "desc": "(Lxz;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -52988,12 +55434,26 @@
     "obf": "bsv",
     "deobf": "net/minecraft/client/render/entity/MagmaCubeRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyw;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53028,6 +55488,13 @@
         "desc": "(Lrw;)Lkn;",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyh;)Lkn;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -53059,8 +55526,22 @@
     "obf": "bsz",
     "deobf": "net/minecraft/client/render/entity/MinecartRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "b",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Laaq;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "getTexture",
@@ -53091,12 +55572,26 @@
     "obf": "btc",
     "deobf": "net/minecraft/client/render/entity/MooshroomRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwg;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53107,12 +55602,44 @@
     "obf": "btd",
     "deobf": "net/minecraft/client/render/entity/OcelotRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "BLACK_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "OCELOT_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "RED_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "SIAMESE_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwh;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53123,12 +55650,26 @@
     "obf": "bte",
     "deobf": "net/minecraft/client/render/entity/PaintingRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyb;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53139,12 +55680,26 @@
     "obf": "btf",
     "deobf": "net/minecraft/client/render/entity/PigRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwi;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53155,12 +55710,26 @@
     "obf": "btg",
     "deobf": "net/minecraft/client/render/entity/PigZombieRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "k",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyy;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53171,12 +55740,26 @@
     "obf": "bth",
     "deobf": "net/minecraft/client/render/entity/PolarBearRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwj;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53187,12 +55770,68 @@
     "obf": "bti",
     "deobf": "net/minecraft/client/render/entity/RabbitRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "BROWN_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "WHITE_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "BLACK_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "GOLD_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "m",
+        "deobf": "SALT_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "n",
+        "deobf": "WHITE_SPLOTCHED_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "o",
+        "deobf": "TOAST_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "p",
+        "deobf": "CAERBANNOG_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwk;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53203,12 +55842,26 @@
     "obf": "btj",
     "deobf": "net/minecraft/client/render/entity/SheepRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwl;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53235,12 +55888,26 @@
     "obf": "btl",
     "deobf": "net/minecraft/client/render/entity/ShulkerRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzb;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53283,12 +55950,26 @@
     "obf": "bto",
     "deobf": "net/minecraft/client/render/entity/SlimeRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzf;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53299,12 +55980,26 @@
     "obf": "btp",
     "deobf": "net/minecraft/client/render/entity/SnowmanRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwm;)Lkn;",
         "javadoc": "",
         "parameters": []
       },
@@ -53322,8 +56017,22 @@
     "obf": "btq",
     "deobf": "net/minecraft/client/render/entity/SpectralArrowRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Laag;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "getTexture",
@@ -53338,12 +56047,26 @@
     "obf": "btr",
     "deobf": "net/minecraft/client/render/entity/SpiderRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzg;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53354,12 +56077,26 @@
     "obf": "bts",
     "deobf": "net/minecraft/client/render/entity/SquidRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwn;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53394,8 +56131,28 @@
     "obf": "btv",
     "deobf": "net/minecraft/client/render/entity/TippedArrowRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "TIPPED_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Laam;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "getTexture",
@@ -53426,6 +56183,13 @@
         "desc": "(Lrw;)Lkn;",
         "javadoc": "",
         "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lyl;)Lkn;",
+        "javadoc": "",
+        "parameters": []
       }
     ],
     "classes": []
@@ -53434,12 +56198,26 @@
     "obf": "bty",
     "deobf": "net/minecraft/client/render/entity/IronGolemRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwo;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53450,12 +56228,56 @@
     "obf": "btz",
     "deobf": "net/minecraft/client/render/entity/VillagerRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "FARMER_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "LIBRARIAN_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "PRIEST_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "m",
+        "deobf": "SMITH_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "n",
+        "deobf": "BUTCHER_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzn;)Lkn;",
         "javadoc": "",
         "parameters": []
       },
@@ -53473,12 +56295,26 @@
     "obf": "bua",
     "deobf": "net/minecraft/client/render/entity/WitchRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzh;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53505,8 +56341,28 @@
     "obf": "buc",
     "deobf": "net/minecraft/client/render/entity/WitherSkullRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "INVULNERABLE_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Laan;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
       {
         "obf": "a",
         "deobf": "getTexture",
@@ -53521,12 +56377,38 @@
     "obf": "bud",
     "deobf": "net/minecraft/client/render/entity/WolfRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "a",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "b",
+        "deobf": "TAME_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "k",
+        "deobf": "ANGRY_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lwq;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53537,12 +56419,68 @@
     "obf": "bue",
     "deobf": "net/minecraft/client/render/entity/ZombieRenderer",
     "javadoc": "",
-    "fields": [],
+    "fields": [
+      {
+        "obf": "k",
+        "deobf": "VILLAGER_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "l",
+        "deobf": "FARMER_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "m",
+        "deobf": "LIBRARIAN_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "n",
+        "deobf": "PRIEST_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "o",
+        "deobf": "SMITH_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "p",
+        "deobf": "BUTCHER_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "q",
+        "deobf": "TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      },
+      {
+        "obf": "r",
+        "deobf": "HUSK_TEXTURE",
+        "desc": "Lkn;",
+        "javadoc": ""
+      }
+    ],
     "methods": [
       {
         "obf": "a",
         "deobf": "getTexture",
         "desc": "(Lrw;)Lkn;",
+        "javadoc": "",
+        "parameters": []
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lzi;)Lkn;",
         "javadoc": "",
         "parameters": []
       }
@@ -53588,6 +56526,13 @@
             "deobf": "slimArms"
           }
         ]
+      },
+      {
+        "obf": "a",
+        "deobf": "getTexture",
+        "desc": "(Lbnk;)Lkn;",
+        "javadoc": "",
+        "parameters": []
       },
       {
         "obf": "a",
